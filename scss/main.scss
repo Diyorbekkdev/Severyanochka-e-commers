@@ -1,0 +1,41 @@
+//BASE
+@import 
+    'base/normalize',
+    'base/base',
+    'base/typography';
+
+
+//ABSTRACTS 
+@import 
+    'abstracts/mixins',
+    'abstracts/classes',
+    'abstracts/colors',
+    'abstracts/placeholders',
+    'abstracts/variables',
+    'abstracts/animations';
+
+
+//COMPONENTS
+@import 
+    'components/buttons',
+    'components/dropdown',
+    'components/loaders',
+    'components/loaders',
+    'components/modals';
+
+
+//LAYOUT PART
+@import
+    'layout/header',
+    'layout/forms',
+    'layout/grid',
+    'layout/menu',
+    'layout/tables',
+    'layout/footer';
+
+//THEMES 
+@import
+    'themes/admin',
+    'themes/authenticated';
+
+ 

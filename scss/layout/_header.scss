@@ -1,0 +1,255 @@
+// Header
+@use "../abstracts/mixins";
+@use "../abstracts/colors";
+@use '../components/modals';
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 15;
+  background: #fff;
+  &__nav {
+    height: 72px;
+    @extend %df-main;
+    @include media(550px) {
+      justify-content: flex-start;
+    }
+
+    .logo {
+      @include media(768px) {
+        display: none;
+      }
+    }
+    .logo_tablet {
+      display: none;
+      @include media(768px) {
+        display: block;
+        margin-right: 20px;
+      }
+    }
+
+    &_search {
+      .catalog {
+        @include media(550px) {
+          display: none;
+        }
+        padding: 8px;
+        @extend %df-main;
+        gap: 18px;
+        outline: none;
+        border: none;
+        background: none;
+        background: #70c05b;
+        border-radius: 4px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.3s ease-out;
+        .text_katalog {
+          padding-right: 10px;
+          @include media(768px) {
+            display: none;
+          }
+        }
+        &:hover {
+          background: #3f9829;
+        }
+      }
+      max-width: 516px;
+      @extend %df-main;
+      gap: 16px;
+      .search {
+        position: relative;
+        @extend %df-main;
+        @include media(768px) {
+          display: block;
+        }
+        input {
+          width: 360px;
+          @include media(768px) {
+            // width: 200px;
+            width: 100%;
+            max-width: 700px; /* Adjust the value as per your requirement */
+            box-sizing: border-box;
+          }
+          @include media(550px) {
+            width: 250px;
+            // max-width: 300px; /* Adjust the value as per your requirement */
+            box-sizing: border-box;
+          }
+          border: 1px solid #70c05b !important;
+          border-radius: 4px;
+          padding: 8px 16px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+        }
+
+        .search_icon {
+          position: absolute;
+          right: 10px;
+          @include media(768px) {
+            top: 9px;
+          }
+        }
+        &:focus {
+          .search_icon {
+            display: none;
+          }
+        }
+      }
+    }
+    ul {
+      @extend %df-main;
+      gap: 24px;
+      @include media(768px) {
+        gap: 14px;
+      }
+      @include media(550px) {
+        display: none;
+      }
+      li {
+        a {
+          position: relative;
+          @extend %df-col-main;
+          font-family: "Rubik";
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 150%;
+          color: #000;
+        }
+        position: relative;
+      }
+      //   .counts_parent{
+      //   }
+      .count {
+        margin: 0;
+        padding: 5px;
+        position: absolute;
+        top: -10px;
+        right: 4px;
+        font-size: 12px;
+        background: rgb(235, 45, 45);
+        color: #fff;
+        border-radius: 50%;
+      }
+    }
+    .user {
+      @extend %df-main;
+      gap: 15px;
+      &_info {
+        @include media(768px) {
+          display: none;
+        }
+        color: #414141;
+      }
+      @include media(550px) {
+        display: none;
+      }
+    }
+    .dropdown_box {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      @include media(768px){
+        grid-template-columns: 1fr 1fr;
+        .grid-item:nth-child(2) {
+            margin-top: 15px;
+            grid-gap: 40px !important;
+            grid-row: 2; /* Move the first item to the first row */
+            grid-column: 3 / span ; /* Move the first item to columns 2 and 3 */
+          }
+      }
+      ul {
+        // border: 1px solid red;
+        @extend %df-col-main;
+        align-items: flex-start;
+        gap: 24px;
+        li {
+          a {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 150%;
+            color:  #414141;
+            @include media(550px){
+                font-size: 13px;
+            }
+            &:hover{
+                color: rgb(38, 151, 52);
+            }
+            &:focus{
+                color: red;
+            }
+            &:active{
+                color: red;
+            }
+        }
+        .active{
+            color: red;
+        }
+    }
+      }
+      .second{
+        padding-bottom: 40px;
+        @extend %df-col-main;
+        align-items: flex-start;
+         gap: 5px !important;
+      }
+    }
+  }
+}
+
+.footer_navbar {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  @include media(550px) {
+    display: block;
+  }
+  .footer_navbar_fixed {
+    padding: 8px 16px;
+  }
+  .footer_nav_list {
+    @extend %df-main;
+    li {
+      a {
+        @extend %df-col-main;
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 150%;
+        color: #000;
+      }
+      .red_hover:hover {
+        transition: 0.2s ease-out;
+        color: red;
+        img {
+          filter: grayscale(100%) sepia(100%) hue-rotate(0deg) saturate(10000%)
+            brightness(100%) contrast(100%);
+        }
+      }
+      position: relative;
+      .count {
+        margin: 0;
+        padding: 4px;
+        position: absolute;
+        top: -10px;
+        right: 1px;
+        font-size: 12px;
+        background: rgb(235, 45, 45);
+        color: #fff;
+        border-radius: 50%;
+      }
+      .invert_menu {
+        filter: invert(1);
+      }
+    }
+  }
+}
+
+  

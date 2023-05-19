@@ -1,0 +1,36 @@
+// Colors
+
+// SCSS Color Variables 
+$main-bg: #F4F4F2;
+$bg-text: #291E0F;
+$surface: #fff;
+$surface-text: #414141;
+$primary-text: #fff;
+$primary-orange: #FF6633;
+$secondary-text: #fff;
+
+//GREYSCALE
+$lightset: #F3F2F1;
+$light: #BFBFBF;
+$hard: #8F8F8F;
+$hardest: #606060;
+
+//PALETTE
+$succes:#008C49;
+$info: #1CB9FC;
+$warning: #FCA21C;
+$error: #D80000;
+
+
+
+// Theme CSS Color Variables
+// :root {
+// 	--theme-text: #{$pickled-bluewood};
+// 	--theme-background: #{$white};
+// 	--theme-error: #{$persianRed};
+// }
+
+// Theme SCSS Color Variables
+$theme-text: var(--theme-text);
+$theme-background: var(--theme-background);
+$theme-error: var(--theme-error);

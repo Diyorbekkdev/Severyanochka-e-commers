@@ -1,0 +1,46 @@
+// Typography rules
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+// @font-face {
+// 	font-family: 'Rubik';
+// 	src: url('../../assets/fonts/static/Rubik-Black.ttf');
+// }
+// @font-face {
+// 	font-family: 'Rubik';
+// 	src: url('../../assets/fonts/static/Rubik-Bold.ttf');
+// }
+// @font-face {
+// 	font-family: 'Rubik';
+// 	src: url('../../assets/fonts/static/Rubik-ExtraBold.ttf');
+// }
+// @font-face {
+// 	font-family: 'Rubik';
+// 	src: url('../../assets/fonts/static/Rubik-Light.ttf');
+// }
+// @font-face {
+// 	font-family: 'Rubik';
+// 	src: url('../../assets/fonts/static/Rubik-Medium.ttf');
+// }
+// @font-face {
+// 	font-family: 'Rubik';
+// 	src: url('../../assets/fonts/static/Rubik-Regular.ttf');
+// }
+// @font-face {
+// 	font-family: 'Rubik';
+// 	src: url('../../assets/fonts/static/Rubik-SemiBold.ttf');
+// }
+
+
+// Root elements
+:root {
+	--font-family-sans-serif: 'Rubik';
+}
+
+html,
+body {
+	font-family: var(--font-family-sans-serif) !important;
+}
+
+
+
+

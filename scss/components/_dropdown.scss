@@ -1,0 +1,23 @@
+// Dropdown
+#dropdown-content {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  z-index: -10;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  padding: 40px 0;
+  transition: 0.3s ease-out;
+  opacity: 0; /* Initially hide the dropdown with opacity 0 */
+  transition: top 0.6s ease, opacity 0.1s ease;
+  // display: none;
+}
+
+#dropdown-content.visible {
+  // display: block;
+  transition: 0.4s ease-out;
+  top: 110%; /* Show the dropdown below the button */
+  opacity: 1; /* Set opacity to 1 when visible */
+}
+

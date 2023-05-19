@@ -1,0 +1,91 @@
+// SCSS Mixins
+
+// Fonts
+@mixin font-style($size, $color, $weight: 400, $style: normal, $align: left) {
+	font-size: $size;
+	color: $color;
+	font-weight: $weight;
+	font-style: $style;
+	text-align: $align;
+}
+
+
+
+/* Define the mixin */
+@mixin buttonMixin($bg-color, $text-color) {
+	display: inline-block;
+	padding: 18px 16px;
+	font-size: 16px;
+	text-align: center;
+	text-decoration: none;
+	border: none;
+	border-radius: 4px;
+	color: $text-color;
+	background-color: $bg-color;
+	cursor: pointer;
+}
+  
+  
+// GRID UCHUN MIXIN
+@mixin grid($cols, $gap) {
+	display: grid;
+	grid-template-columns: repeat($cols, 1fr);
+	grid-gap: $gap;
+  }
+  
+  // Mixin for Flexbox
+  @mixin flexbox($direction: row, $justify: flex-start, $align: stretch) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+  }
+  
+  @mixin media($size) {
+	@media only screen and (max-width: $size) {
+	  @content;
+	}
+  }
+
+
+//BOX-SHADOWS
+@mixin boxShadows {
+	$shadows: (
+	  "1px 2px 4px rgba(0, 0, 0, 0.1)",
+	  "2px 4px 8px rgba(0, 0, 0, 0.1)",
+	  "8px 16px 32px rgba(0, 0, 0, 0.1)",
+	  "16px 32px 64px rgba(0, 0, 0, 0.1)",
+	  "1px 2px 4px rgba(255, 102, 51, 0.2)",
+	  "2px 4px 8px rgba(255, 102, 51, 0.2)",
+	  "4px 8px 16px rgba(255, 102, 51, 0.2)",
+	  "8px 16px 32px rgba(255, 102, 51, 0.2)",
+	  "16px 32px 64px rgba(255, 102, 51, 0.2)",
+	  "1px 2px 4px rgba(112, 192, 91, 0.2)",
+	  "2px 4px 8px rgba(112, 192, 91, 0.2)",
+	  "4px 8px 16px rgba(112, 192, 91, 0.2)",
+	  "8px 16px 32px rgba(112, 192, 91, 0.2)",
+	  "16px 32px 64px rgba(112, 192, 91, 0.2)"
+	);
+  
+	@each $shadow in $shadows {
+	  $index: index($shadows, $shadow);
+	  .shadow-#{$index} {
+		box-shadow: $shadow;
+	  }
+	}
+  }
+//USAGE 
+// @include boxShadows;
+
+// .my-element {
+//   @extend .shadow-1;
+// }
+
+// .another-element {
+//   @extend .shadow-2;
+// }
+
+
+
+
+  

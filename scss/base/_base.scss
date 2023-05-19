@@ -1,0 +1,27 @@
+// Styles for commonly used HTML elements
+@use '../abstracts/mixins';
+// Root elements
+@mixin media($size) {
+	@media only screen and (max-width: $size) {
+	  @content;
+	}
+  }
+html, 
+body {
+	font-family: 'Rubik';
+
+}
+
+.container{
+	max-width: 1228px;
+	padding:0 20px;
+	margin: 0 auto;
+	@include media(767px){
+		max-width: 736px;
+		padding:0 16px;
+	}
+	@include media(360px){
+		max-width: 336px;
+		padding: 0 12px;
+	}
+}
