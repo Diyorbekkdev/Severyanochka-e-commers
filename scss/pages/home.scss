@@ -1,8 +1,8 @@
 // Specific style for home page
-@use "../main.scss"; 
-@import '../abstracts/mixins'; 
- 
+@use "../main.scss";
+@import "../abstracts/mixins";
 
+// FIRST SECTION STYLE
 .deliver {
   margin-top: 72px;
   background: url("../../assets/images/Home/banner-bg.png") center center
@@ -13,11 +13,11 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    img{
-        width: 30%;
-        @include media(570px){
-            display: none;
-        }
+    img {
+      width: 30%;
+      @include media(570px) {
+        display: none;
+      }
     }
     h1 {
       font-weight: 700;
@@ -25,12 +25,199 @@
       line-height: 150%;
       color: #414141;
       max-width: 751px;
-      @include media(768px){
-        font-size: 24px;  
-      }  
-      @include media(400px){
+      @include media(768px) {
+        font-size: 24px;
+      }
+      @include media(400px) {
         font-size: 18px;
-      }    
+      }
     }
   }
 }
+// FIRST SECTION STYLE
+
+// SECOND SECTION STYLE
+.discount {
+  &__title {
+    margin-top: 80px;
+    @extend %df-main;
+    h2 {
+      @extend %left-title;
+    }
+    a {
+      @extend %df-main;
+      gap: 10px;
+      @extend %right-info;
+      img {
+        transition: 0.3s ease-out;
+      }
+      &:hover {
+        color: rgb(72, 182, 72);
+        img {
+          transform: translateX(20px);
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    .card {
+      padding: 8px;
+      overflow: hidden;
+      position: relative;
+      @extend %df-col-main;
+      max-width: 272px;
+      max-height: 349px;
+      background-color: #fff;
+      box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      &:hover {
+        box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
+        .container__heart {
+          right: 10px;
+        }
+      }
+      img {
+        width: 100%;
+      }
+
+      .container__heart {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: -40px;
+        cursor: pointer;
+        font-size: 20px;
+        user-select: none;
+        transition: 100ms;
+        background: #f3f2f1d8;
+        transition: 0.3s ease-out;
+        border-radius: 4px;
+        padding: 5px;
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+        }
+        .checkmark {
+          top: 0;
+          left: 0;
+          height: 1.5em;
+          width: 1.5em;
+          transition: 100ms;
+          animation: dislike_effect 400ms ease;
+        }
+        input:checked ~ .checkmark path {
+          fill: #ff5353;
+          stroke-width: 0;
+        }
+        input:checked ~ .checkmark {
+          animation: like_effect 400ms ease;
+        }
+      }
+      @keyframes like_effect {
+        0% {
+          transform: scale(0);
+        }
+
+        50% {
+          transform: scale(1.2);
+        }
+
+        100% {
+          transform: scale(1);
+        }
+      }
+      @keyframes dislike_effect {
+        0% {
+          transform: scale(0);
+        }
+
+        50% {
+          transform: scale(1.2);
+        }
+
+        100% {
+          transform: scale(1);
+        }
+      }
+      .discount_percent {
+        padding: 4px 8px;
+        position: absolute;
+        top: 35%;
+        left: 10px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #ffffff;
+        background: #ff6633;
+        border-radius: 4px;
+      }
+
+      .price {
+        margin-top: 8px;
+        @extend %df-main;
+        p {
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 150%;
+          color: #414141;
+        }
+        span {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+          color: #606060;
+        }
+      }
+      .price_info {
+        @extend %df-main;
+        p {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 150%;
+          color: #bfbfbf;
+        }
+      }
+      .main_info {
+        margin-top: 8px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #414141;
+      }
+      .rating {
+        margin-top: 8px;
+        .fa {
+          color: #ff6633;
+        }
+      }
+      .shop_cart {
+        margin-top: 8px;
+        padding: 8px;
+        outline: none;
+        border: none;
+        background: transparent;
+        width: 100%;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #70c05b;
+        border: 1px solid #70c05b;
+        border-radius: 4px;
+        transition: .3s ease-out;
+        &:hover{
+          background-color: #ff6633;
+          color: #fff;
+          border: 1px solid #ff6633;
+        }
+      }
+    }
+  }
+}
+// SECOND SECTION STYLE

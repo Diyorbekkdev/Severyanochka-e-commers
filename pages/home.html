@@ -8,6 +8,28 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.0/build/css/intlTelInput.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/driver.js/dist/driver.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/2dd9a30273.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Главная || Северяночка</title>
     <link rel="stylesheet" href="../css/home.min.css" />
   </head>
@@ -15,7 +37,7 @@
     <header class="header">
       <div class="container">
         <nav class="header__nav">
-          <a class="logo" href="../pages/home.html"
+          <a id="logo" class="logo" href="../pages/home.html"
             ><img src="../assets/images/Home/logo-min.svg" alt="Logo"
           /></a>
           <a class="logo_tablet" href="../pages/home.html"
@@ -69,7 +91,7 @@
               </div>
             </div>
             <div class="search">
-              <input type="text" placeholder="Найти товар" />
+              <input type="search" placeholder="Найти товар" />
               <img
                 class="search_icon"
                 src="../assets/images/Home/search.svg"
@@ -112,7 +134,7 @@
         </nav>
       </div>
     </header>
-
+    <!-- NAVIGATION START -->
     <div id="modal" class="modal">
       <div class="modal-content">
         <span class="close"
@@ -177,20 +199,568 @@
         </div>
       </div>
     </nav>
+    <!-- NAVIGATION END -->
 
+    <!-- HOME FIRST SECTION START -->
     <section class="deliver">
-        <div class="container">
-            <div class="deliver__container">
-                <img src="../assets/images/Home/banner-min.svg" alt="fruits">
-                <h1>Доставка бесплатно от 1000 ₽</h1>
-            </div>
+      <div class="container">
+        <div class="deliver__container">
+          <img src="../assets/images/Home/banner-min.svg" alt="fruits" />
+          <h1>Доставка бесплатно от 1000 ₽</h1>
         </div>
+      </div>
     </section>
-    
+    <!-- HOME FIRST SECTION START -->
 
+    <!-- HOME SECOND SECTION START -->
+    <section class="discount">
+      <div class="container">
+        <div class="discount__title">
+          <h2>Акции</h2>
+          <a href="all-product.html"
+            >Все продукты
+            <span
+              ><img
+                src="../assets/images/Home/arrow-to-right.svg"
+                alt="right arrow" /></span
+          ></a>
+        </div>
+        <div class="discount__wrapper owl-carousel owl-theme">
+          <div class= "item card">
+            <img
+              src="../assets/images/Home/home-card-images/img-1.png"
+              alt="biscuit"
+            />
+            <label class="container__heart">
+              <input checked="checked" type="checkbox" />
+              <div class="checkmark">
+                <svg viewBox="0 0 256 256">
+                  <rect fill="none" height="256" width="256"></rect>
+                  <path
+                    d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z"
+                    stroke-width="20px"
+                    stroke="#ccc"
+                    fill="none"
+                  ></path>
+                </svg>
+              </div>
+            </label>
+            <span class="discount_percent">-50%</span>
+            <div class="card_body">
+              <div class="price">
+                <p>44,50 ₽</p>
+                <span>50,50 ₽</span>
+              </div>
+              <div class="price_info">
+                <p>С картой</p>
+                <p>Обычная</p>
+              </div>
+              <p class="main_info">Г/Ц Блинчики с мясом вес, Россия</p>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <button class="shop_cart">В корзину</button>
+            </div>
+          </div>
+          <div class=" item card">
+            <img
+              src="../assets/images/Home/home-card-images/img-1.png"
+              alt="biscuit"
+            />
+            <label class="container__heart">
+              <input checked="checked" type="checkbox" />
+              <div class="checkmark">
+                <svg viewBox="0 0 256 256">
+                  <rect fill="none" height="256" width="256"></rect>
+                  <path
+                    d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z"
+                    stroke-width="20px"
+                    stroke="#ccc"
+                    fill="none"
+                  ></path>
+                </svg>
+              </div>
+            </label>
+            <span class="discount_percent">-50%</span>
+            <div class="card_body">
+              <div class="price">
+                <p>44,50 ₽</p>
+                <span>50,50 ₽</span>
+              </div>
+              <div class="price_info">
+                <p>С картой</p>
+                <p>Обычная</p>
+              </div>
+              <p class="main_info">Г/Ц Блинчики с мясом вес, Россия</p>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <button class="shop_cart">В корзину</button>
+            </div>
+          </div>
+          <div class="item card">
+            <img
+              src="../assets/images/Home/home-card-images/img-1.png"
+              alt="biscuit"
+            />
+            <label class="container__heart">
+              <input checked="checked" type="checkbox" />
+              <div class="checkmark">
+                <svg viewBox="0 0 256 256">
+                  <rect fill="none" height="256" width="256"></rect>
+                  <path
+                    d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z"
+                    stroke-width="20px"
+                    stroke="#ccc"
+                    fill="none"
+                  ></path>
+                </svg>
+              </div>
+            </label>
+            <span class="discount_percent">-50%</span>
+            <div class="card_body">
+              <div class="price">
+                <p>44,50 ₽</p>
+                <span>50,50 ₽</span>
+              </div>
+              <div class="price_info">
+                <p>С картой</p>
+                <p>Обычная</p>
+              </div>
+              <p class="main_info">Г/Ц Блинчики с мясом вес, Россия</p>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <button class="shop_cart">В корзину</button>
+            </div>
+          </div>
+          <div class=" item card">
+            <img
+              src="../assets/images/Home/home-card-images/img-1.png"
+              alt="biscuit"
+            />
+            <label class="container__heart">
+              <input checked="checked" type="checkbox" />
+              <div class="checkmark">
+                <svg viewBox="0 0 256 256">
+                  <rect fill="none" height="256" width="256"></rect>
+                  <path
+                    d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z"
+                    stroke-width="20px"
+                    stroke="#ccc"
+                    fill="none"
+                  ></path>
+                </svg>
+              </div>
+            </label>
+            <span class="discount_percent">-50%</span>
+            <div class="card_body">
+              <div class="price">
+                <p>44,50 ₽</p>
+                <span>50,50 ₽</span>
+              </div>
+              <div class="price_info">
+                <p>С картой</p>
+                <p>Обычная</p>
+              </div>
+              <p class="main_info">Г/Ц Блинчики с мясом вес, Россия</p>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <button class="shop_cart">В корзину</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="discount">
+      <div class="container">
+        <div class="discount__title">
+          <h2>Акции</h2>
+          <a href="all-product.html"
+            >Все продукты
+            <span
+              ><img
+                src="../assets/images/Home/arrow-to-right.svg"
+                alt="right arrow" /></span
+          ></a>
+        </div>
+        <div class="discount__wrapper owl-carousel owl-theme">
+          <div class= "item card">
+            <img
+              src="../assets/images/Home/home-card-images/img-1.png"
+              alt="biscuit"
+            />
+            <label class="container__heart">
+              <input checked="checked" type="checkbox" />
+              <div class="checkmark">
+                <svg viewBox="0 0 256 256">
+                  <rect fill="none" height="256" width="256"></rect>
+                  <path
+                    d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z"
+                    stroke-width="20px"
+                    stroke="#ccc"
+                    fill="none"
+                  ></path>
+                </svg>
+              </div>
+            </label>
+            <span class="discount_percent">-50%</span>
+            <div class="card_body">
+              <div class="price">
+                <p>44,50 ₽</p>
+                <span>50,50 ₽</span>
+              </div>
+              <div class="price_info">
+                <p>С картой</p>
+                <p>Обычная</p>
+              </div>
+              <p class="main_info">Г/Ц Блинчики с мясом вес, Россия</p>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <button class="shop_cart">В корзину</button>
+            </div>
+          </div>
+          <div class=" item card">
+            <img
+              src="../assets/images/Home/home-card-images/img-1.png"
+              alt="biscuit"
+            />
+            <label class="container__heart">
+              <input checked="checked" type="checkbox" />
+              <div class="checkmark">
+                <svg viewBox="0 0 256 256">
+                  <rect fill="none" height="256" width="256"></rect>
+                  <path
+                    d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z"
+                    stroke-width="20px"
+                    stroke="#ccc"
+                    fill="none"
+                  ></path>
+                </svg>
+              </div>
+            </label>
+            <span class="discount_percent">-50%</span>
+            <div class="card_body">
+              <div class="price">
+                <p>44,50 ₽</p>
+                <span>50,50 ₽</span>
+              </div>
+              <div class="price_info">
+                <p>С картой</p>
+                <p>Обычная</p>
+              </div>
+              <p class="main_info">Г/Ц Блинчики с мясом вес, Россия</p>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <button class="shop_cart">В корзину</button>
+            </div>
+          </div>
+          <div class="item card">
+            <img
+              src="../assets/images/Home/home-card-images/img-1.png"
+              alt="biscuit"
+            />
+            <label class="container__heart">
+              <input checked="checked" type="checkbox" />
+              <div class="checkmark">
+                <svg viewBox="0 0 256 256">
+                  <rect fill="none" height="256" width="256"></rect>
+                  <path
+                    d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z"
+                    stroke-width="20px"
+                    stroke="#ccc"
+                    fill="none"
+                  ></path>
+                </svg>
+              </div>
+            </label>
+            <span class="discount_percent">-50%</span>
+            <div class="card_body">
+              <div class="price">
+                <p>44,50 ₽</p>
+                <span>50,50 ₽</span>
+              </div>
+              <div class="price_info">
+                <p>С картой</p>
+                <p>Обычная</p>
+              </div>
+              <p class="main_info">Г/Ц Блинчики с мясом вес, Россия</p>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <button class="shop_cart">В корзину</button>
+            </div>
+          </div>
+          <div class=" item card">
+            <img
+              src="../assets/images/Home/home-card-images/img-1.png"
+              alt="biscuit"
+            />
+            <label class="container__heart">
+              <input checked="checked" type="checkbox" />
+              <div class="checkmark">
+                <svg viewBox="0 0 256 256">
+                  <rect fill="none" height="256" width="256"></rect>
+                  <path
+                    d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z"
+                    stroke-width="20px"
+                    stroke="#ccc"
+                    fill="none"
+                  ></path>
+                </svg>
+              </div>
+            </label>
+            <span class="discount_percent">-50%</span>
+            <div class="card_body">
+              <div class="price">
+                <p>44,50 ₽</p>
+                <span>50,50 ₽</span>
+              </div>
+              <div class="price_info">
+                <p>С картой</p>
+                <p>Обычная</p>
+              </div>
+              <p class="main_info">Г/Ц Блинчики с мясом вес, Россия</p>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <button class="shop_cart">В корзину</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="discount">
+      <div class="container">
+        <div class="discount__title">
+          <h2>Акции</h2>
+          <a href="all-product.html"
+            >Все продукты
+            <span
+              ><img
+                src="../assets/images/Home/arrow-to-right.svg"
+                alt="right arrow" /></span
+          ></a>
+        </div>
+        <div class="discount__wrapper owl-carousel owl-theme">
+          <div class= "item card">
+            <img
+              src="../assets/images/Home/home-card-images/img-1.png"
+              alt="biscuit"
+            />
+            <label class="container__heart">
+              <input checked="checked" type="checkbox" />
+              <div class="checkmark">
+                <svg viewBox="0 0 256 256">
+                  <rect fill="none" height="256" width="256"></rect>
+                  <path
+                    d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z"
+                    stroke-width="20px"
+                    stroke="#ccc"
+                    fill="none"
+                  ></path>
+                </svg>
+              </div>
+            </label>
+            <span class="discount_percent">-50%</span>
+            <div class="card_body">
+              <div class="price">
+                <p>44,50 ₽</p>
+                <span>50,50 ₽</span>
+              </div>
+              <div class="price_info">
+                <p>С картой</p>
+                <p>Обычная</p>
+              </div>
+              <p class="main_info">Г/Ц Блинчики с мясом вес, Россия</p>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <button class="shop_cart">В корзину</button>
+            </div>
+          </div>
+          <div class=" item card">
+            <img
+              src="../assets/images/Home/home-card-images/img-1.png"
+              alt="biscuit"
+            />
+            <label class="container__heart">
+              <input checked="checked" type="checkbox" />
+              <div class="checkmark">
+                <svg viewBox="0 0 256 256">
+                  <rect fill="none" height="256" width="256"></rect>
+                  <path
+                    d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z"
+                    stroke-width="20px"
+                    stroke="#ccc"
+                    fill="none"
+                  ></path>
+                </svg>
+              </div>
+            </label>
+            <span class="discount_percent">-50%</span>
+            <div class="card_body">
+              <div class="price">
+                <p>44,50 ₽</p>
+                <span>50,50 ₽</span>
+              </div>
+              <div class="price_info">
+                <p>С картой</p>
+                <p>Обычная</p>
+              </div>
+              <p class="main_info">Г/Ц Блинчики с мясом вес, Россия</p>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <button class="shop_cart">В корзину</button>
+            </div>
+          </div>
+          <div class="item card">
+            <img
+              src="../assets/images/Home/home-card-images/img-1.png"
+              alt="biscuit"
+            />
+            <label class="container__heart">
+              <input checked="checked" type="checkbox" />
+              <div class="checkmark">
+                <svg viewBox="0 0 256 256">
+                  <rect fill="none" height="256" width="256"></rect>
+                  <path
+                    d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z"
+                    stroke-width="20px"
+                    stroke="#ccc"
+                    fill="none"
+                  ></path>
+                </svg>
+              </div>
+            </label>
+            <span class="discount_percent">-50%</span>
+            <div class="card_body">
+              <div class="price">
+                <p>44,50 ₽</p>
+                <span>50,50 ₽</span>
+              </div>
+              <div class="price_info">
+                <p>С картой</p>
+                <p>Обычная</p>
+              </div>
+              <p class="main_info">Г/Ц Блинчики с мясом вес, Россия</p>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <button class="shop_cart">В корзину</button>
+            </div>
+          </div>
+          <div class=" item card">
+            <img
+              src="../assets/images/Home/home-card-images/img-1.png"
+              alt="biscuit"
+            />
+            <label class="container__heart">
+              <input checked="checked" type="checkbox" />
+              <div class="checkmark">
+                <svg viewBox="0 0 256 256">
+                  <rect fill="none" height="256" width="256"></rect>
+                  <path
+                    d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z"
+                    stroke-width="20px"
+                    stroke="#ccc"
+                    fill="none"
+                  ></path>
+                </svg>
+              </div>
+            </label>
+            <span class="discount_percent">-50%</span>
+            <div class="card_body">
+              <div class="price">
+                <p>44,50 ₽</p>
+                <span>50,50 ₽</span>
+              </div>
+              <div class="price_info">
+                <p>С картой</p>
+                <p>Обычная</p>
+              </div>
+              <p class="main_info">Г/Ц Блинчики с мясом вес, Россия</p>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <button class="shop_cart">В корзину</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- HOME SECOND SECTION START -->
+    <!-- carousel js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+      integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- carousel js -->
+    <script src="https://unpkg.com/driver.js/dist/driver.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.0/build/js/intlTelInput.js"></script>
     <script src="../JavaScript/dropdown.js"></script>
     <script src="../JavaScript/modal.js"></script>
     <script src="../JavaScript/modal2.js"></script>
+    <script src="../JavaScript/carousel.js"></script>
   </body>
 </html>

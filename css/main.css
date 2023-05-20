@@ -312,6 +312,7 @@ template {
 html,
 body {
   font-family: "Rubik";
+  background-color: #fbf8ec;
 }
 
 .container {
@@ -824,6 +825,13 @@ body {
   line-height: 150%;
   color: #000;
 }
+.header__nav ul li a img {
+  transition: 0.3s ease-out;
+}
+.header__nav ul li a:hover img {
+  transform: translateY(-10px);
+  filter: grayscale(100%) sepia(100%) hue-rotate(0deg) saturate(10000%) brightness(100%) contrast(100%);
+}
 .header__nav ul .count {
   margin: 0;
   padding: 5px;
@@ -924,6 +932,12 @@ body {
   font-size: 8px;
   line-height: 150%;
   color: #000;
+}
+.footer_navbar .footer_nav_list li a img {
+  transition: 0.3s ease-out;
+}
+.footer_navbar .footer_nav_list li a:hover img {
+  transform: translateY(-8px);
 }
 .footer_navbar .footer_nav_list li .red_hover:hover {
   transition: 0.2s ease-out;
