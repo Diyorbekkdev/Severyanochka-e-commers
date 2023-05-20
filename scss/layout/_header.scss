@@ -10,7 +10,7 @@
   z-index: 15;
   background: #fff;
   &__nav {
-    height: 72px;
+      height: 72px;
     @extend %df-main;
     @include media(550px) {
       justify-content: flex-start;

@@ -1,4 +1,36 @@
 // Specific style for home page
-@use "../main.scss";
+@use "../main.scss"; 
+@import '../abstracts/mixins'; 
+ 
 
-
+.deliver {
+  margin-top: 72px;
+  background: url("../../assets/images/Home/banner-bg.png") center center
+    no-repeat;
+  background-size: cover;
+  &__container {
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    img{
+        width: 30%;
+        @include media(570px){
+            display: none;
+        }
+    }
+    h1 {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 150%;
+      color: #414141;
+      max-width: 751px;
+      @include media(768px){
+        font-size: 24px;  
+      }  
+      @include media(400px){
+        font-size: 18px;
+      }    
+    }
+  }
+}

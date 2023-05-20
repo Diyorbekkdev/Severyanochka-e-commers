@@ -404,8 +404,9 @@ body {
 
 #dropdown-content.visible {
   transition: 0.4s ease-out;
-  top: 110%; /* Show the dropdown below the button */
-  opacity: 1; /* Set opacity to 1 when visible */
+  top: 100%; /* Show the dropdown below the button */
+  opacity: 1;
+  transition: top 0.6s ease, opacity 0.1s ease; /* Set opacity to 1 when visible */
 }
 
 /* Define the mixin */
@@ -944,4 +945,42 @@ body {
 }
 .footer_navbar .footer_nav_list li .invert_menu {
   filter: invert(1);
+}
+
+/* Define the mixin */
+.deliver {
+  margin-top: 72px;
+  background: url("../../assets/images/Home/banner-bg.png") center center no-repeat;
+  background-size: cover;
+}
+.deliver__container {
+  padding-top: 28px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.deliver__container img {
+  width: 30%;
+}
+@media only screen and (max-width: 570px) {
+  .deliver__container img {
+    display: none;
+  }
+}
+.deliver__container h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 150%;
+  color: #414141;
+  max-width: 751px;
+}
+@media only screen and (max-width: 768px) {
+  .deliver__container h1 {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .deliver__container h1 {
+    font-size: 18px;
+  }
 }

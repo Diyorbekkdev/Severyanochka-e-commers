@@ -17,7 +17,8 @@
 #dropdown-content.visible {
   // display: block;
   transition: 0.4s ease-out;
-  top: 110%; /* Show the dropdown below the button */
-  opacity: 1; /* Set opacity to 1 when visible */
+  top: 100%; /* Show the dropdown below the button */
+  opacity: 1;
+  transition: top 0.6s ease, opacity 0.1s ease;    /* Set opacity to 1 when visible */
 }
 
