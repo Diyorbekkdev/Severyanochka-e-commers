@@ -65,6 +65,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     .card {
+      margin: 0 auto;
       padding: 8px;
       overflow: hidden;
       position: relative;
@@ -210,8 +211,8 @@
         color: #70c05b;
         border: 1px solid #70c05b;
         border-radius: 4px;
-        transition: .3s ease-out;
-        &:hover{
+        transition: 0.3s ease-out;
+        &:hover {
           background-color: #ff6633;
           color: #fff;
           border: 1px solid #ff6633;
@@ -221,3 +222,261 @@
   }
 }
 // SECOND SECTION STYLE
+
+.app {
+  margin-top: 120px;
+  h2 {
+    @extend %left-title;
+  }
+  &__box {
+    margin-top: 40px;
+    @extend %df-main;
+    gap: 40px;
+    @include media(700px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .box {
+      overflow: hidden;
+      position: relative;
+      padding: 30px 40px;
+      @extend %df-main;
+      gap: 21px;
+      background: #fcd5ba;
+      border-radius: 4px;
+      width: 100%;
+      transition: 0.3s ease-out;
+      @include media(400px) {
+        padding: 10px 20px;
+        margin: 0 14px;
+      }
+      &:hover {
+        box-shadow: 0px 8px 16px rgba(202, 147, 96, 0.5);
+      }
+      img {
+        filter: drop-shadow(0px 8px 47px rgba(200, 90, 53, 0.51));
+      }
+      &__info {
+        h4 {
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 150%;
+          color: #414141;
+          @include media(400px) {
+            font-size: 15px;
+            line-height: 150%;
+          }
+        }
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+          color: #414141;
+          @include media(400px) {
+            font-size: 12px;
+            line-height: 150%;
+          }
+        }
+        max-width: 258px;
+      }
+    }
+    .second_box {
+      background: url("../../assets/images/Home/home-card-images/app-card-2nd-bg.png")
+        center center no-repeat;
+      background-size: cover;
+      max-width: 584px;
+    }
+  }
+}
+
+.map {
+  margin-top: 120px;
+  h2 {
+    @extend %left-title;
+  }
+  .ap-tab {
+    margin-top: 44px;
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      .ap-tab-link {
+        padding: 13px 26px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        color: #606060;
+        background: #f3f2f1;
+        border-radius: 4px;
+        @include media(400px) {
+          padding: 10px 15px;
+        }
+      }
+      .ap-tab-link.active-tab {
+        transition: 0.3s ease-out;
+        color: #fff;
+        background: #70c05b;
+        box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+      }
+    }
+  }
+  .ap-tab-container {
+    margin-top: 24px;
+    .ap-tab-content {
+      iframe {
+        border-radius: 4px;
+        box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}
+
+.stati {
+  &__card_box {
+    margin-top: 40px;
+    @extend %df-main;
+    @include media(600px) {
+      flex-direction: column;
+    }
+    gap: 32px;
+    .card {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      max-width: 376px;
+      background: #ffffff;
+      box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      transition: 0.3s ease-out;
+      &:hover {
+        transform: scale(1.005);
+        box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
+      }
+      img {
+        width: 100%;
+      }
+      .date {
+        padding: 10px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        color: #8f8f8f;
+      }
+      h4 {
+        padding: 10px;
+        margin-top: 10px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 150%;
+        color: #414141;
+        @include media(768px) {
+          font-size: 16px;
+          line-height: 150%;
+        }
+      }
+      p {
+        padding: 10px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #414141;
+        @include media(768px) {
+          font-size: 12px;
+          line-height: 150%;
+        }
+      }
+      .card_btn {
+        margin: 10px 10px;
+        padding: 8px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        background: #e5ffde;
+        border-radius: 4px;
+        color: #70c05b;
+        max-width: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s ease-in-out;
+        &:hover {
+          color: #fff;
+          background: #70c05b;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  padding: 24px 0;
+  margin-top: 140px;
+  background: url("../../assets/images/Home/home-card-images/footer-bg.png")
+    center center no-repeat;
+  background-size: cover;
+  @include media(550px){
+    margin-bottom: 50px;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media(400px){
+      align-items: flex-start
+    }
+  }
+  &__left {
+    @extend %df-main;
+    @include media(768px){
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+    }
+    @include media(400px){
+      grid-template-columns: 1fr;
+    }
+    gap: 40px;
+    a {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 150%;
+      color: #414141;
+    }
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    @include media(768px){
+      gap: 10px;
+    }
+    @include media(400px){
+      flex-wrap: wrap;
+    }
+    .socials {
+      display: flex;
+      @include media(768px){
+        flex-direction: column;
+        gap: 10px;
+      }
+      .half{
+        display: flex;
+      }
+      img{
+        margin-right: 16px
+      };
+    }
+    .phone{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+      span{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+    }
+  }
+}
