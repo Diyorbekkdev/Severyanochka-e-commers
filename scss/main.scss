@@ -21,14 +21,15 @@
     'components/dropdown',
     'components/loaders',
     'components/loaders',
-    'components/modals';
+    'components/modals',
+    'components/map';
 
 
 //LAYOUT PART
 @import
     'layout/header',
     'layout/forms',
-    'layout/grid',
+    'layout/breadcrumb',
     'layout/menu',
     'layout/tables',
     'layout/footer';

@@ -1,0 +1,29 @@
+// Custom grid system
+
+ul.breadcrumb {
+    margin-top: 80px;
+    padding: 10px 16px;
+    list-style: none;
+  }
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+  }
+  ul.breadcrumb li + li:before {
+    padding: 8px;
+    color: black;
+    content: "\203a";
+  }
+  ul.breadcrumb li a {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+    color: #414141;
+    text-decoration: none;
+  }
+  ul.breadcrumb li .active {
+    color: #8f8f8f;
+  }
+  ul.breadcrumb li a:hover {
+    color: rgb(174, 96, 32);
+  }

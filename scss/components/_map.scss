@@ -1,0 +1,41 @@
+.map {
+    margin-top: 120px;
+    h2 {
+      @extend %left-title;
+    }
+    .ap-tab {
+      margin-top: 44px;
+      &-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        .ap-tab-link {
+          padding: 13px 26px;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 150%;
+          color: #606060;
+          background: #f3f2f1;
+          border-radius: 4px;
+          @include media(400px) {
+            padding: 10px 15px;
+          }
+        }
+        .ap-tab-link.active-tab {
+          transition: 0.3s ease-out;
+          color: #fff;
+          background: #70c05b;
+          box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+        }
+      }
+    }
+    .ap-tab-container {
+      margin-top: 24px;
+      .ap-tab-content {
+        iframe {
+          border-radius: 4px;
+          box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }

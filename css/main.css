@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
 *,
 *::after,
@@ -365,7 +366,16 @@ body {
   align-items: center;
 }
 
-.footer_navbar .footer_nav_list, .header__nav .user, .header__nav ul, .header__nav_search .search, .header__nav_search, .header__nav_search .catalog, .header__nav {
+.map h2 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 150%;
+  color: #414141;
+}
+
+.footer__left, .footer_navbar .footer_nav_list, .header__nav .user, .header__nav ul, .header__nav_search .search, .header__nav_search, .header__nav_search .catalog, .header__nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -399,14 +409,14 @@ body {
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
   padding: 40px 0;
   transition: 0.3s ease-out;
-  opacity: 0; /* Initially hide the dropdown with opacity 0 */
-  transition: top 0.6s ease, opacity 0.1s ease;
+  visibility: hidden; /* Initially hide the dropdown with opacity 0 */
+  transition: top 0.6s ease, visibility 0.1s ease;
 }
 
 #dropdown-content.visible {
-  transition: 0.4s ease-out;
+  transition: all 0.4s ease-out;
   top: 100%; /* Show the dropdown below the button */
-  opacity: 1;
+  visibility: visible;
   transition: top 0.6s ease, opacity 0.1s ease; /* Set opacity to 1 when visible */
 }
 
@@ -544,6 +554,45 @@ body {
   cursor: pointer;
   background: #f3f2f1;
   border-radius: 4px;
+}
+
+.map {
+  margin-top: 120px;
+}
+.map .ap-tab {
+  margin-top: 44px;
+}
+.map .ap-tab-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.map .ap-tab-list .ap-tab-link {
+  padding: 13px 26px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #606060;
+  background: #f3f2f1;
+  border-radius: 4px;
+}
+@media only screen and (max-width: 400px) {
+  .map .ap-tab-list .ap-tab-link {
+    padding: 10px 15px;
+  }
+}
+.map .ap-tab-list .ap-tab-link.active-tab {
+  transition: 0.3s ease-out;
+  color: #fff;
+  background: #70c05b;
+  box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+}
+.map .ap-tab-container {
+  margin-top: 24px;
+}
+.map .ap-tab-container .ap-tab-content iframe {
+  border-radius: 4px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Define the mixin */
@@ -960,4 +1009,121 @@ body {
 }
 .footer_navbar .footer_nav_list li .invert_menu {
   filter: invert(1);
+}
+
+ul.breadcrumb {
+  margin-top: 80px;
+  padding: 10px 16px;
+  list-style: none;
+}
+
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+ul.breadcrumb li + li:before {
+  padding: 8px;
+  color: black;
+  content: "›";
+}
+
+ul.breadcrumb li a {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150%;
+  color: #414141;
+  text-decoration: none;
+}
+
+ul.breadcrumb li .active {
+  color: #8f8f8f;
+}
+
+ul.breadcrumb li a:hover {
+  color: rgb(174, 96, 32);
+}
+
+.footer {
+  padding: 24px 0;
+  margin-top: 140px;
+  background: url("../../assets/images/Home/home-card-images/footer-bg.png") center center no-repeat;
+  background-size: cover;
+}
+@media only screen and (max-width: 550px) {
+  .footer {
+    margin-bottom: 50px;
+  }
+}
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 400px) {
+  .footer .container {
+    align-items: flex-start;
+  }
+}
+.footer__left {
+  gap: 40px;
+}
+@media only screen and (max-width: 768px) {
+  .footer__left {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .footer__left {
+    grid-template-columns: 1fr;
+  }
+}
+.footer__left a {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #414141;
+}
+.footer__right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+@media only screen and (max-width: 768px) {
+  .footer__right {
+    gap: 10px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .footer__right {
+    flex-wrap: wrap;
+  }
+}
+.footer__right .socials {
+  display: flex;
+}
+@media only screen and (max-width: 768px) {
+  .footer__right .socials {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.footer__right .socials .half {
+  display: flex;
+}
+.footer__right .socials img {
+  margin-right: 16px;
+}
+.footer__right .phone {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.footer__right .phone span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }

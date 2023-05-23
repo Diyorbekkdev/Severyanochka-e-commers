@@ -1,0 +1,117 @@
+// Specific style for contact page
+@import "../main.scss";
+
+.contact {
+  .wrapper {
+    display: flex;
+    gap: 80px;
+    @include media(700px){
+      flex-direction: column;
+    }
+    .box {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      max-width: 418px;
+      &_content {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        p {
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 150%;
+          color: #414141;
+          @include media(400px){
+            font-size: 20px;
+          }
+        }
+        span {
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 150%;
+          text-decoration-line: underline;
+          color: #414141;
+        }
+      }
+    }
+  }
+}
+
+.map {
+  margin-top: 120px;
+  h2 {
+    @extend %left-title;
+  }
+  .wrapper {
+    margin-top: 40px;
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    @include media(800px){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .box {
+        max-width: 250px;
+        .market_logo{
+            width: 70%
+        };
+      &_content {
+        p {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 5px;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 150%;
+          color: #414141;
+        }
+        span{
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 18px;
+            color: #414141;
+        }
+      }
+    }
+  }
+  .ap-tab {
+    margin-top: 44px;
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      .ap-tab-link {
+        padding: 13px 26px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        color: #606060;
+        background: #f3f2f1;
+        border-radius: 4px;
+        @include media(400px) {
+          padding: 10px 15px;
+        }
+      }
+      .ap-tab-link.active-tab {
+        transition: 0.3s ease-out;
+        color: #fff;
+        background: #70c05b;
+        box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+      }
+    }
+  }
+  .ap-tab-container {
+    margin-top: 24px;
+    .ap-tab-content {
+      iframe {
+        border-radius: 4px;
+        box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}
