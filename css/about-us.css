@@ -366,13 +366,22 @@ body {
   align-items: center;
 }
 
+.map h2 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 150%;
+  color: #414141;
+}
+
 .footer__left, .footer_navbar .footer_nav_list, .header__nav .user, .header__nav ul, .header__nav_search .search, .header__nav_search, .header__nav_search .catalog, .header__nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.footer_navbar .footer_nav_list li a, .header__nav .dropdown_box .second, .header__nav .dropdown_box ul, .header__nav ul li a {
+.footer_navbar .footer_nav_list li a, .dropdown_box .second, .dropdown_box ul, .header__nav ul li a {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -390,25 +399,154 @@ body {
     transform: rotate(360deg);
   }
 }
-#dropdown-content {
+.chat {
+  position: fixed;
+  right: 30px;
+  bottom: 15px;
+  z-index: 7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  animation-name: skew-y-shakeing;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@media only screen and (max-width: 550px) {
+  .chat {
+    bottom: 65px;
+  }
+}
+.chat .telegram {
+  position: relative;
+  transition: 0.3s ease-out;
+  right: -4px;
+  transform: translateY(125px);
+  z-index: -1;
+}
+.chat .whatsapp {
+  position: relative;
+  transform: translateY(60px);
+  z-index: -1;
+  transition: 0.3s ease-out;
+}
+.chat .message {
+  transition: 0.3s ease-out;
+  transform: rotate(0);
+}
+.chat .messeage_close {
   position: absolute;
-  top: 0%;
+  top: 129px;
+  opacity: 0.0009;
+  transition: 0.3s ease-out;
+  transform: rotate(0);
+}
+.chat .write {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 5px 8px;
+  position: relative;
+  top: 10px;
+  background: #fff;
+  border-radius: 100px;
+  box-shadow: 0px 1px 14px 0px rgba(34, 60, 80, 0.2);
+  transition: 0.3s ease-out;
+}
+@media only screen and (max-width: 550px) {
+  .chat .write {
+    display: none;
+  }
+}
+.chat .join {
+  opacity: 0.0009;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 5px 8px;
+  position: relative;
+  top: -20px;
+  background: #fff;
+  border-radius: 100px;
+  box-shadow: 0px 1px 14px 0px rgba(34, 60, 80, 0.2);
+  transition: 0.3s ease-out;
+}
+@media only screen and (max-width: 550px) {
+  .chat .join {
+    display: none;
+  }
+}
+
+@keyframes skew-y-shakeing {
+  0% {
+    transform: skewY(-15deg);
+  }
+  5% {
+    transform: skewY(15deg);
+  }
+  10% {
+    transform: skewY(-15deg);
+  }
+  15% {
+    transform: skewY(15deg);
+  }
+  20% {
+    transform: skewY(0deg);
+  }
+  100% {
+    transform: skewY(0deg);
+  }
+}
+.chat.social {
+  animation: none;
+}
+.chat.social .telegram {
+  transition: 0.3s ease-out;
+  transform: translateY(0px);
+  right: 0;
+}
+.chat.social .telegram:hover {
+  transform: scale(1.08);
+}
+.chat.social .whatsapp {
+  transition: 0.3s ease-out;
+  transform: translateY(0);
+}
+.chat.social .whatsapp:hover {
+  transform: scale(1.08);
+}
+.chat.social .message {
+  transform: rotate(360deg);
+  opacity: 0.009;
+}
+.chat.social .messeage_close {
+  opacity: 1;
+  transform: rotate(360deg);
+}
+.chat.social .write {
+  opacity: 0.0009;
+}
+.chat.social .join {
+  opacity: 1;
+}
+@media only screen and (max-width: 550px) {
+  .chat.social .join {
+    display: none;
+  }
+}
+
+#dropdown-content {
+  position: fixed;
+  top: -100%;
   left: 0;
-  z-index: -10;
+  z-index: 10;
   width: 100%;
-  background: #ffffff;
+  background: #fff;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
   padding: 40px 0;
   transition: 0.3s ease-out;
-  visibility: hidden; /* Initially hide the dropdown with opacity 0 */
-  transition: top 0.6s ease, visibility 0.1s ease;
 }
 
 #dropdown-content.visible {
   transition: all 0.4s ease-out;
-  top: 100%; /* Show the dropdown below the button */
-  visibility: visible;
-  transition: top 0.6s ease, opacity 0.1s ease; /* Set opacity to 1 when visible */
+  top: 72px; /* Show the dropdown below the button */
 }
 
 /* Define the mixin */
@@ -545,6 +683,45 @@ body {
   cursor: pointer;
   background: #f3f2f1;
   border-radius: 4px;
+}
+
+.map {
+  margin-top: 120px;
+}
+.map .ap-tab {
+  margin-top: 44px;
+}
+.map .ap-tab-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.map .ap-tab-list .ap-tab-link {
+  padding: 13px 26px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #606060;
+  background: #f3f2f1;
+  border-radius: 4px;
+}
+@media only screen and (max-width: 400px) {
+  .map .ap-tab-list .ap-tab-link {
+    padding: 10px 15px;
+  }
+}
+.map .ap-tab-list .ap-tab-link.active-tab {
+  transition: 0.3s ease-out;
+  color: #fff;
+  background: #70c05b;
+  box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+}
+.map .ap-tab-container {
+  margin-top: 24px;
+}
+.map .ap-tab-container .ap-tab-content iframe {
+  border-radius: 4px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Define the mixin */
@@ -708,7 +885,8 @@ body {
 }
 @media only screen and (max-width: 550px) {
   .header__nav {
-    justify-content: flex-start;
+    margin-top: 20px;
+    display: block;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -722,12 +900,19 @@ body {
 @media only screen and (max-width: 768px) {
   .header__nav .logo_tablet {
     display: block;
+    position: absolute;
+    z-index: 15;
     margin-right: 20px;
   }
 }
 .header__nav_search {
   max-width: 516px;
   gap: 16px;
+}
+@media only screen and (max-width: 768px) {
+  .header__nav_search {
+    margin-left: 70px;
+  }
 }
 .header__nav_search .catalog {
   padding: 8px;
@@ -761,6 +946,7 @@ body {
   background: #3f9829;
 }
 .header__nav_search .search {
+  flex-grow: 1;
   position: relative;
 }
 @media only screen and (max-width: 768px) {
@@ -782,11 +968,12 @@ body {
     width: 100%;
     max-width: 700px; /* Adjust the value as per your requirement */
     box-sizing: border-box;
+    flex-grow: 1;
   }
 }
 @media only screen and (max-width: 550px) {
   .header__nav_search .search input {
-    width: 250px;
+    width: 100%;
     box-sizing: border-box;
   }
 }
@@ -860,49 +1047,50 @@ body {
     display: none;
   }
 }
-.header__nav .dropdown_box {
+
+.dropdown_box {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 @media only screen and (max-width: 768px) {
-  .header__nav .dropdown_box {
+  .dropdown_box {
     grid-template-columns: 1fr 1fr;
   }
-  .header__nav .dropdown_box .grid-item:nth-child(2) {
+  .dropdown_box .grid-item:nth-child(2) {
     margin-top: 15px;
     grid-gap: 40px !important;
     grid-row: 2; /* Move the first item to the first row */
     grid-column: 3/span; /* Move the first item to columns 2 and 3 */
   }
 }
-.header__nav .dropdown_box ul {
+.dropdown_box ul {
   align-items: flex-start;
   gap: 24px;
 }
-.header__nav .dropdown_box ul li a {
+.dropdown_box ul li a {
   font-weight: 700;
   font-size: 16px;
   line-height: 150%;
   color: #414141;
 }
 @media only screen and (max-width: 550px) {
-  .header__nav .dropdown_box ul li a {
+  .dropdown_box ul li a {
     font-size: 13px;
   }
 }
-.header__nav .dropdown_box ul li a:hover {
+.dropdown_box ul li a:hover {
   color: rgb(38, 151, 52);
 }
-.header__nav .dropdown_box ul li a:focus {
+.dropdown_box ul li a:focus {
   color: red;
 }
-.header__nav .dropdown_box ul li a:active {
+.dropdown_box ul li a:active {
   color: red;
 }
-.header__nav .dropdown_box ul li .active {
+.dropdown_box ul li .active {
   color: red;
 }
-.header__nav .dropdown_box .second {
+.dropdown_box .second {
   padding-bottom: 40px;
   align-items: flex-start;
   gap: 5px !important;
@@ -1037,6 +1225,9 @@ ul.breadcrumb li a:hover {
   font-size: 12px;
   line-height: 150%;
   color: #414141;
+}
+.footer__left a:hover {
+  color: red;
 }
 .footer__right {
   display: flex;

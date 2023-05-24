@@ -1,24 +1,18 @@
 // Dropdown
 #dropdown-content {
-  position: absolute;
-  top: 0%;
+  position: fixed;
+  top: -100%;
   left: 0;
-  z-index: -10;
+  z-index: 10;
   width: 100%;
-  background: #ffffff;
+  background: #fff;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
   padding: 40px 0;
   transition: 0.3s ease-out;
-  visibility: hidden; /* Initially hide the dropdown with opacity 0 */
-  transition: top 0.6s ease, visibility 0.1s ease;
-  // display: none;
 }
 
 #dropdown-content.visible {
-  // display: block;
   transition: all 0.4s ease-out;
-  top: 100%; /* Show the dropdown below the button */
-  visibility: visible;
-  transition: top 0.6s ease, opacity 0.1s ease;    /* Set opacity to 1 when visible */
+  top: 72px; /* Show the dropdown below the button */
 }
 

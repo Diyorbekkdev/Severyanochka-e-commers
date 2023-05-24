@@ -13,7 +13,9 @@
       height: 72px;
     @extend %df-main;
     @include media(550px) {
-      justify-content: flex-start;
+      margin-top: 20px;
+      display: block;
+      // justify-content: flex-start;
     }
 
     .logo {
@@ -25,11 +27,17 @@
       display: none;
       @include media(768px) {
         display: block;
+        position: absolute;
+        z-index: 15;
         margin-right: 20px;
       }
     }
 
     &_search {
+      @include media(768px){
+        margin-left: 70px;
+         
+      }
       .catalog {
         @include media(550px) {
           display: none;
@@ -62,6 +70,7 @@
       @extend %df-main;
       gap: 16px;
       .search {
+        flex-grow: 1;
         position: relative;
         @extend %df-main;
         @include media(768px) {
@@ -74,9 +83,10 @@
             width: 100%;
             max-width: 700px; /* Adjust the value as per your requirement */
             box-sizing: border-box;
+            flex-grow: 1;
           }
           @include media(550px) {
-            width: 250px;
+            width: 100%;
             // max-width: 300px; /* Adjust the value as per your requirement */
             box-sizing: border-box;
           }
@@ -160,54 +170,54 @@
         display: none;
       }
     }
-    .dropdown_box {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      @include media(768px){
-        grid-template-columns: 1fr 1fr;
-        .grid-item:nth-child(2) {
-            margin-top: 15px;
-            grid-gap: 40px !important;
-            grid-row: 2; /* Move the first item to the first row */
-            grid-column: 3 / span ; /* Move the first item to columns 2 and 3 */
-          }
+  }
+}
+.dropdown_box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  @include media(768px){
+    grid-template-columns: 1fr 1fr;
+    .grid-item:nth-child(2) {
+        margin-top: 15px;
+        grid-gap: 40px !important;
+        grid-row: 2; /* Move the first item to the first row */
+        grid-column: 3 / span ; /* Move the first item to columns 2 and 3 */
       }
-      ul {
-        // border: 1px solid red;
-        @extend %df-col-main;
-        align-items: flex-start;
-        gap: 24px;
-        li {
-          a {
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 150%;
-            color:  #414141;
-            @include media(550px){
-                font-size: 13px;
-            }
-            &:hover{
-                color: rgb(38, 151, 52);
-            }
-            &:focus{
-                color: red;
-            }
-            &:active{
-                color: red;
-            }
+  }
+  ul {
+    // border: 1px solid red;
+    @extend %df-col-main;
+    align-items: flex-start;
+    gap: 24px;
+    li {
+      a {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 150%;
+        color:  #414141;
+        @include media(550px){
+            font-size: 13px;
         }
-        .active{
+        &:hover{
+            color: rgb(38, 151, 52);
+        }
+        &:focus{
+            color: red;
+        }
+        &:active{
             color: red;
         }
     }
-      }
-      .second{
-        padding-bottom: 40px;
-        @extend %df-col-main;
-        align-items: flex-start;
-         gap: 5px !important;
-      }
+    .active{
+        color: red;
     }
+}
+  }
+  .second{
+    padding-bottom: 40px;
+    @extend %df-col-main;
+    align-items: flex-start;
+     gap: 5px !important;
   }
 }
 
