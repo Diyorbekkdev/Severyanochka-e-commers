@@ -695,6 +695,12 @@ body {
 .map {
   margin-top: 120px;
 }
+@media only screen and (max-width: 400px) {
+  .map h2 {
+    font-size: 24px;
+    line-height: 150%;
+  }
+}
 .map .ap-tab {
   margin-top: 44px;
 }
@@ -1319,6 +1325,12 @@ ul.breadcrumb li a:hover {
 .discount__title {
   margin-top: 80px;
 }
+@media only screen and (max-width: 400px) {
+  .discount__title h2 {
+    font-size: 24px;
+    line-height: 150%;
+  }
+}
 .discount__title a {
   gap: 10px;
 }
@@ -1485,6 +1497,12 @@ ul.breadcrumb li a:hover {
 
 .app {
   margin-top: 120px;
+}
+@media only screen and (max-width: 400px) {
+  .app h2 {
+    font-size: 24px;
+    line-height: 150%;
+  }
 }
 .app__box {
   margin-top: 40px;

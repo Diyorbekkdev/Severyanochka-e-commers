@@ -688,6 +688,12 @@ body {
 .map {
   margin-top: 120px;
 }
+@media only screen and (max-width: 400px) {
+  .map h2 {
+    font-size: 24px;
+    line-height: 150%;
+  }
+}
 .map .ap-tab {
   margin-top: 44px;
 }
