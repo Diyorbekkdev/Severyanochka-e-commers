@@ -169,6 +169,9 @@
       letter-spacing: 0.1em; /* Adjust as needed */
       animation: typing 4.5s steps(40, end), blink-caret 1.75s step-end infinite;
       animation-iteration-count: infinite;
+      @include media(500px){
+        font-size: 14px !important;
+      }
       @include media(1100px) {
         animation: none;
         overflow: inherit;
@@ -177,6 +180,8 @@
         margin: none; /* Gives that scrolling effect as the typing happens */
         letter-spacing: normal;
       }
+
+      
     }
 
     /* The typing effect */
