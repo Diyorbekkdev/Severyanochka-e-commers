@@ -6,6 +6,9 @@
     font-size: 64px;
     line-height: 150%;
     color: #414141;
+    @include media(500px){
+      font-size: 30px;
+    }
   }
   .wrapper {
     display: grid;

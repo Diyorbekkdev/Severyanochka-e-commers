@@ -1283,6 +1283,11 @@ ul.breadcrumb li a:hover {
   line-height: 150%;
   color: #414141;
 }
+@media only screen and (max-width: 500px) {
+  .jobs h1 {
+    font-size: 30px;
+  }
+}
 .jobs .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
