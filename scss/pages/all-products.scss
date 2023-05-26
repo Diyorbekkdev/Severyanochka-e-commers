@@ -11,6 +11,16 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 50px;
+  @include media(900px){
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include media(768px){
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media(400px){
+    grid-template-columns: 1fr;
+  }
+
   .card {
     margin: 0 auto;
     padding: 8px;
