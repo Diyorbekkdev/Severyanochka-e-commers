@@ -8,12 +8,12 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.0/build/css/intlTelInput.css"
   />
-    <title>Все продукты</title>
-    <link rel="stylesheet" href="../css/all-products.min.css">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="../css/shop-cart.min.css">
 </head>
 <body>
-     <!-- CHAT USER  -->
-     <div id="myButton" class="chat">
+    <!-- CHAT USER  -->
+    <div id="myButton" class="chat">
         <a class="telegram" href="../pages/about-us.html"
           ><img
             width="60"
@@ -218,12 +218,50 @@
       </ul>
       <!-- BREADCRUMB END -->
 
-      
-    
-        
+
+      <main>
+        <section class="title">
+            <div class="container">
+                <div class="wrapper">
+                    <h1>Корзина</h1>
+                    <span class="amout">0</span>
+                </div>
+            </div>
+               
+            </div>
+        </section>
+
+
+        <section class="added_products">
+            <div class="container">
+                <div class="wrapper_button">
+                    <label class="containerr">
+                        <input type="checkbox">
+                        <svg viewBox="0 0 64 64" height="2em" width="2em">
+                          <path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" pathLength="575.0541381835938" class="path"></path>
+                        </svg>
+                        <p>Выделить всё</p>
+                    </label>
+                    <a class="delete_button" href="#">Удалить выбранные</a>
+                </div>
+
+                <div class="wrapper_products">
+                    <div id="cartItem" class="bought_products">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+      </main>
+
+
+
+
+
+
 
     <!-- footer start -->
-       <footer class="footer foo">
+    <footer class="footer foo">
         <div class="container">
           <div class="footer__left">
             <a href="home.html"
@@ -279,12 +317,13 @@
         </div>
       </footer>
     <!-- footer end -->
+
+    <script src="../JavaScript/productCart.js"></script>
+    <script src="../JavaScript/shop-cart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.0/build/js/intlTelInput.js"></script>
     <script src="../JavaScript/dropdown.js"></script>
     <script src="../JavaScript/modal.js"></script>
     <script src="../JavaScript/modal2.js"></script>
     <script src="../JavaScript/chat-user.js"></script>
-    <script  src="../JavaScript/all-products.js"></script>
-
 </body>
 </html>

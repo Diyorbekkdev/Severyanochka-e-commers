@@ -1,4 +1,4 @@
-const products = [
+const product = [
     {
         "id": 1,
         "name": "Apple",
@@ -403,79 +403,14 @@ const stati = [
   }
 ]
 
-    
-
-
 // DISCOUNT SECTIOINS PRODUCTS
-const categories = [...new Set(products.map((item) => 
- {return item}))];
- let i = 0;
-document.getElementById('root').innerHTML = categories.map((item) =>
-{   
-    let {image, description, price, discount} = item;
-    if(item.discount > 0){
-        return(
-            ` <div class=" card">
-            <img
-              src="${image}"
-              alt="biscuit"
-            />
-            <label class="container__heart">
-              <input checked="checked" type="checkbox" />
-              <div class="checkmark">
-                <svg viewBox="0 0 256 256">
-                  <rect fill="none" height="256" width="256"></rect>
-                  <path
-                    d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z"
-                    stroke-width="20px"
-                    stroke="#ccc"
-                    fill="none"
-                  ></path>
-                </svg>
-              </div>
-            </label>
-            <span class="discount_percent">-${discount}%</span>
-            <div class="card_body">
-              <div class="price">
-                <p>${price} ₽</p>
-                <span>50,50 ₽</span>
-              </div>
-              <div class="price_info">
-                <p>С картой</p>
-                <p>Обычная</p>
-              </div>
-              <p class="main_info">${description}</p>
-              <div class="rating">
-                ${getRating(item.rating)}
-              </div>
-              <button onclick = 'addtocart("+(i++)+")' class="shop_cart">В корзину</button>
-            </div>
-          </div>`
-        )
-    }
-}).slice(-6).join('')
-
-
-
-
-
-// NEW PRODUCTS SECTIOIN
-function findLastFiveLowestRatedProducts(products) {
-   
-    products.sort((a, b) => b.rating - a.rating);
-  
-    const lastFiveProducts = products.slice(-5);
-
-    return lastFiveProducts;
-  }
-  const lastFiveLowestRatedProducts = findLastFiveLowestRatedProducts(products);
-
-  const newProducts = [...new Set(lastFiveLowestRatedProducts.map((item) => 
+const categories = [...new Set(product.map((item) => 
     {return item}))];
-   
-   document.getElementById('roots').innerHTML = lastFiveLowestRatedProducts.map((item) =>
+    // let i = 0;
+   document.getElementById('root').innerHTML = categories.map((item) =>
    {   
-       let {image, description, price} = item;
+       let {image, description, price, discount} = item;
+       if(item.discount > 0){
            return(
                ` <div class=" card">
                <img
@@ -496,7 +431,7 @@ function findLastFiveLowestRatedProducts(products) {
                    </svg>
                  </div>
                </label>
-               <span class="discount_percent percent">New</span>
+               <span class="discount_percent">-${discount}%</span>
                <div class="card_body">
                  <div class="price">
                    <p>${price} ₽</p>
@@ -514,202 +449,8 @@ function findLastFiveLowestRatedProducts(products) {
                </div>
              </div>`
            )
-    //    }
-   }).join('')
+       }
+   }).slice(-6).join('')
 
-  //  HIGHT RATED PRODUCTS SECTION
-   function findLastFiveHighestRatedProducts(products) {
-   
-    products.sort((a, b) => a.rating - b.rating);
   
-    const lastFiveProducts = products.slice(-5);
-
-    return lastFiveProducts;
-  }
-  const lastFiveHighestRatedProducts = findLastFiveHighestRatedProducts(products);
-
-  const hightRatedProducts = [...new Set(lastFiveHighestRatedProducts.map((item) => 
-    {return item}))];
    
-   document.getElementById('high-rated').innerHTML = lastFiveHighestRatedProducts.map((item) =>
-   {   
-       let {image, description, price} = item;
-           return(
-               ` <div class=" card">
-               <img
-                 src="${image}"
-                 alt="biscuit"
-               />
-               <label class="container__heart">
-                 <input checked="checked" type="checkbox" />
-                 <div class="checkmark">
-                   <svg viewBox="0 0 256 256">
-                     <rect fill="none" height="256" width="256"></rect>
-                     <path
-                       d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z"
-                       stroke-width="20px"
-                       stroke="#ccc"
-                       fill="none"
-                     ></path>
-                   </svg>
-                 </div>
-               </label>
-               <div class="card_body">
-                 <div class="price">
-                   <p>${price} ₽</p>
-                   <span>50,50 ₽</span>
-                 </div>
-                 <div class="price_info">
-                   <p>С картой</p>
-                   <p>Обычная</p>
-                 </div>
-                 <p class="main_info">${description}</p>
-                 <div class="rating">
-                   ${getRating(item.rating)}
-                 </div>
-                 <button  class="shop_cart" onclick = "addtocart(${description})" >В корзину</button>
-               </div>
-             </div>`
-           )
-    //    }
-   }).join('')
-
-function getRating(rating) {
-    let res = "";
-    let star_count = 0;
-    let full_star = parseInt(rating);
-    let rest_star = rating - full_star;
-    star_count = full_star;
-    res = Array(full_star).fill("<img  src='../assets/images/Home/full-star.svg'>").join("");
-    if (0.25 <= rest_star && rest_star <= 0.5) {
-      star_count++;
-      res += "<img src='../assets/images/Home/half-star.svg'>";
-    }
-    if (0.5 < rest_star) {
-      star_count++;
-      res += "<img src='../assets/images/Home/full-star.svg'>";
-    }
-    free_star = 5 - star_count;
-    res += Array(free_star).fill("<img src='../assets/images/Home/free-star.svg'>").join("");
-    return res;
-  }
-
-
-// app section
-const appSection = [...new Set(app.map((item) => 
-  {return item}))];
- 
- document.getElementById('app_container').innerHTML = appSection.map((item) =>
- {   
-     let {image, description, title,} = item;
-     if(item.id === 1){
-       return(
-           ` <div class="box">
-           <div class="box__info">
-             <h4>${title}</h4>
-             <p>${description}</p>
-           </div>
-           <div class="cover_img">
-             <img
-               class="app_img"
-               src="${image}"
-               alt="Северяночка"
-             />
-           </div>
-         </div>
-        `
-       )
-
-     }else if (item.id === 2){
-        return (
-          ` <div class="box second_box">
-          <div class="box__info">
-            <h4>${title}</h4>
-            <p>${description}</p>
-          </div>
-          <div class="cover_img">
-            <img
-              class="app_img"
-              src="${image}"
-              alt="Северяночка"
-            />
-          </div>
-        </div>`
-        )
-     }
-     
- }).join('')
-// app section
-const statiContents = [...new Set(stati.map((item) => 
-  {return item}))];
- 
- document.getElementById('stati-root').innerHTML = statiContents.map((item) =>
- {   
-     let {image, description, title, date} = item;
-     if(item.id === 1){
-       return(
-           ` <div class="card">
-           <img
-             src="${image}"
-             alt=""
-           />
-           <span class="date">${date}</span>
-           <h4>
-             ${title}
-           </h4>
-           <p>
-             ${description}
-           </p>
-           <a class="card_btn" href="#">Подробнее</a>
-         </div>
-        `
-       )
-
-     }else if (item.id === 2){
-        return (
-          ` <div class="card">
-          <img
-            src="${image}"
-            alt=""
-          />
-          <span class="date">${date}</span>
-          <h4>
-            ${title}
-          </h4>
-          <p>
-            ${description}
-          </p>
-          <a class="card_btn" href="#">Подробнее</a>
-        </div>`
-        )
-     }else{
-      return (
-        ` <div class="card">
-        <img
-          src="${image}"
-          alt=""
-        />
-        <span class="date">${date}</span>
-        <h4>
-          ${title}
-        </h4>
-        <p>
-          ${description}
-        </p>
-        <a class="card_btn" href="#">Подробнее</a>
-      </div>`
-      )
-     } 
- }).join('')
-
- 
- const cart = [];
- function addToCart(description) {
-  const selectedProduct = lastFiveHighestRatedProducts.find((product) => product.description === description);
-  
-  if (selectedProduct) {
-    cart.push(selectedProduct);
-    
-  }
-}
-

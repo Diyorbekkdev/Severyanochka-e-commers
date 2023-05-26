@@ -1282,76 +1282,214 @@ ul.breadcrumb li a:hover {
   gap: 5px;
 }
 
-.jobs h1 {
+.foo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.title .wrapper {
+  position: relative;
+  max-width: 326px;
+}
+.title .wrapper h1 {
   font-weight: 700;
   font-size: 64px;
   line-height: 150%;
   color: #414141;
 }
-@media only screen and (max-width: 500px) {
-  .jobs h1 {
-    font-size: 30px;
+@media only screen and (max-width: 400px) {
+  .title .wrapper h1 {
+    font-size: 50px;
   }
 }
-.jobs .wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.title .wrapper .amout {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgb(206, 41, 41);
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 25px;
+}
+
+.added_products {
+  margin-top: 60px;
+}
+.added_products .wrapper_button {
+  display: flex;
+  align-items: center;
   gap: 40px;
 }
-@media only screen and (max-width: 900px) {
-  .jobs .wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
+.added_products .wrapper_button label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
-@media only screen and (max-width: 600px) {
-  .jobs .wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 0 auto;
-  }
+.added_products .wrapper_button p {
+  color: #414141;
+  transition: 0.2s ease-out;
 }
-.jobs .wrapper .box {
-  padding: 32px;
+.added_products .wrapper_button p:hover {
+  color: red;
+}
+.added_products .wrapper_button .delete_button {
+  color: #414141;
+  transition: 0.2s ease-out;
+}
+.added_products .wrapper_button .delete_button:hover {
+  color: red;
+}
+.added_products .wrapper_button .containerr {
+  cursor: pointer;
+}
+.added_products .wrapper_button .containerr input {
+  display: none;
+}
+.added_products .wrapper_button .containerr svg {
+  overflow: visible;
+}
+.added_products .wrapper_button .path {
+  fill: none;
+  stroke: green;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
+  stroke-dasharray: 241 9999999;
+  stroke-dashoffset: 0;
+}
+.added_products .wrapper_button .containerr input:checked ~ svg .path {
+  stroke-dasharray: 70.5096664429 9999999;
+  stroke-dashoffset: -262.2723388672;
+}
+.added_products .wrapper_products {
+  margin-top: 25px;
+  display: flex;
+}
+.added_products .wrapper_products .bought_products .product {
+  padding: 15px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 876px;
   background: #fff;
-  max-width: 376px;
-  min-height: 550px;
-  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   transition: 0.3s ease-out;
 }
-@media only screen and (max-width: 600px) {
-  .jobs .wrapper .box {
-    margin: 0 auto;
-  }
-}
-.jobs .wrapper .box:hover {
+.added_products .wrapper_products .bought_products .product:hover {
   box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
 }
-.jobs .wrapper .box h2 {
-  margin-bottom: 16px;
+.added_products .wrapper_products .bought_products .product .product_img {
+  padding: 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80px;
+  background: #fff;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+.added_products .wrapper_products .bought_products .product .product_img img {
+  width: 100%;
+}
+.added_products .wrapper_products .bought_products .product .containerr {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+.added_products .wrapper_products .bought_products .product .containerr input {
+  display: none;
+}
+.added_products .wrapper_products .bought_products .product .containerr svg {
+  overflow: visible;
+}
+.added_products .wrapper_products .bought_products .product .path {
+  fill: none;
+  stroke: green;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
+  stroke-dasharray: 241 9999999;
+  stroke-dashoffset: 0;
+}
+.added_products .wrapper_products .bought_products .product .containerr input:checked ~ svg .path {
+  stroke-dasharray: 70.5096664429 9999999;
+  stroke-dashoffset: -262.2723388672;
+}
+.added_products .wrapper_products .bought_products .product .product_info {
+  margin-left: 105px;
+}
+.added_products .wrapper_products .bought_products .product .product_info .title {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.added_products .wrapper_products .bought_products .product .product_info .title h4 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #414141;
+}
+.added_products .wrapper_products .bought_products .product .product_info .title .price {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 12px;
   line-height: 150%;
-  color: #414141;
 }
-.jobs .wrapper .box h6 {
-  margin-top: 16px;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 150%;
-  color: #414141;
+.added_products .wrapper_products .bought_products .product .adding_card_left {
+  display: flex;
+  gap: 16px;
 }
-.jobs .wrapper .box p {
-  margin-top: 8px;
-  font-weight: 400;
+.added_products .wrapper_products .bought_products .product .adding_card_left .count_button {
+  padding: 8px;
+  display: flex;
+}
+.added_products .wrapper_products .bought_products .product .adding_card_left .count_button .subtraction {
+  position: relative;
+  justify-content: center;
+  outline: none;
+  border: none;
+  background: green;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px 0 0 4px;
+}
+.added_products .wrapper_products .bought_products .product .adding_card_left .count_button .subtraction img {
+  position: absolute;
+  top: 19px;
+}
+.added_products .wrapper_products .bought_products .product .adding_card_left .count_button span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  padding-left: 25px;
+  background: green;
+  color: #fff;
+}
+.added_products .wrapper_products .bought_products .product .adding_card_left .count_button .addition {
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  background: green;
+  padding: 9.6px;
+  cursor: pointer;
+  border-radius: 0px 4px 4px 0px;
+}
+.added_products .wrapper_products .bought_products .product .adding_card_left .main_price {
+  margin-left: 26px;
+}
+.added_products .wrapper_products .bought_products .product .adding_card_left .main_price .display_price {
+  font-weight: 700;
   font-size: 18px;
   line-height: 150%;
   color: #414141;
-}
-.jobs .wrapper .box span {
-  margin-top: 8px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }

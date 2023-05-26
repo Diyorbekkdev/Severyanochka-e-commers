@@ -4,6 +4,9 @@ ul.breadcrumb {
     margin-top: 80px;
     padding: 10px 16px;
     list-style: none;
+    @include media (550px){
+      margin-top: 125px;
+    }
   }
   ul.breadcrumb li {
     display: inline;

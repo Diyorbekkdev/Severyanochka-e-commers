@@ -1282,76 +1282,109 @@ ul.breadcrumb li a:hover {
   gap: 5px;
 }
 
-.jobs h1 {
+h2 {
   font-weight: 700;
   font-size: 64px;
   line-height: 150%;
   color: #414141;
 }
-@media only screen and (max-width: 500px) {
-  .jobs h1 {
-    font-size: 30px;
+@media only screen and (max-width: 400px) {
+  h2 {
+    font-size: 45px;
   }
 }
-.jobs .wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+
+#productSection {
+  margin-top: 60px;
+  margin-bottom: 80px;
 }
-@media only screen and (max-width: 900px) {
-  .jobs .wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media only screen and (max-width: 600px) {
-  .jobs .wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 0 auto;
-  }
-}
-.jobs .wrapper .box {
-  padding: 32px;
-  background: #fff;
-  max-width: 376px;
-  min-height: 550px;
-  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  transition: 0.3s ease-out;
-}
-@media only screen and (max-width: 600px) {
-  .jobs .wrapper .box {
-    margin: 0 auto;
-  }
-}
-.jobs .wrapper .box:hover {
-  box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
-}
-.jobs .wrapper .box h2 {
-  margin-bottom: 16px;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 150%;
-  color: #414141;
-}
-.jobs .wrapper .box h6 {
-  margin-top: 16px;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 150%;
-  color: #414141;
-}
-.jobs .wrapper .box p {
-  margin-top: 8px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 150%;
-  color: #414141;
-}
-.jobs .wrapper .box span {
-  margin-top: 8px;
+#productSection .box {
+  margin-top: 20px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
+  gap: 15px;
+}
+@media only screen and (max-width: 678px) {
+  #productSection .box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 400px) {
+  #productSection .box {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+#productSection .box div {
+  position: relative;
+  overflow: hidden;
+  width: 25%;
+  box-shadow: 1px 2px 4px rgba(112, 192, 91, 0.2);
+  border-radius: 4px;
+  transition: background 0.3s ease-out;
+  cursor: pointer;
+}
+@media only screen and (max-width: 678px) {
+  #productSection .box div {
+    width: 100%;
+  }
+}
+#productSection .box div:hover {
+  transition: 0.3s ease-out;
+}
+#productSection .box div:hover .gradient {
+  background: linear-gradient(180deg, rgba(255, 102, 51, 0) 0%, #FF6633 100%);
+}
+#productSection .box div:hover img {
+  transform: scale(1.3);
+}
+#productSection .box div h3 {
+  position: absolute;
+  top: 125px;
+  left: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  color: #fff;
+  z-index: 1;
+}
+#productSection .box div img {
+  width: 100%;
+  transition: 0.3s ease-out;
+}
+#productSection .box div .gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(112, 192, 91, 0) 0%, #70c05b 82.81%);
+  transition: background 0.3s ease-out;
+}
+#productSection .box:first-child div {
+  flex-basis: 50%;
+}
+#productSection .box:first-child .box > div {
+  display: none;
+}
+#productSection .box:last-child div {
+  flex-basis: 48%;
+}
+#productSection .box:last-child div h3 {
+  top: 210px;
+}
+@media only screen and (max-width: 400px) {
+  #productSection .box:last-child div h3 {
+    top: 125px;
+  }
+}
+#productSection .box:last-child div img {
+  height: 250px;
+}
+@media only screen and (max-width: 400px) {
+  #productSection .box:last-child div img {
+    height: 100%;
+  }
 }

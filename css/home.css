@@ -1169,6 +1169,11 @@ ul.breadcrumb {
   padding: 10px 16px;
   list-style: none;
 }
+@media only screen and (max-width: 550px) {
+  ul.breadcrumb {
+    margin-top: 125px;
+  }
+}
 
 ul.breadcrumb li {
   display: inline;
@@ -1345,8 +1350,7 @@ ul.breadcrumb li a:hover {
 }
 .discount__wrapper {
   margin-top: 40px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex !important;
 }
 .discount__wrapper .card {
   margin: 0 auto;
@@ -1354,7 +1358,7 @@ ul.breadcrumb li a:hover {
   overflow: hidden;
   position: relative;
   max-width: 272px;
-  max-height: 349px;
+  max-height: 380px;
   background-color: #fff;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
@@ -1440,6 +1444,9 @@ ul.breadcrumb li a:hover {
   background: #ff6633;
   border-radius: 4px;
 }
+.discount__wrapper .card .percent {
+  background: #70c05b;
+}
 .discount__wrapper .card .price {
   margin-top: 8px;
 }
@@ -1469,7 +1476,11 @@ ul.breadcrumb li a:hover {
   color: #414141;
 }
 .discount__wrapper .card .rating {
+  display: flex;
   margin-top: 8px;
+}
+.discount__wrapper .card .rating img {
+  width: 20px;
 }
 .discount__wrapper .card .rating .fa {
   color: #ff6633;

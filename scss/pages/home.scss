@@ -66,8 +66,9 @@
 
   &__wrapper {
     margin-top: 40px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex !important;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr 1fr;
     .card {
       margin: 0 auto;
       padding: 8px;
@@ -75,7 +76,7 @@
       position: relative;
       @extend %df-col-main;
       max-width: 272px;
-      max-height: 349px;
+      max-height: 380px;
       background-color: #fff;
       box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
       border-radius: 4px;
@@ -163,6 +164,9 @@
         background: #ff6633;
         border-radius: 4px;
       }
+      .percent{
+        background: #70c05b;
+      }
 
       .price {
         margin-top: 8px;
@@ -197,7 +201,11 @@
         color: #414141;
       }
       .rating {
+        display: flex;
         margin-top: 8px;
+        img{
+          width: 20px;
+        }
         .fa {
           color: #ff6633;
         }

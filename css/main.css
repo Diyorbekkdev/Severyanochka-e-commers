@@ -1162,6 +1162,11 @@ ul.breadcrumb {
   padding: 10px 16px;
   list-style: none;
 }
+@media only screen and (max-width: 550px) {
+  ul.breadcrumb {
+    margin-top: 125px;
+  }
+}
 
 ul.breadcrumb li {
   display: inline;

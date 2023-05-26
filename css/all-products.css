@@ -1282,76 +1282,9 @@ ul.breadcrumb li a:hover {
   gap: 5px;
 }
 
-.jobs h1 {
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 150%;
-  color: #414141;
-}
-@media only screen and (max-width: 500px) {
-  .jobs h1 {
-    font-size: 30px;
-  }
-}
-.jobs .wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-}
-@media only screen and (max-width: 900px) {
-  .jobs .wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media only screen and (max-width: 600px) {
-  .jobs .wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 0 auto;
-  }
-}
-.jobs .wrapper .box {
-  padding: 32px;
-  background: #fff;
-  max-width: 376px;
-  min-height: 550px;
-  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  transition: 0.3s ease-out;
-}
-@media only screen and (max-width: 600px) {
-  .jobs .wrapper .box {
-    margin: 0 auto;
-  }
-}
-.jobs .wrapper .box:hover {
-  box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
-}
-.jobs .wrapper .box h2 {
-  margin-bottom: 16px;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 150%;
-  color: #414141;
-}
-.jobs .wrapper .box h6 {
-  margin-top: 16px;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 150%;
-  color: #414141;
-}
-.jobs .wrapper .box p {
-  margin-top: 8px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 150%;
-  color: #414141;
-}
-.jobs .wrapper .box span {
-  margin-top: 8px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.foo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
