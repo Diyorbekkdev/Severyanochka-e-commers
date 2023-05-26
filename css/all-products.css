@@ -1514,6 +1514,21 @@ h2 {
   display: inline-block;
   margin-right: 55px;
 }
+@media only screen and (max-width: 900px) {
+  .simple-pagination li {
+    margin-right: 40px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .simple-pagination li {
+    margin-right: 30px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .simple-pagination li {
+    margin-right: 5px;
+  }
+}
 
 .simple-pagination li a,
 .simple-pagination li span {

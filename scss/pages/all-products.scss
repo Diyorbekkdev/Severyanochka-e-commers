@@ -205,6 +205,15 @@ h2 {
 .simple-pagination li {
   display: inline-block;
   margin-right: 55px;
+  @include media(900px){
+    margin-right: 40px;
+  }
+  @include media(768px){
+     margin-right: 30px;
+  }
+  @include media(400px){
+    margin-right: 5px;
+  }
 }
 
 .simple-pagination li a,
