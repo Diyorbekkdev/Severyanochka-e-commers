@@ -1,7 +1,7 @@
 // Header
 @use "../abstracts/mixins";
 @use "../abstracts/colors";
-@use '../components/modals';
+@use "../components/modals";
 .header {
   position: fixed;
   top: 0;
@@ -10,7 +10,7 @@
   z-index: 15;
   background: #fff;
   &__nav {
-      height: 72px;
+    height: 72px;
     @extend %df-main;
     @include media(550px) {
       margin-top: 20px;
@@ -34,9 +34,48 @@
     }
 
     &_search {
-      @include media(768px){
+      @include media(768px) {
         margin-left: 70px;
-         
+      }
+      .direction {
+        padding: 10px;
+        background: #3f9829;
+      }
+      .wrapperr{
+        position: relative;
+        transition: .3s ease-out;
+        &:hover{
+          transition: .3s ease-out;
+          .dropdown-content{
+            transition: .3s ease-out;
+            display: block;
+            
+          }
+        }
+        .dropdown-content {
+          text-align: center;
+          display: none;
+          position: absolute;
+          padding: 10px;
+          top: 40px;
+          left: -10px;
+          background-color: #4bf077be;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          z-index: 111;
+          border-radius: 10px;
+          transition: .3s ease-out;
+          &:hover{
+            background: #54b23d;
+            transform: translateX(20px);
+          }
+          a{
+            text-align: center;
+            color: #fff;
+            transition: .3s ease-out;
+          }
+          
+        }
       }
       .catalog {
         @include media(550px) {
@@ -56,6 +95,7 @@
         color: #fff;
         cursor: pointer;
         transition: 0.3s ease-out;
+       
         .text_katalog {
           padding-right: 10px;
           @include media(768px) {
@@ -64,6 +104,7 @@
         }
         &:hover {
           background: #3f9829;
+          
         }
       }
       max-width: 516px;
@@ -130,14 +171,14 @@
           font-size: 12px;
           line-height: 150%;
           color: #000;
-          img{
-            transition: .3s ease-out;
+          img {
+            transition: 0.3s ease-out;
           }
-          &:hover{
-            img{
+          &:hover {
+            img {
               transform: translateY(-10px);
-              filter: grayscale(100%) sepia(100%) hue-rotate(0deg) saturate(10000%)
-              brightness(100%) contrast(100%);
+              filter: grayscale(100%) sepia(100%) hue-rotate(0deg)
+                saturate(10000%) brightness(100%) contrast(100%);
             }
           }
         }
@@ -175,14 +216,14 @@
 .dropdown_box {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  @include media(768px){
+  @include media(768px) {
     grid-template-columns: 1fr 1fr;
     .grid-item:nth-child(2) {
-        margin-top: 15px;
-        grid-gap: 40px !important;
-        grid-row: 2; /* Move the first item to the first row */
-        grid-column: 3 / span ; /* Move the first item to columns 2 and 3 */
-      }
+      margin-top: 15px;
+      grid-gap: 40px !important;
+      grid-row: 2; /* Move the first item to the first row */
+      grid-column: 3 / span; /* Move the first item to columns 2 and 3 */
+    }
   }
   ul {
     // border: 1px solid red;
@@ -194,30 +235,30 @@
         font-weight: 700;
         font-size: 16px;
         line-height: 150%;
-        color:  #414141;
-        @include media(550px){
-            font-size: 13px;
+        color: #414141;
+        @include media(550px) {
+          font-size: 13px;
         }
-        &:hover{
-            color: rgb(38, 151, 52);
+        &:hover {
+          color: rgb(38, 151, 52);
         }
-        &:focus{
-            color: red;
+        &:focus {
+          color: red;
         }
-        &:active{
-            color: red;
+        &:active {
+          color: red;
         }
-    }
-    .active{
+      }
+      .active {
         color: red;
+      }
     }
-}
   }
-  .second{
+  .second {
     padding-bottom: 40px;
     @extend %df-col-main;
     align-items: flex-start;
-     gap: 5px !important;
+    gap: 5px !important;
   }
 }
 
@@ -245,11 +286,11 @@
         font-size: 8px;
         line-height: 150%;
         color: #000;
-        img{
-          transition: .3s ease-out;
+        img {
+          transition: 0.3s ease-out;
         }
-        &:hover{
-          img{
+        &:hover {
+          img {
             transform: translateY(-8px);
           }
         }
@@ -280,5 +321,3 @@
     }
   }
 }
-
-  

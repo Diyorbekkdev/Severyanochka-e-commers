@@ -1,8 +1,223 @@
-@import '../main.scss';
+@import "../main.scss";
 
-.foo {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
+// .foo {
+//     position: absolute;
+//     bottom: 0;
+//     right: 0;
+//     left: 0;
+// }
+
+#allproducts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 50px;
+  .card {
+    margin: 0 auto;
+    padding: 8px;
+    overflow: hidden;
+    position: relative;
+    @extend %df-col-main;
+    max-width: 272px;
+    max-height: 380px;
+    background-color: #fff;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    &:hover {
+      box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
+      .container__heart {
+        right: 10px;
+      }
+    }
+    img {
+      width: 100%;
+    }
+
+    .container__heart {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: -40px;
+      cursor: pointer;
+      font-size: 20px;
+      user-select: none;
+      transition: 100ms;
+      background: #f3f2f1d8;
+      transition: 0.3s ease-out;
+      border-radius: 4px;
+      padding: 5px;
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+      .checkmark {
+        top: 0;
+        left: 0;
+        height: 1.5em;
+        width: 1.5em;
+        transition: 100ms;
+        animation: dislike_effect 400ms ease;
+      }
+      input:checked ~ .checkmark path {
+        fill: #ff5353;
+        stroke-width: 0;
+      }
+      input:checked ~ .checkmark {
+        animation: like_effect 400ms ease;
+      }
+    }
+    @keyframes like_effect {
+      0% {
+        transform: scale(0);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+    @keyframes dislike_effect {
+      0% {
+        transform: scale(0);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+    .discount_percent {
+      padding: 4px 8px;
+      position: absolute;
+      top: 35%;
+      left: 10px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #ffffff;
+      background: #ff6633;
+      border-radius: 4px;
+    }
+    .percent {
+      background: #70c05b;
+    }
+
+    .price {
+      margin-top: 8px;
+      @extend %df-main;
+      p {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 150%;
+        color: #414141;
+      }
+      span {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #606060;
+      }
+    }
+    .price_info {
+      @extend %df-main;
+      p {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        color: #bfbfbf;
+      }
+    }
+    .main_info {
+      margin-top: 8px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #414141;
+    }
+    .rating {
+      display: flex;
+      margin-top: 8px;
+      img {
+        width: 20px;
+      }
+      .fa {
+        color: #ff6633;
+      }
+    }
+    .shop_cart {
+      margin-top: 8px;
+      padding: 8px;
+      outline: none;
+      border: none;
+      background: transparent;
+      width: 100%;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #70c05b;
+      border: 1px solid #70c05b;
+      border-radius: 4px;
+      transition: 0.3s ease-out;
+      &:hover {
+        background-color: #ff6633;
+        color: #fff;
+        border: 1px solid #ff6633;
+      }
+    }
+  }
+}
+
+h2 {
+  margin-top: 50px;
+  margin-bottom: 60px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 150%;
+  color: #414141;
+}
+
+.simple-pagination ul {
+  margin-top: 150px;
+  // margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.simple-pagination li {
+  display: inline-block;
+  margin-right: 55px;
+}
+
+.simple-pagination li a,
+.simple-pagination li span {
+  color: #666;
+  padding: 5px 10px;
+  text-decoration: none;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  // background-color: #FFF;
+  box-shadow: 0px 0px 10px 0px #eee;
+}
+
+.simple-pagination .current {
+  color: #fff;
+  background-color: #ff7182;
+  border-color: #ff7182;
+  border-radius: 50%;
+  transition: .3s ease-out;
+}
+
+.simple-pagination .prev.current,
+.simple-pagination .next.current {
+  background: #e04e60;
+  transition: .3s ease-out;
 }

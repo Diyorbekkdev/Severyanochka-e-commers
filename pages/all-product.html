@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.0/build/css/intlTelInput.css"
@@ -57,13 +58,18 @@
               ><img src="../assets/images/Home/logo-tablet.svg" alt="logo"
             /></a>
             <div class="header__nav_search">
-              <button onclick="toggleDropdown()" class="catalog">
-                <img
-                  id="menuIcon"
-                  src="../assets/images/Home/menu-min.svg"
-                  alt="menu"
-                /><span class="text_katalog">Каталог</span>
-              </button>
+              <div class="wrapperr">
+                <button onclick="toggleDropdown()" class="catalog">
+                  <img
+                    id="menuIcon"
+                    src="../assets/images/Home/menu-min.svg"
+                    alt="menu"
+                  /><span class="text_katalog">Каталог</span>
+                </button>
+                <div class="dropdown-content">
+                  <a href="../pages/category.html">Каталог > </a>
+                </div>
+              </div>
               <div class="search">
                 <input type="search" placeholder="Найти товар" />
                 <img
@@ -214,12 +220,22 @@
       <!-- BREADCRUMB START -->
       <ul class="container breadcrumb">
         <li><a href="../pages/home.html">Главная</a></li>
-        <li><a class="active" href="#">Контакты</a></li>
+        <li><a class="active" href="#">Все продукты</a></li>
       </ul>
       <!-- BREADCRUMB END -->
 
+      <div class="container">
+        <h2>Все продукты</h2>
+      </div>
+
+      <div class="container">
+        <div id="allproducts" class="card-content">
+
+        </div>
+      </div>
+      <div id="pagination-container"></div>
+      <!-- <div class="container"> -->
       
-    
         
 
     <!-- footer start -->
@@ -279,12 +295,34 @@
         </div>
       </footer>
     <!-- footer end -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.0/build/js/intlTelInput.js"></script>
     <script src="../JavaScript/dropdown.js"></script>
     <script src="../JavaScript/modal.js"></script>
     <script src="../JavaScript/modal2.js"></script>
     <script src="../JavaScript/chat-user.js"></script>
+    <script src="../JavaScript/productCart.js"></script>
     <script  src="../JavaScript/all-products.js"></script>
+    <script>
+    var items = $("#allproducts .card");
+    var numItems = items.length;
+    var perPage = 8;
+
+    items.slice(perPage).hide();
+
+    $('#pagination-container').pagination({
+        items: numItems,
+        itemsOnPage: perPage,
+        prevText: "&laquo;",
+        nextText: "&raquo;",
+        onPageClick: function (pageNumber) {
+            var showFrom = perPage * (pageNumber - 1);
+            var showTo = showFrom + perPage;
+            items.hide().slice(showFrom, showTo).show();
+        }
+    });
+    </script>
 
 </body>
 </html>

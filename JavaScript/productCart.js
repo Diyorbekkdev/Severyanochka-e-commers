@@ -57,7 +57,7 @@ const products = [
         "price": 91,
         "rating": 3.5,
         "discount": 50,
-        "image": "../assets/images/Home/home-card-images/img-1.png"
+        "image": "../assets/images/Home/home-card-images/img-2.png"
     },
     {
         "id": 7,
@@ -67,7 +67,7 @@ const products = [
         "price": 68,
         "rating": 3.5,
         "discount": 20,
-        "image": "../assets/images/Home/home-card-images/img-1.png"
+        "image": "../assets/images/Home/home-card-images/img-3.png"
     },
     {
         "id": 8,
@@ -77,7 +77,7 @@ const products = [
         "price": 61,
         "rating": 4.5,
         "discount": 20,
-        "image": "../assets/images/Home/home-card-images/img-1.png"
+        "image": "../assets/images/Home/home-card-images/img-4.png"
     },
     {
         "id": 9,
@@ -97,7 +97,7 @@ const products = [
         "price": 79,
         "rating": 4.5,
         "discount": 0,
-        "image": "../assets/images/Home/home-card-images/img-1.png"
+        "image": "../assets/images/Home/home-card-images/img-2.png"
     },
     {
         "id": 11,
@@ -107,7 +107,7 @@ const products = [
         "price": 89,
         "rating": 3.5,
         "discount": 50,
-        "image": "../assets/images/Home/home-card-images/img-1.png"
+        "image": "../assets/images/Home/home-card-images/img-3.png"
     },
     {
         "id": 12,
@@ -117,7 +117,7 @@ const products = [
         "price": 61,
         "rating": 4,
         "discount": 20,
-        "image": "../assets/images/Home/home-card-images/img-1.png"
+        "image": "../assets/images/Home/home-card-images/img-4.png"
     },
     {
         "id": 13,
@@ -147,7 +147,7 @@ const products = [
         "price": 68,
         "rating": 4.5,
         "discount": 0,
-        "image": "../assets/images/Home/home-card-images/img-1.png"
+        "image": "../assets/images/Home/home-card-images/img-3.png"
     },
     {
         "id": 16,
@@ -157,7 +157,7 @@ const products = [
         "price": 74,
         "rating": 3.5,
         "discount": 0,
-        "image": "../assets/images/Home/home-card-images/img-1.png"
+        "image": "../assets/images/Home/home-card-images/img-4.png"
     },
     {
         "id": 17,
@@ -177,7 +177,7 @@ const products = [
         "price": 87,
         "rating": 4,
         "discount": 0,
-        "image": "../assets/images/Home/home-card-images/img-1.png"
+        "image": "../assets/images/Home/home-card-images/img-3.png"
     },
     {
         "id": 19,
@@ -187,7 +187,7 @@ const products = [
         "price": 83,
         "rating": 4.5,
         "discount": 0,
-        "image": "../assets/images/Home/home-card-images/img-1.png"
+        "image": "../assets/images/Home/home-card-images/img-4.png"
     },
     {
         "id": 20,
@@ -197,7 +197,7 @@ const products = [
         "price": 76,
         "rating": 5,
         "discount": 0,
-        "image": "../assets/images/Home/home-card-images/img-1.png"
+        "image": "../assets/images/Home/home-card-images/img-3.png"
     },
     {
         "id": 21,
@@ -207,7 +207,7 @@ const products = [
         "price": 77,
         "rating": 5,
         "discount": 0,
-        "image": "../assets/images/Home/home-card-images/img-1.png"
+        "image": "../assets/images/Home/home-card-images/img-2.png"
     },
     {
         "id": 22,
@@ -217,7 +217,7 @@ const products = [
         "price": 80,
         "rating": 5,
         "discount": 20,
-        "image": "../assets/images/Home/home-card-images/img-1.png"
+        "image": "../assets/images/Home/home-card-images/img-4.png"
     },
     {
         "id": 23,
@@ -227,7 +227,7 @@ const products = [
         "price": 93,
         "rating": 3.5,
         "discount": 20,
-        "image": "../assets/images/Home/home-card-images/img-1.png"
+        "image": "../assets/images/Home/home-card-images/img-2.png"
     },
     {
         "id": 24,
@@ -237,7 +237,7 @@ const products = [
         "price": 94,
         "rating": 4.5,
         "discount": 0,
-        "image": "../assets/images/Home/home-card-images/img-1.png"
+        "image": "../assets/images/Home/home-card-images/img-3.png"
     },
     {
         "id": 25,
@@ -247,7 +247,7 @@ const products = [
         "price": 71,
         "rating": 3.5,
         "discount": 20,
-        "image": "../assets/images/Home/home-card-images/img-1.png"
+        "image": "../assets/images/Home/home-card-images/img-4.png"
     },
     {
         "id": 26,
@@ -267,7 +267,7 @@ const products = [
         "price": 97,
         "rating": 4.5,
         "discount": 20,
-        "image": "../assets/images/Home/home-card-images/img-1.png"
+        "image": "../assets/images/Home/home-card-images/img-2.png"
     },
     {
         "id": 28,
@@ -277,7 +277,7 @@ const products = [
         "price": 81,
         "rating": 4,
         "discount": 20,
-        "image": "../assets/images/Home/home-card-images/img-1.png"
+        "image": "../assets/images/Home/home-card-images/img-3.png"
     },
     {
         "id": 29,
@@ -287,7 +287,7 @@ const products = [
         "price": 96,
         "rating": 3,
         "discount": 50,
-        "image": "../assets/images/Home/home-card-images/img-1.png"
+        "image": "../assets/images/Home/home-card-images/img-4.png"
     },
     {
         "id": 30,
@@ -297,7 +297,7 @@ const products = [
         "price": 95,
         "rating": 4,
         "discount": 0,
-        "image": "../assets/images/Home/home-card-images/img-1.png"
+        "image": "../assets/images/Home/home-card-images/img-2.png"
     },
     {
         "id": 31,
@@ -307,7 +307,7 @@ const products = [
         "price": 100,
         "rating": 5,
         "discount": 50,
-        "image": "../assets/images/Home/home-card-images/img-1.png"
+        "image": "../assets/images/Home/home-card-images/img-3.png"
     },
     {
         "id": 32,
@@ -317,7 +317,7 @@ const products = [
         "price": 63,
         "rating": 4.5,
         "discount": 20,
-        "image": "../assets/images/Home/home-card-images/img-2.png"
+        "image": "../assets/images/Home/home-card-images/img-4.png"
     },
     {
         "id": 33,
@@ -327,7 +327,7 @@ const products = [
         "price": 82,
         "rating": 4.5,
         "discount": 20,
-        "image": "../assets/images/Home/home-card-images/img-1.png"
+        "image": "../assets/images/Home/home-card-images/img-3.png"
     },
     {
         "id": 34,
@@ -337,7 +337,7 @@ const products = [
         "price": 94,
         "rating": 4,
         "discount": 20,
-        "image": "../assets/images/Home/home-card-images/img-1.png"
+        "image": "../assets/images/Home/home-card-images/img-2.png"
     },
     {
         "id": 35,
@@ -347,7 +347,7 @@ const products = [
         "price": 70,
         "rating": 1,
         "discount": 0,
-        "image": "../assets/images/Home/home-card-images/img-1.png"
+        "image": "../assets/images/Home/home-card-images/img-3.png"
     },
     {
         "id": 36,
@@ -448,7 +448,7 @@ document.getElementById('root').innerHTML = categories.map((item) =>
               <div class="rating">
                 ${getRating(item.rating)}
               </div>
-              <button onclick = 'addtocart("+(i++)+")' class="shop_cart">В корзину</button>
+              <button  class="shop_cart confetti-button">В корзину</button>
             </div>
           </div>`
         )
@@ -510,7 +510,7 @@ function findLastFiveLowestRatedProducts(products) {
                  <div class="rating">
                    ${getRating(item.rating)}
                  </div>
-                 <button class="shop_cart">В корзину</button>
+                 <button class="shop_cart confetti-button">В корзину</button>
                </div>
              </div>`
            )
@@ -703,13 +703,3 @@ const statiContents = [...new Set(stati.map((item) =>
  }).join('')
 
  
- const cart = [];
- function addToCart(description) {
-  const selectedProduct = lastFiveHighestRatedProducts.find((product) => product.description === description);
-  
-  if (selectedProduct) {
-    cart.push(selectedProduct);
-    
-  }
-}
-
