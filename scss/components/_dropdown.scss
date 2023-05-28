@@ -16,3 +16,24 @@
   top: 72px; /* Show the dropdown below the button */
 }
 
+
+
+body.dark{
+  .grid-item{
+    .active{
+      color: red !important;
+    }
+  }
+  #dropdown-content{
+    background: url('../../assets/images/dark-mode/nav-bg.png');
+    border-radius: 0px 0px 25px 25px;
+    .dropdown_box{
+      a{
+        color: #fff;
+        &:hover{
+          color: #17d369;
+        }
+      }
+    }
+  }
+}

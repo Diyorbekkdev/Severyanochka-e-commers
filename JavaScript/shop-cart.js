@@ -1,10 +1,9 @@
-var cart = [1, 4];
+var cart = [];
 
 function addtocart(a){
   cart.push({...categories[a]})
   displayCart()
 }
-
 
  function displayCart (){
   let j = 0;

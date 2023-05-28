@@ -49,7 +49,11 @@
     </div>
     <!-- CHAT USER  -->
 
-
+    <!-- DarkMode checkbox -->
+    <div class="container">
+      <div onclick="darkMode()" class="check_box"><label><input value="on" name="dummy" type="checkbox" class="bubble"></label></div>
+    </div>
+    <!-- DarkMode checkbox -->
 
   
     <header class="header">
@@ -63,19 +67,16 @@
           /></a>
           <div class="header__nav_search">
             <div class="wrapperr">
-              <button onclick="toggleDropdown()" class="catalog confetti-button">
-                <img
+              <button  class="catalog confetti-button">
+                <img onclick="toggleDropdown()"
                   id="menuIcon"
                   src="../assets/images/Home/menu-min.svg"
                   alt="menu"
-                /><span class="text_katalog">Каталог</span>
+                /><a href="../pages/category.html" class="text_katalog">Каталог</a>
               </button>
-              <div class="dropdown-content">
-                <a href="../pages/category.html">Каталог > </a>
-              </div>
             </div>
             <div class="search">
-              <input type="search" placeholder="Найти товар" />
+              <input class="search_input" type="search" placeholder="Найти товар" />
               <img
                 class="search_icon"
                 src="../assets/images/Home/search.svg"
@@ -86,7 +87,7 @@
           <ul>
             <li>
               <a href="#"
-                ><img
+                ><img class="invert"
                   src="../assets/images/Home/like-min.svg"
                   alt="like"
                 />Избранное</a
@@ -113,7 +114,7 @@
           <a href="#" id="user-button" class="user">
             <img src="../assets/images/Home/aleksiy.png" alt="user" />
             <p class="user_info">Алексей</p>
-            <img src="../assets/images/Home/dropdown.svg" alt="dropdown" />
+            <img class="user_dropdown" src="../assets/images/Home/dropdown.svg" alt="dropdown" />
           </a>
         </nav>
       </div>
@@ -510,6 +511,6 @@ var interval = setInterval(function() {
     <script src="../JavaScript/productCart.js"></script>
     <script src="../JavaScript/product-2.js"></script>
     <script src="../JavaScript/carousel.js"></script>
-  
+    <script src="../JavaScript/dark-mode.js"></script>
   </body>
 </html>
