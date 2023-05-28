@@ -1040,6 +1040,57 @@ body.dark #dropdown-content .dropdown_box a:hover {
 .header__nav_search .search:focus .search_icon {
   display: none;
 }
+.header__nav_search .search .search_result {
+  position: absolute;
+  padding: 4px;
+  width: 100%;
+  height: 400px;
+  top: 45px;
+  overflow-y: scroll;
+  border-radius: 8px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.header__nav_search .search .search_result::-webkit-scrollbar {
+  display: none;
+}
+.header__nav_search .search .search_result .card {
+  background: rgba(255, 255, 255, 0.29);
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.7px);
+  -webkit-backdrop-filter: blur(10.7px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+.header__nav_search .search .search_result .card .img {
+  width: 25%;
+  min-height: 45px;
+  border-radius: 4px;
+}
+.header__nav_search .search .search_result .card .content {
+  flex-grow: 1;
+}
+.header__nav_search .search .search_result .card .content .price_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__nav_search .search .search_result .card .content .price_content .price {
+  color: #000;
+  font-weight: bold;
+}
+.header__nav_search .search .search_result .card .content .price_content h1 {
+  font-size: 15px;
+  color: #f08b1f;
+}
+.header__nav_search .search .search_result .card .content .description_search {
+  color: #414141;
+}
 .header__nav ul {
   gap: 24px;
 }
