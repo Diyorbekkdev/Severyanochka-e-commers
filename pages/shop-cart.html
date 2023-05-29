@@ -67,12 +67,13 @@
                 </button>
               </div>
               <div class="search">
-                <input type="search" placeholder="Найти товар" />
+                <input id="searchInput" class="search_input" type="text" placeholder="Найти товар" />
                 <img
                   class="search_icon"
                   src="../assets/images/Home/search.svg"
                   alt="search icon"
                 />
+                <div class="search_result"></div>
               </div>
             </div>
             <ul>
@@ -321,6 +322,7 @@
     <!-- footer end -->
 
     <script src="../JavaScript/productCart.js"></script>
+    <script src="../JavaScript/category_search.js"></script>
     <script src="../JavaScript/shop-cart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.0/build/js/intlTelInput.js"></script>
     <script src="../JavaScript/dropdown.js"></script>

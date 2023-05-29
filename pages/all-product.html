@@ -1,296 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.0/build/css/intlTelInput.css"
-  />
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.0/build/css/intlTelInput.css"
+    />
     <title>Все продукты</title>
-    <link rel="stylesheet" href="../css/all-products.min.css">
-</head>
-<body>
-     <!-- CHAT USER  -->
-     <div id="myButton" class="chat">
-        <a class="telegram" href="../pages/about-us.html"
-          ><img
-            width="60"
-            height="60"
-            src="../assets/images/Home/chat-user/whatssapp.svg"
-            alt=""
-        /></a>
-        <a class="whatsapp" href="#"
-          ><img
-            width="60"
-            height="60"
-            src="../assets/images/Home/chat-user/telegram.svg"
-            alt="Chat user"
-        /></a>
-        <img
-          class="message"
+    <link rel="stylesheet" href="../css/all-products.min.css" />
+  </head>
+  <body>
+    <!-- CHAT USER  -->
+    <div id="myButton" class="chat">
+      <a class="telegram" href="../pages/about-us.html"
+        ><img
           width="60"
           height="60"
-          src="../assets/images/contact/logo.svg"
+          src="../assets/images/Home/chat-user/whatssapp.svg"
           alt=""
-        />
-        <img
-          class="messeage_close"
-          width="55"
-          height="55"
-          src="../assets/images/Home/chat-user/close.png"
-          alt=""
-        />
-        <p class="write">Hапишите нам</p>
-        <p class="join">Подписаться</p>
+      /></a>
+      <a class="whatsapp" href="#"
+        ><img
+          width="60"
+          height="60"
+          src="../assets/images/Home/chat-user/telegram.svg"
+          alt="Chat user"
+      /></a>
+      <img
+        class="message"
+        width="60"
+        height="60"
+        src="../assets/images/contact/logo.svg"
+        alt=""
+      />
+      <img
+        class="messeage_close"
+        width="55"
+        height="55"
+        src="../assets/images/Home/chat-user/close.png"
+        alt=""
+      />
+      <p class="write">Hапишите нам</p>
+      <p class="join">Подписаться</p>
+    </div>
+    <!-- CHAT USER  -->
+
+    <!-- DarkMode checkbox -->
+    <div class="container">
+      <div onclick="darkMode()" class="check_box">
+        <label
+          ><input value="on" name="dummy" type="checkbox" class="bubble"
+        /></label>
       </div>
-      <!-- CHAT USER  -->
-  
-      <header class="header">
-        <div class="container">
-          <nav class="header__nav">
-            <a id="logo" class="logo" href="../pages/home.html"
-              ><img src="../assets/images/Home/logo-min.svg" alt="Logo"
-            /></a>
-            <a class="logo_tablet" href="../pages/home.html"
-              ><img src="../assets/images/Home/logo-tablet.svg" alt="logo"
-            /></a>
-            <div class="header__nav_search">
-              <div class="wrapperr">
-                <button  class="catalog confetti-button">
-                  <img onclick="toggleDropdown()"
-                    id="menuIcon"
-                    src="../assets/images/Home/menu-min.svg"
-                    alt="menu"
-                  /><a href="../pages/category.html" class="text_katalog">Каталог</a>
-                </button>
-              </div>
-              <div class="search">
-                <input type="search" placeholder="Найти товар" />
+    </div>
+    <!-- DarkMode checkbox -->
+
+    <header class="header dark-header">
+      <div class="container">
+        <nav class="header__nav">
+          <a id="logo" class="logo" href="../pages/home.html"
+            ><img src="../assets/images/Home/logo-min.svg" alt="Logo"
+          /></a>
+          <a class="logo_tablet" href="../pages/home.html"
+            ><img src="../assets/images/Home/logo-tablet.svg" alt="logo"
+          /></a>
+          <div class="header__nav_search">
+            <div class="wrapperr">
+              <button class="catalog confetti-button">
                 <img
-                  class="search_icon"
-                  src="../assets/images/Home/search.svg"
-                  alt="search icon"
-                />
-              </div>
+                  onclick="toggleDropdown()"
+                  id="menuIcon"
+                  src="../assets/images/Home/menu-min.svg"
+                  alt="menu"
+                /><a href="../pages/category.html" class="text_katalog"
+                  >Каталог</a
+                >
+              </button>
             </div>
-            <ul>
-              <li>
-                <a href="#"
-                  ><img
-                    src="../assets/images/Home/like-min.svg"
-                    alt="like"
-                  />Избранное</a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><img
-                    src="../assets/images/Home/product-min.svg"
-                    alt="product-min"
-                  />продукты</a
-                >
-              </li>
-              <li>
-                <a  class="counts_parent" href="#"
-                  ><img
-                    src="../assets/images/Home/shopping-cart.svg"
-                    alt="shop cart"
-                  />Корзина</a
-                >
-                <span id="count" class="count">0</span>
-              </li>
-            </ul>
-            <a href="#" id="user-button" class="user">
-              <img src="../assets/images/Home/aleksiy.png" alt="user" />
-              <p class="user_info">Алексей</p>
-              <img src="../assets/images/Home/dropdown.svg" alt="dropdown" />
-            </a>
-          </nav>
-        </div>
-      </header>
-      <div id="dropdown-content">
-        <div class="container">
-          <div id="categoryButtons" class="dropdown_box">
-            <ul class="grid-item">
-              <li>
-                <a data-category="milk" class="grid-itemm" href="#">Молоко, сыр, яйцо</a>
-              </li>
-              <li><a data-category="bread" class="grid-itemm" href="#">Хлеб</a></li>
-              <li><a data-category="bread" class="grid-itemm" href="#">Фрукты и овощи</a></li>
-              <li>
-                <a data-category="bread" class="grid-itemm" href="#">Замороженные продукты</a>
-              </li>
-            </ul>
-            <ul class="second grid-item">
-              <li><a value="Молоко" class="grid-itemm" href="#">Напитки</a></li>
-              <li>
-                <a value="Молоко" class="grid-itemm" href="#">Кондитерские изделия</a>
-              </li>
-              <li><a class="grid-itemm" href="#">Чай, кофе</a></li>
-            </ul>
-            <ul class="second grid-item">
-              <li><a class="grid-itemm" href="#">Бакалея</a></li>
-              <li><a class="grid-itemm" href="#">Здоровое питание</a></li>
-              <li><a class="grid-itemm" href="#">Зоотовары</a></li>
-            </ul>
-            <ul class="second grid-item">
-              <li>
-                <a class="grid-itemm" href="#">Непродовольственные товары</a>
-              </li>
-              <li><a class="grid-itemm" href="#">Детское питание</a></li>
-              <li>
-                <a class="grid-itemm" href="#">Мясо, птица, колбаса</a>
-              </li>
-            </ul>
+            <div class="search">
+              <input
+                id="searchInput"
+                class="search_input search__input"
+                type="text"
+                placeholder="Найти товар"
+              />
+              <img
+                class="search_icon"
+                src="../assets/images/Home/search.svg"
+                alt="search icon"
+              />
+              <div class="search_result"></div>
+            </div>
           </div>
-        </div>
+          <ul>
+            <li>
+              <a href="#"
+                ><img
+                  src="../assets/images/Home/like-min.svg"
+                  alt="like"
+                />Избранное</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="../assets/images/Home/product-min.svg"
+                  alt="product-min"
+                />продукты</a
+              >
+            </li>
+            <li>
+              <a class="counts_parent" href="#"
+                ><img
+                  src="../assets/images/Home/shopping-cart.svg"
+                  alt="shop cart"
+                />Корзина</a
+              >
+              <span id="count" class="count">0</span>
+            </li>
+          </ul>
+          <a href="#" id="user-button" class="user">
+            <img src="../assets/images/Home/aleksiy.png" alt="user" />
+            <p class="user_info">Алексей</p>
+            <img src="../assets/images/Home/dropdown.svg" alt="dropdown" />
+          </a>
+        </nav>
       </div>
-      <!-- NAVIGATION START -->
-      <div id="modal" class="modal">
-        <div class="modal-content">
-          <span class="close"
-            ><img src="../assets/images/Home/closebutton.svg" alt=""
-          /></span>
-          <h2>Вход</h2>
-          <div class="wrapper">
-            <p>Телефон</p>
-            <input type="tel" id="phone" />
-          </div>
-          <button onclick="showSuccessAlert()" class="enter">Вход</button>
-          <div class="login">
-            <a class="login_reg" href="#">Регистрация</a>
-            <a class="forgot" href="#">Забыли пароль?</a>
-          </div>
-        </div>
-      </div>
-  
-      <nav class="footer_navbar">
-        <div class="container">
-          <div class="footer_navbar_fixed">
-            <ul class="footer_nav_list">
-              <li>
-                <a onclick="toggleDropdown()" class="red_hover" href="#"
-                  ><img
-                    src="../assets/images/Home/menu-dark.svg"
-                    alt="menu"
-                  />Каталог</a
-                >
-              </li>
-              <li>
-                <a class="red_hover" href="#"
-                  ><img
-                    src="../assets/images/Home/like-min.svg"
-                    alt="like"
-                  />Избранное</a
-                >
-              </li>
-              <li>
-                <a class="red_hover" href="#"
-                  ><img
-                    src="../assets/images/Home/product-min.svg"
-                    alt="product-min"
-                  />продукты</a
-                >
-              </li>
-              <li>
-                <a class="counts_parent red_hover" href="#"
-                  ><img
-                    src="../assets/images/Home/shopping-cart.svg"
-                    alt="shop cart"
-                  />Корзина</a
-                >
-                <span class="count">0</span>
-              </li>
-              <li>
-                <a id="mobile-button" class="mobile-only" href="#"
-                  ><img src="../assets/images/Home/aleksiy.png" alt=""
-                /></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <!-- NAVIGATION END -->
-      <!-- BREADCRUMB START -->
-      <ul class="container breadcrumb">
-        <li><a href="../pages/home.html">Главная</a></li>
-        <li><a class="active" href="#">Все продукты</a></li>
-      </ul>
-      <!-- BREADCRUMB END -->
-
+    </header>
+    <div id="dropdown-content">
       <div class="container">
-        <h2>Все продукты</h2>
-      </div>
-
-      <div class="container">
-        <div id="allproducts" class="card-content">
-
+        <div id="categoryButtons" class="dropdown_box">
+          <ul class="grid-item">
+            <li>
+              <a data-category="milk" class="grid-itemm" href="#"
+                >Молоко, сыр, яйцо</a
+              >
+            </li>
+            <li>
+              <a data-category="bread" class="grid-itemm" href="#">Хлеб</a>
+            </li>
+            <li>
+              <a data-category="bread" class="grid-itemm" href="#"
+                >Фрукты и овощи</a
+              >
+            </li>
+            <li>
+              <a data-category="bread" class="grid-itemm" href="#"
+                >Замороженные продукты</a
+              >
+            </li>
+          </ul>
+          <ul class="second grid-item">
+            <li><a value="Молоко" class="grid-itemm" href="#">Напитки</a></li>
+            <li>
+              <a value="Молоко" class="grid-itemm" href="#"
+                >Кондитерские изделия</a
+              >
+            </li>
+            <li><a class="grid-itemm" href="#">Чай, кофе</a></li>
+          </ul>
+          <ul class="second grid-item">
+            <li><a class="grid-itemm" href="#">Бакалея</a></li>
+            <li><a class="grid-itemm" href="#">Здоровое питание</a></li>
+            <li><a class="grid-itemm" href="#">Зоотовары</a></li>
+          </ul>
+          <ul class="second grid-item">
+            <li>
+              <a class="grid-itemm" href="#">Непродовольственные товары</a>
+            </li>
+            <li><a class="grid-itemm" href="#">Детское питание</a></li>
+            <li>
+              <a class="grid-itemm" href="#">Мясо, птица, колбаса</a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div id="pagination-container"></div>
-      <!-- <div class="container"> -->
-      
-        
+    </div>
+    <!-- NAVIGATION START -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close"
+          ><img src="../assets/images/Home/closebutton.svg" alt=""
+        /></span>
+        <h2>Вход</h2>
+        <div class="wrapper">
+          <p>Телефон</p>
+          <input type="tel" id="phone" />
+        </div>
+        <button onclick="showSuccessAlert()" class="enter">Вход</button>
+        <div class="login">
+          <a class="login_reg" href="#">Регистрация</a>
+          <a class="forgot" href="#">Забыли пароль?</a>
+        </div>
+      </div>
+    </div>
+
+    <nav class="footer_navbar">
+      <div class="container">
+        <div class="footer_navbar_fixed">
+          <ul class="footer_nav_list">
+            <li>
+              <a onclick="toggleDropdown()" class="red_hover" href="#"
+                ><img
+                  src="../assets/images/Home/menu-dark.svg"
+                  alt="menu"
+                />Каталог</a
+              >
+            </li>
+            <li>
+              <a class="red_hover" href="#"
+                ><img
+                  src="../assets/images/Home/like-min.svg"
+                  alt="like"
+                />Избранное</a
+              >
+            </li>
+            <li>
+              <a class="red_hover" href="#"
+                ><img
+                  src="../assets/images/Home/product-min.svg"
+                  alt="product-min"
+                />продукты</a
+              >
+            </li>
+            <li>
+              <a class="counts_parent red_hover" href="#"
+                ><img
+                  src="../assets/images/Home/shopping-cart.svg"
+                  alt="shop cart"
+                />Корзина</a
+              >
+              <span class="count">0</span>
+            </li>
+            <li>
+              <a id="mobile-button" class="mobile-only" href="#"
+                ><img src="../assets/images/Home/aleksiy.png" alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- NAVIGATION END -->
+    <!-- BREADCRUMB START -->
+    <ul class="container breadcrumb crumb">
+      <li><a href="../pages/home.html">Главная</a></li>
+      <li><a class="active" href="#">Все продукты</a></li>
+    </ul>
+    <!-- BREADCRUMB END -->
+
+    <div class="container">
+      <h2 class="all" >Все продукты</h2>
+    </div>
+
+    <div class="container">
+      <div id="allproducts" class="card-content products__row">
+
+      </div>
+    </div>
+    <div id="pagination-container"></div>
+    <!-- <div class="container"> -->
 
     <!-- footer start -->
-       <footer class="footer foo">
-        <div class="container">
-          <div class="footer__left">
-            <a href="home.html"
-              ><img
-                src="../assets/images/Home/home-card-images/logo-footer.svg"
-                alt="logo"
-            /></a>
-            <li><a href="../pages/about-us.html">О компании</a></li>
-            <li><a href="../pages/contact.html">Контакты</a></li>
-            <li><a href="../pages/jobs.html">Вакансии</a></li>
-            <li><a href="#">Статьи</a></li>
-            <li><a href="#">Политика обработки персональных данных</a></li>
+    <footer class="footer foo">
+      <div class="container">
+        <div class="footer__left">
+          <a href="home.html"
+            ><img
+              src="../assets/images/Home/home-card-images/logo-footer.svg"
+              alt="logo"
+          /></a>
+          <li><a href="../pages/about-us.html">О компании</a></li>
+          <li><a href="../pages/contact.html">Контакты</a></li>
+          <li><a href="../pages/jobs.html">Вакансии</a></li>
+          <li><a href="#">Статьи</a></li>
+          <li><a href="#">Политика обработки персональных данных</a></li>
+        </div>
+        <div class="footer__right">
+          <div class="socials">
+            <div class="half">
+              <img
+                src="../assets/images/Home/home-card-images/insta.svg"
+                alt="instagram"
+              />
+              <img
+                src="../assets/images/Home/home-card-images/Vector.svg"
+                alt="vektor"
+              />
+            </div>
+            <div class="rest_half">
+              <img
+                src="../assets/images/Home/home-card-images/facebook.svg"
+                alt="facebook"
+              />
+              <img
+                src="../assets/images/Home/home-card-images/odno.svg"
+                alt="odnoklasniky"
+              />
+            </div>
           </div>
-          <div class="footer__right">
-            <div class="socials">
-              <div class="half">
-                <img
-                  src="../assets/images/Home/home-card-images/insta.svg"
-                  alt="instagram"
-                />
-                <img
-                  src="../assets/images/Home/home-card-images/Vector.svg"
-                  alt="vektor"
-                />
-              </div>
-              <div class="rest_half">
-                <img
-                  src="../assets/images/Home/home-card-images/facebook.svg"
-                  alt="facebook"
-                />
-                <img
-                  src="../assets/images/Home/home-card-images/odno.svg"
-                  alt="odnoklasniky"
-                />
-              </div>
-            </div>
-            <div class="phone">
-              <span
-                ><img
-                  src="../assets/images/Home/home-card-images/phone.png"
-                  alt="phone"
-                />
-                8 800 777 33 33</span
-              >
-              <span
-                >Дизайн
-                <img
-                  src="../assets/images/Home/home-card-images/logo-zasovskiy-small-black.svg"
-                  alt="zakaz"
-              /></span>
-            </div>
+          <div class="phone">
+            <span
+              ><img
+                src="../assets/images/Home/home-card-images/phone.png"
+                alt="phone"
+              />
+              8 800 777 33 33</span
+            >
+            <span
+              >Дизайн
+              <img
+                src="../assets/images/Home/home-card-images/logo-zasovskiy-small-black.svg"
+                alt="zakaz"
+            /></span>
           </div>
         </div>
-      </footer>
+      </div>
+    </footer>
     <!-- footer end -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.js"></script>
@@ -300,26 +329,27 @@
     <script src="../JavaScript/modal2.js"></script>
     <script src="../JavaScript/chat-user.js"></script>
     <script src="../JavaScript/productCart.js"></script>
-    <script  src="../JavaScript/all-products.js"></script>
+    <script src="../JavaScript/all-products.js"></script>
+    <script src="../JavaScript/category_search.js"></script>
+    <script src="../JavaScript/dark-mode.js"></script>
     <script>
-    var items = $("#allproducts .card");
-    var numItems = items.length;
-    var perPage = 8;
+      var items = $("#allproducts .card");
+      var numItems = items.length;
+      var perPage = 8;
 
-    items.slice(perPage).hide();
+      items.slice(perPage).hide();
 
-    $('#pagination-container').pagination({
+      $("#pagination-container").pagination({
         items: numItems,
         itemsOnPage: perPage,
         prevText: "&laquo;",
         nextText: "&raquo;",
         onPageClick: function (pageNumber) {
-            var showFrom = perPage * (pageNumber - 1);
-            var showTo = showFrom + perPage;
-            items.hide().slice(showFrom, showTo).show();
-        }
-    });
+          var showFrom = perPage * (pageNumber - 1);
+          var showTo = showFrom + perPage;
+          items.hide().slice(showFrom, showTo).show();
+        },
+      });
     </script>
-
-</body>
+  </body>
 </html>

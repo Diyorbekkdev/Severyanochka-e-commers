@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <title>Категории</title>
     <link
       rel="stylesheet"
@@ -49,7 +50,17 @@
     </div>
     <!-- CHAT USER  -->
 
-    <header class="header">
+        <!-- DarkMode checkbox -->
+        <div class="container">
+          <div onclick="darkMode()" class="check_box">
+            <label
+              ><input value="on" name="dummy" type="checkbox" class="bubble"
+            /></label>
+          </div>
+        </div>
+        <!-- DarkMode checkbox -->
+
+    <header class="header dark-header">
       <div class="container">
         <nav class="header__nav">
           <a id="logo" class="logo" href="../pages/home.html"
@@ -67,15 +78,17 @@
                   alt="menu"
                 /><a href="../pages/category.html" class="text_katalog">Каталог</a>
               </button>
-
             </div>
             <div class="search">
-              <input type="search" placeholder="Найти товар" />
+              <input id="searchInput" class="search_input"  type="text" placeholder="Найти товар" />
               <img
                 class="search_icon"
                 src="../assets/images/Home/search.svg"
                 alt="search icon"
               />
+              <div class="search_result">
+                 
+              </div>
             </div>
           </div>
           <ul>
@@ -224,7 +237,7 @@
     <!-- BREADCRUMB END -->
 
     <div class="container">
-        <h2>Каталог</h2>
+        <h2 class="dark-category-title">Каталог</h2>
         <div id="productSection">
         </div>
     </div>
@@ -288,11 +301,52 @@
         </div>
       </footer>
     <!-- footer end -->
-    <script src="../JavaScript/category.js"></script>
+    <script>
+      document
+        .getElementsByClassName("confetti-button")[0]
+        .addEventListener("click", () => {
+          confetti();
+        });
+
+      var duration = 15 * 1000;
+      var animationEnd = Date.now() + duration;
+      var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+      function randomInRange(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+
+      var interval = setInterval(function () {
+        var timeLeft = animationEnd - Date.now();
+
+        if (timeLeft <= 0) {
+          return clearInterval(interval);
+        }
+
+        var particleCount = 50 * (timeLeft / duration);
+        // since particles fall down, start a bit higher than random
+        confetti(
+          Object.assign({}, defaults, {
+            particleCount,
+            origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+          })
+        );
+        confetti(
+          Object.assign({}, defaults, {
+            particleCount,
+            origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+          })
+        );
+      }, 250);
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.0/build/js/intlTelInput.js"></script>
     <script src="../JavaScript/dropdown.js"></script>
     <script src="../JavaScript/modal.js"></script>
     <script src="../JavaScript/modal2.js"></script>
     <script src="../JavaScript/chat-user.js"></script>
+    <script src="../JavaScript/productCart.js"></script>
+    <script src="../JavaScript/category_search.js"></script>
+    <script src="../JavaScript/category.js"></script>
+    <script src="../JavaScript/dark-mode.js"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-const products = [
+const product = [
     { name: "Багет",
       category: "bread", 
       image: "../assets/images/Category/1.jpg" 
@@ -125,55 +125,61 @@ const products = [
     },
   ];
 
-  function filterProducts(category) {
-    const filteredProducts = products.filter((product) => product.category === category);
-    return filteredProducts;
-  }
-  
-  // Function to handle button click event
-  function handleButtonClick(event) {
-    const selectedCategory = event.target.dataset.category;
-    const filteredProducts = filterProducts(selectedCategory);
-  
-    // Clear existing product section
-    const productSection = document.getElementById("productSection");
-    productSection.innerHTML = "";
-  
-    // Wrap every three products with a div
-    for (let i = 0; i < filteredProducts.length; i += 4) {
-      const productGroup = filteredProducts.slice(i, i + 4);
-      const productGroupElement = document.createElement("div");
-      productGroupElement.classList.add("box")
-      for (const product of productGroup) {
-        const productElement = document.createElement("div");
-  
-        // Create an image element
-        const imageElement = document.createElement("img");
-        imageElement.src = product.image;
-        productElement.appendChild(imageElement);
-  
-        // Create a title element
-        const titleElement = document.createElement("h3");
-        titleElement.textContent = product.name;
-        productElement.appendChild(titleElement);
 
-        const gradientDiv = document.createElement("div");
-        gradientDiv.classList.add("gradient");
-        productElement.appendChild(gradientDiv);
 
-        productGroupElement.appendChild(productElement);
-      }
-  
-      productSection.appendChild(productGroupElement);
+function filterProducts(category) {
+  const filteredProducts = product.filter((product) => product.category === category);
+  return filteredProducts;
+}
+
+// Function to handle button click event
+function handleButtonClick(event) {
+  const selectedCategory = event.target.dataset.category;
+  const filteredProducts = filterProducts(selectedCategory);
+
+  // Clear existing product section
+  const productSection = document.getElementById("productSection");
+  productSection.innerHTML = "";
+
+  // Wrap every three products with a div
+  for (let i = 0; i < filteredProducts.length; i += 4) {
+    const productGroup = filteredProducts.slice(i, i + 4);
+    const productGroupElement = document.createElement("div");
+    productGroupElement.classList.add("box")
+    for (const product of productGroup) {
+      const productElement = document.createElement("div");
+
+      // Create an image element
+      const imageElement = document.createElement("img");
+      imageElement.src = product.image;
+      productElement.appendChild(imageElement);
+
+      // Create a title element
+      const titleElement = document.createElement("h3");
+      titleElement.textContent = product.name;
+      productElement.appendChild(titleElement);
+
+      const gradientDiv = document.createElement("div");
+      gradientDiv.classList.add("gradient");
+      productElement.appendChild(gradientDiv);
+
+      productGroupElement.appendChild(productElement);
     }
+
+    productSection.appendChild(productGroupElement);
   }
-  
-  // Attach event listener to the category buttons
-  const categoryButtons = document.getElementById("categoryButtons");
-  categoryButtons.addEventListener("click", handleButtonClick);
+}
+
+// Attach event listener to the category buttons
+const categoryButtons = document.getElementById("categoryButtons");
+categoryButtons.addEventListener("click", handleButtonClick);
 
 const defaultCategory = "bread"; // Replace with your desired default category
 const defaultButton = categoryButtons.querySelector(`[data-category="${defaultCategory}"]`);
 if (defaultButton) {
-  handleButtonClick({ target: defaultButton });
+handleButtonClick({ target: defaultButton });
 }
+
+
+
+
