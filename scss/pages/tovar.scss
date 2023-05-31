@@ -1,0 +1,81 @@
+@import "../main.scss";
+
+.oil {
+  .oil_title {
+    h2 {
+      margin-top: 44px;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 150%;
+      color: #414141;
+    }
+  }
+  .card_info {
+    max-width: 550px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span {
+      margin-right: 24px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 150%;
+      color: #414141;
+    }
+  }
+
+
+  margin-bottom: 400px !important;
+
+  .wrapper_oil {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 400px;
+    .card_main_info{
+        // position: relative;
+        margin-left: 50%;
+        right: 0;
+        max-width: 600px;
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        .price{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+  }
+  //     width: 584px;
+  // height: 496px;
+  .swiper {
+    width: 45% !important;
+    // min: 530px;
+    position: absolute;
+    // left: ;
+    margin-left: 0px;
+    margin-right: 0;
+    // margin-top: -150px;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+  
+}
+
+.foo{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}

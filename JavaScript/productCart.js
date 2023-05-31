@@ -7,7 +7,8 @@ const products = [
         "price": 89,
         "rating": 5,
         "discount": 0,
-        "image": "../assets/images/Home/home-card-images/img-1.png"
+        "image": "../assets/images/Home/home-card-images/img-1.png",
+        "country": "Uzb"
     },
     {
         "id": 2,

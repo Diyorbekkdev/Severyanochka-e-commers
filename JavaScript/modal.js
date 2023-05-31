@@ -1,62 +1,225 @@
-var userButton = document.getElementById('user-button');
-var mobileButton = document.getElementById('mobile-button');
-var modal = document.getElementById('modal');
-var closeBtn = modal.querySelector('.close');
+const userButton = document.getElementById("user-button");
+const mobileButton = document.getElementById("mobile-button");
+const modal = document.getElementById("modal");
+const userName = document.querySelector(".user_info");
 
-// Check the viewport width and update the button ID accordingly
-if (window.innerWidth <= 768) { // Adjust the breakpoint as needed
-  userButton.id = 'user-button-mobile'; // Set a new ID for mobile devices
+const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+
+if (window.innerWidth <= 768) {
+  userButton.id = "user-button-mobile";
 }
 
-// Open the modal when the user button or mobile button is clicked
-userButton.addEventListener('click', openModal);
-mobileButton.addEventListener('click', openModal);
 
-// Close the modal when the close button is clicked
-closeBtn.addEventListener('click', function(event) {
-  event.stopPropagation();
-  closeModal();
+
+userButton.addEventListener("click", function () {
+  if (userInfo) {
+    window.location.href = "user-dashboard.html";
+  } else {
+    openModal();
+  }
 });
 
-// Close the modal when the user clicks outside the modal content
-window.addEventListener('click', function(event) {
+window.addEventListener("click", function (event) {
   if (event.target === modal) {
     closeModal();
   }
 });
 
-// Function to open the modal
+mobileButton.addEventListener("click", openModal);
+
 function openModal() {
-  modal.style.display = 'block';
+  modal.classList.add("show");
 }
 
-// Function to close the modal
 function closeModal() {
-  modal.style.display = 'none';
+  modal.classList.remove("show");
 }
 
+if (userInfo) {
+  userName.textContent = userInfo.userName;
+}
 
+const slidePage = document.querySelector(".slide-page");
+const nextBtnFirst = document.querySelector(".firstNext");
+const prevBtnSec = document.querySelector(".prev-1");
+const nextBtnSec = document.querySelector(".next-1");
+const prevBtnThird = document.querySelector(".prev-2");
+const nextBtnThird = document.querySelector(".next-2");
+const prevBtnFourth = document.querySelector(".prev-3");
+const submitBtn = document.querySelector(".submit");
+const progressText = document.querySelectorAll(".step p");
+const progressCheck = document.querySelectorAll(".step .check");
+const bullet = document.querySelectorAll(".step .bullet");
+let current = 1;
 
-function showSuccessAlert() {
-    // Create a custom success alert element
-    var successAlert = document.createElement("div");
-    successAlert.className = "success-alert";
-    successAlert.textContent = "✅ Success! The phone number is correct";
+nextBtnFirst.addEventListener("click", function (event) {
+  event.preventDefault();
 
-    // Style the custom success alert
-    successAlert.style.color = "white";
-    successAlert.style.padding = "10px";
-    successAlert.style.position = "fixed";
-    successAlert.style.top = "90px";
-    successAlert.style.left = "50%";
-    successAlert.style.zIndex = "10000";
-    successAlert.style.transform = "translate(-50%, -50%)";
+  // Perform input validation
+  const firstNameInput = document.querySelector(
+    ".slide-page .field input[type='text'][placeholder='First Name']"
+  );
+  const lastNameInput = document.querySelector(
+    ".slide-page .field input[type='text'][placeholder='Last name']"
+  );
 
-    // Append the custom success alert to the document body
-    document.body.appendChild(successAlert);
-
-    // Remove the custom success alert after a certain duration (e.g., 3 seconds)
-    setTimeout(function() {
-      successAlert.remove();
-    }, 3000);
+  if (firstNameInput.value.trim() === "" || lastNameInput.value.trim() === "") {
+    // Show validation error message using alert
+    alert("Please fill in all required fields.");
+    return;
   }
+  slidePage.style.marginLeft = "-25%";
+  bullet[current - 1].classList.add("active");
+  progressCheck[current - 1].classList.add("active");
+  progressText[current - 1].classList.add("active");
+  current += 1;
+});
+
+nextBtnSec.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  // Perform input validation
+  const userEmail = document.querySelector(".email");
+  const userPhone = document.querySelector(".tel");
+
+  if (userEmail.value.trim() === "" || userPhone.value.trim() === "") {
+    // Show validation error message using alert
+    alert("Please fill in all required fields.");
+    return;
+  }
+  slidePage.style.marginLeft = "-50%";
+  bullet[current - 1].classList.add("active");
+  progressCheck[current - 1].classList.add("active");
+  progressText[current - 1].classList.add("active");
+  current += 1;
+});
+
+nextBtnThird.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  // Perform input validation
+  const userEmail = document.querySelector(".date");
+  const userPhone = document.querySelector(".tel");
+
+  if (userEmail.value.trim() === "" || userPhone.value.trim() === "") {
+    // Show validation error message using alert
+    alert("Please fill in all required fields.");
+    return;
+  }
+  slidePage.style.marginLeft = "-75%";
+  bullet[current - 1].classList.add("active");
+  progressCheck[current - 1].classList.add("active");
+  progressText[current - 1].classList.add("active");
+  current += 1;
+});
+
+submitBtn.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  // Perform input validation
+  const userNameImp = document.querySelector(".username_important");
+  const userPassword = document.querySelector(".tel");
+
+  if (userNameImp.value.trim() === "" || userPassword.value.trim() === "") {
+    // Show validation error message using alert
+    alert("Please fill in all required fields.");
+    return;
+  }
+
+  const userInfo = {
+    userName: userNameImp.value.trim(),
+    userPassword: userPassword.value.trim(),
+  };
+
+  // Save user information to local storage
+  localStorage.setItem("userInfo", JSON.stringify(userInfo));
+
+  bullet[current - 1].classList.add("active");
+  progressCheck[current - 1].classList.add("active");
+  progressText[current - 1].classList.add("active");
+  current += 1;
+  setTimeout(function () {
+    alert("Your Form Successfully Signed up");
+    location.reload();
+  }, 800);
+});
+
+prevBtnSec.addEventListener("click", function (event) {
+  event.preventDefault();
+  slidePage.style.marginLeft = "0%";
+  bullet[current - 2].classList.remove("active");
+  progressCheck[current - 2].classList.remove("active");
+  progressText[current - 2].classList.remove("active");
+  current -= 1;
+});
+
+prevBtnThird.addEventListener("click", function (event) {
+  event.preventDefault();
+  slidePage.style.marginLeft = "-25%";
+  bullet[current - 2].classList.remove("active");
+  progressCheck[current - 2].classList.remove("active");
+  progressText[current - 2].classList.remove("active");
+  current -= 1;
+});
+
+prevBtnFourth.addEventListener("click", function (event) {
+  event.preventDefault();
+  slidePage.style.marginLeft = "-50%";
+  bullet[current - 2].classList.remove("active");
+  progressCheck[current - 2].classList.remove("active");
+  progressText[current - 2].classList.remove("active");
+  current -= 1;
+});
+
+const userNameElement = document.getElementById("username");
+const dropdownMenu = document.getElementById("dropdown-menu");
+const dropdownIcon = document.querySelector(".dropdown-icon");
+
+function toggleDropdown() {
+  dropdownMenu.classList.toggle("show");
+}
+
+// Add click event listener to user info container
+document.getElementById("user-info").addEventListener("click", toggleDropdown);
+
+// Close the dropdown when clicking outside of it
+window.addEventListener("click", function (event) {
+  if (
+    !event.target.matches(".user-info") &&
+    !event.target.matches(".dropdown-icon")
+  ) {
+    dropdownMenu.classList.remove("show");
+  }
+});
+dropdownIcon.classList.remove("hidden");
+
+const profileImageInput = document.getElementById("profile-image-input");
+const profileImage = document.getElementById("profile-image");
+
+profileImageInput.addEventListener("change", function (event) {
+  const file = event.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function () {
+      const imageDataURL = reader.result;
+      profileImage.src = imageDataURL;
+    };
+    reader.readAsDataURL(file);
+  }
+});
+
+function toggleDropdown() {
+  if (userInfo) {
+    dropdownMenu.classList.toggle("show");
+  }
+}
+
+if (userInfo) {
+  userName.textContent = userInfo.userName;
+  dropdownIcon.style.display = "block";
+}
+
+if (userInfo) {
+  userName.textContent = userInfo.userName;
+  dropdownIcon.classList.remove("hidden");
+}
