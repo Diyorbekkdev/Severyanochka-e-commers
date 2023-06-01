@@ -128,3 +128,17 @@ recognition.onend = function () {
   console.log("Speech recognition ended");
   stopListening();
 };
+
+
+const logoutButton = document.querySelector(".log-out");
+
+logoutButton.addEventListener("click", logout);
+
+
+function logout(event) {
+  event.preventDefault();
+
+  localStorage.removeItem("userInfo");
+
+  location.reload();
+}
