@@ -46,6 +46,11 @@ body.dark{
   background: transparent;
   border: none;
   cursor: pointer;
+  z-index: 20;
+  @include media(550px){
+    bottom: 60px;
+    width: 40px;
+  }
 
 }
 
