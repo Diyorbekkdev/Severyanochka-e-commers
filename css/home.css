@@ -317,7 +317,7 @@ body {
 }
 
 .container {
-  max-width: 1228px;
+  max-width: 1248px;
   padding: 0 20px;
   margin: 0 auto;
 }
@@ -1283,7 +1283,7 @@ body.dark #dropdown-content .dropdown_box a:hover {
   position: absolute;
   padding: 4px;
   width: 100%;
-  height: 400px;
+  max-height: 400px;
   top: 45px;
   overflow-y: scroll;
   border-radius: 8px;
@@ -1610,6 +1610,35 @@ body.dark .header .search_input {
 
 #porfile-image {
   width: 40px !important;
+}
+
+@keyframes shakeCart {
+  25% {
+    transform: translateX(6px);
+  }
+  50% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.shop-count {
+  position: absolute;
+  bottom: 60px;
+  right: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.3s ease-out;
+}
+.shop-count svg {
+  transition: 0.3s ease-out;
+}
+.shop-count:hover svg {
+  transform: scale(1.1);
 }
 
 ul.breadcrumb {
@@ -2529,6 +2558,13 @@ body.dark #productSection .box div {
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
+.discount__wrapper .card button.sendtocart .cart-item {
+  display: block;
+  animation: xAxis 1s forwards cubic-bezier(1, 0.44, 0.84, 0.165);
+}
+.discount__wrapper .card button.sendtocart .cart-item:before {
+  animation: yAxis 1s alternate forwards cubic-bezier(0.165, 0.84, 0.44, 1);
+}
 .discount__wrapper .card .star-1 {
   position: absolute;
   top: 20%;
@@ -2963,4 +2999,83 @@ body.dark #productSection .box div {
 .stati__card_box .card .card_btn:hover {
   color: #fff;
   background: #70c05b;
+}
+
+@keyframes xAxis {
+  100% {
+    transform: translateX(calc(50vw - 105px));
+  }
+}
+@keyframes yAxis {
+  100% {
+    transform: translateY(calc(-50vh + 75px));
+  }
+}
+.quantity-field {
+  display: none;
+}
+
+.card .quantity-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  margin: 5px auto;
+  animation-name: bottom-to-top;
+  animation-duration: 1s;
+}
+.card .quantity-field .value-button {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background: #4ee334;
+  outline: none;
+  cursor: pointer;
+}
+.card .quantity-field .value-button:hover {
+  background: rgb(96, 189, 29);
+}
+.card .quantity-field .value-button:active {
+  background: rgb(53, 221, 61);
+}
+.card .quantity-field .decrease-button {
+  margin-right: -4px;
+  border-radius: 8px 0 0 8px;
+}
+.card .quantity-field .increase-button {
+  margin-left: -4px;
+  border-radius: 0 8px 8px 0;
+}
+.card .quantity-field .number {
+  display: inline-block;
+  text-align: center;
+  border: none;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 0px;
+  width: 120px;
+  height: 100%;
+  line-height: 40px;
+  font-size: 11pt;
+  box-sizing: border-box;
+  background: rgb(211, 214, 212);
+  font-family: calibri;
+}
+.card .quantity-field .number::-moz-selection {
+  background: none;
+}
+.card .quantity-field .number::selection {
+  background: none;
+}
+@keyframes bottom-to-top {
+  0% {
+    transform: translateY(110px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

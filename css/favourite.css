@@ -2335,3 +2335,7 @@ body.dark #productSection .box div {
      -moz-user-select: none;
           user-select: none;
 }
+
+.foo {
+  display: none;
+}

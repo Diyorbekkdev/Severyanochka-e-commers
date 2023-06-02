@@ -1,6 +1,6 @@
 const searchInput = document.getElementById("searchInput");
 const searchResult = document.querySelector(".search_result");
-const searchCount = document.querySelector(".count");
+// const searchCount = document.querySelector(".count");
 let search = "";
 
 searchInput.addEventListener("keyup", function () {
@@ -43,7 +43,7 @@ function handleSearch() {
 
   if (filteredProducts.length > 0 && search !== "") {
     searchResult.style.display = "flex";
-    searchCount.textContent = filteredProducts.length.toString();
+    // searchCount.textContent = filteredProducts.length.toString();
   } else {
     searchResult.style.display = "none";
   }
@@ -78,6 +78,18 @@ recognition.onresult = function (event) {
   }
   if (command == "close drop-down") {
     toggleDropdown()
+  } else {
+    search = command;
+    searchInput.value = command;
+    handleSearch();
+  }
+  if (command == "go home page") {
+    if(window.location.href = '../pages/home.html'){
+      
+    }else{
+      window.open('../pages/home.html', '_blank');
+    }
+    
   } else {
     search = command;
     searchInput.value = command;

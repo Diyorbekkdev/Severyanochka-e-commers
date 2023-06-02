@@ -338,7 +338,89 @@
         border: 1px solid #ff6633;
       }
     }
+    
   }
+  
+.quantity-field{
+  display: none !important;
+}
+
+.card{
+  // .btn_main{
+  //   display: none;
+  // }  
+  .quantity-field {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important; 
+    height: 40px !important;
+    margin: 5px auto !important;
+    animation-name: bottom-to-top;
+    animation-duration: 1s;
+    // border: 1px solid red;    
+  }
+  
+  .quantity-field .value-button{ 
+    margin-top: 20px;
+    border: 1px solid #ddd !important;
+    margin: 0px;
+    width: 100% !important;
+    height: 100% !important;   
+    padding: 0 !important;
+    background: #4ee334 !important; 
+    outline: none !important;
+    cursor: pointer !important;
+  }
+  
+  .quantity-field .value-button:hover {
+    background: rgb(96, 189, 29) !important;
+  }
+  
+  .quantity-field .value-button:active{
+    background: rgb(53, 221, 61);
+  }
+  
+  .quantity-field .decrease-button {
+    margin-right: -4px;
+    border-radius: 8px 0 0 8px;
+  }
+  
+  .quantity-field .increase-button {
+    margin-left: -4px;
+    border-radius: 0 8px 8px 0;
+  }
+   
+  .quantity-field .number{
+    display: inline-block;
+    text-align: center !important;
+    border: none;
+    border-top: 1px solid #ddd !important;
+    border-bottom: 1px solid #ddd;
+    margin: 0px;
+    width: 120px !important;
+    height: 100% !important;
+    line-height: 40px;
+    font-size: 11pt;
+    box-sizing: border-box; 
+    background: rgb(211, 214, 212);
+    font-family: calibri;
+  }
+  
+  .quantity-field .number::selection{
+    background: none !important;
+  }
+  @keyframes  bottom-to-top {
+    0%{
+      transform: translateY(110px);
+    }
+    100%{
+      transform: translateY(0);
+    }
+    
+  }
+
+}
 }
 
 h2 {
@@ -396,3 +478,4 @@ h2 {
   background: #e04e60;
   transition: .3s ease-out;
 }
+

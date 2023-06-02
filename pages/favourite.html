@@ -15,7 +15,7 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <title>Все продукты</title>
-    <link rel="stylesheet" href="../css/all-products.min.css" />
+    <link rel="stylesheet" href="../css/favourite.min.css"/>
   </head>
   <body>
     <!-- CHAT USER  -->
@@ -236,12 +236,13 @@
           </div>
           <ul>
             <li>
-              <a href="#"
+              <a href="favourite.html"
                 ><img
                   src="../assets/images/Home/like-min.svg"
                   alt="like"
                 />Избранное</a
               >
+              <span id="count-favourite">0</span>
             </li>
             <li>
               <a href="all-product.html"
@@ -408,151 +409,158 @@
     <!-- BREADCRUMB START -->
     <ul class="container breadcrumb crumb">
       <li><a href="../pages/home.html">Главная</a></li>
-      <li><a class="active" href="#">Все продукты</a></li>
+      <li><a class="active" href="#">Избраное</a></li>
     </ul>
     <!-- BREADCRUMB END -->
 
     <div class="container">
-      <h2 class="all" >Все продукты</h2>
-    </div>
-
-    <div class="container">
-      <div id="allproducts" class="card-content products__row">
-
+        <h2 class="all" >Избраное</h2>
       </div>
-    </div>
-    <div id="pagination-container"></div>
-    <!-- <div class="container"> -->
-
-    <!-- footer start -->
-    <footer class="footer foo">
+  
       <div class="container">
-        <div class="footer__left">
-          <a href="home.html"
-            ><img
-              src="../assets/images/Home/home-card-images/logo-footer.svg"
-              alt="logo"
-          /></a>
-          <li><a href="../pages/about-us.html">О компании</a></li>
-          <li><a href="../pages/contact.html">Контакты</a></li>
-          <li><a href="../pages/jobs.html">Вакансии</a></li>
-          <li><a href="#">Статьи</a></li>
-          <li><a href="#">Политика обработки персональных данных</a></li>
-        </div>
-        <div class="footer__right">
-          <div class="socials">
-            <div class="half">
-              <img
-                src="../assets/images/Home/home-card-images/insta.svg"
-                alt="instagram"
-              />
-              <img
-                src="../assets/images/Home/home-card-images/Vector.svg"
-                alt="vektor"
-              />
-            </div>
-            <div class="rest_half">
-              <img
-                src="../assets/images/Home/home-card-images/facebook.svg"
-                alt="facebook"
-              />
-              <img
-                src="../assets/images/Home/home-card-images/odno.svg"
-                alt="odnoklasniky"
-              />
-            </div>
-          </div>
-          <div class="phone">
-            <span
-              ><img
-                src="../assets/images/Home/home-card-images/phone.png"
-                alt="phone"
-              />
-              8 800 777 33 33</span
-            >
-            <span
-              >Дизайн
-              <img
-                src="../assets/images/Home/home-card-images/logo-zasovskiy-small-black.svg"
-                alt="zakaz"
-            /></span>
-          </div>
+        <div id="favourite" class="favourite-row">
+            
         </div>
       </div>
-    </footer>
-    <!-- footer end -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.0/build/js/intlTelInput.js"></script>
-    <script src="../JavaScript/modal.js"></script>
-    <script src="../JavaScript/dropdown.js"></script>
-    <script src="../JavaScript/modal2.js"></script>
-    <script src="../JavaScript/chat-user.js"></script>
-
-    <script src="../javascript/const.js"></script>
-    <script src="../javascript/main-shop-cart-counter.js"></script>
-    <script src="../JavaScript/productCart.js"></script>
-    <script src="../JavaScript/all-products.js"></script>
-    <script src="../JavaScript/category_search.js"></script>
+      <div id="pagination-container"></div>
 
 
-    <script src="../JavaScript/dark-mode.js"></script>
-    <script>
-      document
-        .getElementsByClassName("confetti-button")[0]
-        .addEventListener("click", () => {
-          confetti();
-        });
+ 
 
-      var duration = 15 * 1000;
-      var animationEnd = Date.now() + duration;
-      var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
 
-      function randomInRange(min, max) {
-        return Math.random() * (max - min) + min;
-      }
 
-      var interval = setInterval(function () {
-        var timeLeft = animationEnd - Date.now();
-
-        if (timeLeft <= 0) {
-          return clearInterval(interval);
+      <!-- footer start -->
+      <footer class="footer foo">
+        <div class="container">
+          <div class="footer__left">
+            <a href="home.html"
+              ><img
+                src="../assets/images/Home/home-card-images/logo-footer.svg"
+                alt="logo"
+            /></a>
+            <li><a href="../pages/about-us.html">О компании</a></li>
+            <li><a href="../pages/contact.html">Контакты</a></li>
+            <li><a href="../pages/jobs.html">Вакансии</a></li>
+            <li><a href="#">Статьи</a></li>
+            <li><a href="#">Политика обработки персональных данных</a></li>
+          </div>
+          <div class="footer__right">
+            <div class="socials">
+              <div class="half">
+                <img
+                  src="../assets/images/Home/home-card-images/insta.svg"
+                  alt="instagram"
+                />
+                <img
+                  src="../assets/images/Home/home-card-images/Vector.svg"
+                  alt="vektor"
+                />
+              </div>
+              <div class="rest_half">
+                <img
+                  src="../assets/images/Home/home-card-images/facebook.svg"
+                  alt="facebook"
+                />
+                <img
+                  src="../assets/images/Home/home-card-images/odno.svg"
+                  alt="odnoklasniky"
+                />
+              </div>
+            </div>
+            <div class="phone">
+              <span
+                ><img
+                  src="../assets/images/Home/home-card-images/phone.png"
+                  alt="phone"
+                />
+                8 800 777 33 33</span
+              >
+              <span
+                >Дизайн
+                <img
+                  src="../assets/images/Home/home-card-images/logo-zasovskiy-small-black.svg"
+                  alt="zakaz"
+              /></span>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- footer end -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.0/build/js/intlTelInput.js"></script>
+      <script src="../JavaScript/modal.js"></script>
+      <script src="../JavaScript/dropdown.js"></script>
+      <script src="../JavaScript/modal2.js"></script>
+      <script src="../JavaScript/chat-user.js"></script>
+  
+      <script src="../javascript/const.js"></script>
+      <script src="../javascript/favourite-main.js"></script>
+      <script src="../JavaScript/productCart.js"></script>
+      <script src="../javascript/main-shop-cart-counter.js"></script>
+      <script src="../javascript/utilis-favourite.js"></script>
+      <script src="../javascript/favouriteCards.js"></script>
+      <script src="../JavaScript/category_search.js"></script>
+  
+  
+      <script src="../JavaScript/dark-mode.js"></script>
+      <script>
+        document
+          .getElementsByClassName("confetti-button")[0]
+          .addEventListener("click", () => {
+            confetti();
+          });
+  
+        var duration = 15 * 1000;
+        var animationEnd = Date.now() + duration;
+        var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+  
+        function randomInRange(min, max) {
+          return Math.random() * (max - min) + min;
         }
-
-        var particleCount = 50 * (timeLeft / duration);
-        // since particles fall down, start a bit higher than random
-        confetti(
-          Object.assign({}, defaults, {
-            particleCount,
-            origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
-          })
-        );
-        confetti(
-          Object.assign({}, defaults, {
-            particleCount,
-            origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
-          })
-        );
-      }, 250);
-    </script>
-    <script>
-      var items = $("#allproducts .card");
-      var numItems = items.length;
-      var perPage = 8;
-
-      items.slice(perPage).hide();
-
-      $("#pagination-container").pagination({
-        items: numItems,
-        itemsOnPage: perPage,
-        prevText: "&laquo;",
-        nextText: "&raquo;",
-        onPageClick: function (pageNumber) {
-          var showFrom = perPage * (pageNumber - 1);
-          var showTo = showFrom + perPage;
-          items.hide().slice(showFrom, showTo).show();
-        },
-      });
-    </script>
-  </body>
-</html>
+  
+        var interval = setInterval(function () {
+          var timeLeft = animationEnd - Date.now();
+  
+          if (timeLeft <= 0) {
+            return clearInterval(interval);
+          }
+  
+          var particleCount = 50 * (timeLeft / duration);
+          // since particles fall down, start a bit higher than random
+          confetti(
+            Object.assign({}, defaults, {
+              particleCount,
+              origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+            })
+          );
+          confetti(
+            Object.assign({}, defaults, {
+              particleCount,
+              origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+            })
+          );
+        }, 250);
+      </script>
+      <script>
+        var items = $("#allproducts .card");
+        var numItems = items.length;
+        var perPage = 8;
+  
+        items.slice(perPage).hide();
+  
+        $("#pagination-container").pagination({
+          items: numItems,
+          itemsOnPage: perPage,
+          prevText: "&laquo;",
+          nextText: "&raquo;",
+          onPageClick: function (pageNumber) {
+            var showFrom = perPage * (pageNumber - 1);
+            var showTo = showFrom + perPage;
+            items.hide().slice(showFrom, showTo).show();
+          },
+        });
+      </script>
+    </body>
+  </html>
+    

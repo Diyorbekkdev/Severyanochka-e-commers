@@ -228,6 +228,16 @@
         box-shadow: 0 0 0 #fec1958c;
         transition: all 0.3s ease-in-out;
         cursor: pointer;
+
+        &.sendtocart {
+          .cart-item {
+            display:block;
+            animation: xAxis 1s forwards cubic-bezier(1.000,0.440,0.840,0.165);
+            &:before {
+              animation: yAxis 1s alternate forwards cubic-bezier(0.165, 0.840, 0.440, 1.000);
+            }
+          }
+        }
       }
 
       .star-1 {
@@ -688,4 +698,152 @@
       }
     }
   }
+}
+
+
+@keyframes xAxis {
+  100% {
+    transform: translateX(calc(50vw - 105px));
+  }
+}
+
+@keyframes yAxis {
+  100% {
+    transform: translateY(calc(-50vh + 75px));
+  }
+}
+
+
+// .quantity {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   padding: 0;
+// }
+// .quantity__minus,
+// .quantity__plus {
+//   display: block;
+//   width: 35px;
+//   height: 56px;
+//   margin: 0;
+//   background: green;
+//   text-decoration: none;
+//   text-align: center;
+//   line-height: 23px;
+// }
+// .quantity__minus:hover,
+// .quantity__plus:hover {
+//   background: #575b71;
+//   color: #fff;
+// } 
+// .quantity__minus {
+//   border-radius: 3px 0 0 3px;
+// }
+// .quantity__plus {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   border-radius: 0 3px 3px 0;
+// }
+// .quantity__input {
+//   width: 35px;
+//   height: 50px;
+//   margin: 0;
+//   padding: 0;
+//   text-align: center;
+//   border-top: 2px solid #dee0ee;
+//   border-bottom: 2px solid #dee0ee;
+//   border-left: 1px solid #dee0ee;
+//   border-right: 2px solid #dee0ee;
+//   background: #fff;
+//   color: #8184a1;
+// }
+// .quantity__minus:link,
+// .quantity__plus:link {
+//   color: #8184a1;
+// } 
+// .quantity__minus:visited,
+// .quantity__plus:visited {
+//   color: #fff;
+// }
+
+.quantity-field{
+  display: none;
+}
+
+.card{
+  // .btn_main{
+  //   display: none;
+  // }
+  .quantity-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 40px;
+    margin: 5px auto;
+    animation-name: bottom-to-top;
+    animation-duration: 1s;
+    // border: 1px solid red;    
+  }
+  
+  .quantity-field .value-button{ 
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    margin: 0px;
+    width: 100%;
+    height: 100%;   
+    padding: 0;
+    background: #4ee334; 
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .quantity-field .value-button:hover {
+    background: rgb(96, 189, 29);
+  }
+  
+  .quantity-field .value-button:active{
+    background: rgb(53, 221, 61);
+  }
+  
+  .quantity-field .decrease-button {
+    margin-right: -4px;
+    border-radius: 8px 0 0 8px;
+  }
+  
+  .quantity-field .increase-button {
+    margin-left: -4px;
+    border-radius: 0 8px 8px 0;
+  }
+   
+  .quantity-field .number{
+    display: inline-block;
+    text-align: center;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 0px;
+    width: 120px;
+    height: 100%;
+    line-height: 40px;
+    font-size: 11pt;
+    box-sizing: border-box; 
+    background: rgb(211, 214, 212);
+    font-family: calibri;
+  }
+  
+  .quantity-field .number::selection{
+    background: none;
+  }
+  @keyframes  bottom-to-top {
+    0%{
+      transform: translateY(110px);
+    }
+    100%{
+      transform: translateY(0);
+    }
+    
+  }
+
 }
