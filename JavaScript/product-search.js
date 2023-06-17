@@ -17,7 +17,7 @@ function handleSearch() {
       name.toLowerCase().includes(search) ||
       description.toLowerCase().includes(search)
     );
-  });
+});
 
   filteredProducts.forEach((element) => {
     const { id, name, price, description, image } = element;

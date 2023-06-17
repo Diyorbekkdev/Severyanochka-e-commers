@@ -242,10 +242,10 @@
                   alt="like"
                 />Избранное</a
               >
-              <!-- <span id="count-favourite">0</span> -->
+              <span id="count-favourite">0</span>
             </li>
             <li>
-              <a href="all-product.html"
+              <a href="products.html"
                 ><img
                   src="../assets/images/Home/product-min.svg"
                   alt="product-min"
@@ -253,7 +253,7 @@
               >
             </li>
             <li>
-              <a class="counts_parent" href="shop-cart.html"
+              <a class="counts_parent" href="cart.html"
                 ><img
                   src="../assets/images/Home/shopping-cart.svg"
                   alt="shop cart"
@@ -364,7 +364,7 @@
         <div class="footer_navbar_fixed">
           <ul class="footer_nav_list">
             <li>
-              <a onclick="toggleDropdown()" class="red_hover" href="#"
+              <a onclick="toggleDropdown()" class="red_hover" href="category.html"
                 ><img
                   src="../assets/images/Home/menu-dark.svg"
                   alt="menu"
@@ -372,12 +372,13 @@
               >
             </li>
             <li>
-              <a class="red_hover" href="#"
+              <a class="red_hover" href="favourite.html"
                 ><img
                   src="../assets/images/Home/like-min.svg"
                   alt="like"
                 />Избранное</a
               >
+              <span class="fav-counter">0</span>
             </li>
             <li>
               <a class="red_hover" href="#"
@@ -388,13 +389,13 @@
               >
             </li>
             <li>
-              <a class="counts_parent red_hover" href="#"
+              <a class="counts_parent red_hover" href="cart.html"
                 ><img
                   src="../assets/images/Home/shopping-cart.svg"
                   alt="shop cart"
                 />Корзина</a
               >
-              <span class="count">0</span>
+              <span class="count countt">0</span>
             </li>
             <li>
               <a id="mobile-button" class="mobile-only" href="#"
@@ -417,11 +418,36 @@
         <h2 class="all" >Избраное</h2>
       </div>
   
-      <div class="container">
-        <div id="favourite" class="favourite-row">
-            
+      <div id="main-wrapper" class="container favourite_container">
+        <button class="open-range">Фильтр</button>
+        <div class="wrapper">
+          <header>
+            <h2>Price Filter Range</h2>
+          </header>
+          <div class="price-input">
+            <div class="field">
+              <span class="min-max">Min</span>
+              <input type="number" class="input-min" value="0">
+            </div>
+            <div class="separator">-</div>
+            <div class="field">
+              <span class="min-max" >Max</span>
+              <input type="number" class="input-max" value="100">
+            </div>
+          </div>
+          <div class="slider">
+            <div class="progress"></div>
+          </div>
+          <div class="range-input">
+            <input type="range" class="range-min" min="0" max="500" value="0" step="5">
+            <input type="range" class="range-max" min="0" max="500" value="100" step="5">
+          </div>
         </div>
-      </div>
+    
+        <div id="favourite-row" class="favourite-row">
+
+        </div>
+      </div> 
       <div id="pagination-container"></div>
 
 
@@ -489,21 +515,21 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.0/build/js/intlTelInput.js"></script>
-      <script src="../JavaScript/modal.js"></script>
+      
+      <script src="../JavaScript/auth.js"></script>
       <script src="../JavaScript/dropdown.js"></script>
-      <script src="../JavaScript/modal2.js"></script>
       <script src="../JavaScript/chat-user.js"></script>
+      <script src="../JavaScript/dark-mode.js"></script>
   
       <script src="../javascript/const.js"></script>
-      <script src="../javascript/favourite-main.js"></script>
-      <script src="../JavaScript/productCart.js"></script>
-      <script src="../javascript/main-shop-cart-counter.js"></script>
-      <script src="../javascript/utilis-favourite.js"></script>
-      <script src="../javascript/favouriteCards.js"></script>
-      <script src="../JavaScript/category_search.js"></script>
+      <script src="../JavaScript/products-data.js"></script>
+      <script src="../javascript/utils.js"></script>
+      <script src="../javascript/main.js"></script>
+      <script src="../javascript/favourite-range/range-filter.js"></script>
+      <script src="../javascript/favourite.js"></script>
+      <script src="../JavaScript/product-search.js"></script>
   
   
-      <script src="../JavaScript/dark-mode.js"></script>
       <script>
         document
           .getElementsByClassName("confetti-button")[0]
@@ -543,9 +569,9 @@
         }, 250);
       </script>
       <script>
-        var items = $("#allproducts .card");
-        var numItems = items.length;
-        var perPage = 8;
+        const items = $("#favourite-row .card");
+        const numItems = items.length;
+        const perPage = 6;
   
         items.slice(perPage).hide();
   

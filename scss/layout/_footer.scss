@@ -18,12 +18,12 @@
     }
     &__left {
       @extend %df-main;
-      @include media(768px){
+      @include media(910px){
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 0;
       }
-      @include media(400px){
+      @include media(485px){
         grid-template-columns: 1fr;
       }
       gap: 40px;

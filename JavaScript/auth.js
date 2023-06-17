@@ -1,3 +1,13 @@
+var input = document.querySelector("#phone");
+var iti = window.intlTelInput(input, {
+  // separateDialCode:true,
+  utilsScript:
+    "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.0/build/js/utils.js",
+});
+
+// store the instance variable so we can access it in the console e.g. window.iti.getNumber()
+window.iti = iti;
+
 const userButton = document.getElementById("user-button");
 const mobileButton = document.getElementById("mobile-button");
 const modal = document.getElementById("modal");
@@ -8,8 +18,6 @@ const userInfo = JSON.parse(localStorage.getItem("userInfo"));
 if (window.innerWidth <= 768) {
   userButton.id = "user-button-mobile";
 }
-
-
 
 userButton.addEventListener("click", function () {
   if (userInfo) {

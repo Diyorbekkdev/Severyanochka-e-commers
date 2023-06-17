@@ -356,9 +356,7 @@
     width: 100% !important; 
     height: 40px !important;
     margin: 5px auto !important;
-    animation-name: bottom-to-top;
-    animation-duration: 1s;
-    // border: 1px solid red;    
+
   }
   
   .quantity-field .value-button{ 
@@ -409,15 +407,6 @@
   
   .quantity-field .number::selection{
     background: none !important;
-  }
-  @keyframes  bottom-to-top {
-    0%{
-      transform: translateY(110px);
-    }
-    100%{
-      transform: translateY(0);
-    }
-    
   }
 
 }

@@ -53,7 +53,9 @@
     </div>
     <!-- CHAT USER  -->
 
-    <button id="btnGiveCommand"><img src="../assets/images/Home/mikrafhone.png" alt=""></button>
+    <button id="btnGiveCommand">
+      <img src="../assets/images/Home/mikrafhone.png" alt="" />
+    </button>
 
     <!-- DarkMode checkbox -->
     <div class="container">
@@ -236,15 +238,16 @@
           </div>
           <ul>
             <li>
-              <a href="#"
+              <a href="favourite.html"
                 ><img
                   src="../assets/images/Home/like-min.svg"
                   alt="like"
                 />Избранное</a
               >
+              <span id="count-favourite">0</span>
             </li>
             <li>
-              <a href="all-product.html"
+              <a href="products.html"
                 ><img
                   src="../assets/images/Home/product-min.svg"
                   alt="product-min"
@@ -252,7 +255,7 @@
               >
             </li>
             <li>
-              <a class="counts_parent" href="shop-cart.html"
+              <a class="counts_parent" href="cart.html"
                 ><img
                   src="../assets/images/Home/shopping-cart.svg"
                   alt="shop cart"
@@ -262,46 +265,72 @@
             </li>
           </ul>
           <a onclick="" href="#" id="user-button" class="user">
-            <img width="40px" height="40px" id="profile-image" style="border-radius: 50%;" src="../assets/images/Home/aleksiy.png" alt="user" />
+            <img
+              width="40px"
+              height="40px"
+              id="profile-image"
+              style="border-radius: 50%"
+              src="../assets/images/Home/aleksiy.png"
+              alt="user"
+            />
             <p id="username" class="user_info">SIGN IN</p>
             <div class="user-info-container">
               <div class="user-info" id="user-info">
-                <img src="../assets/images/Home/list.svg" class="dropdown-icon hidden"></img>
+                <img
+                  src="../assets/images/Home/list.svg"
+                  class="dropdown-icon hidden"
+                />
               </div>
               <ul class="dropdown-menu" id="dropdown-menu">
-                <li><a class="first" href="user-dashboard.html"><svg width = "20px" viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M9.135 20.773v-3.057c0-.78.637-1.414 1.423-1.414h2.875c.377 0 .74.15 1.006.414.267.265.417.625.417 1v3.057c-.002.325.126.637.356.867.23.23.544.36.87.36h1.962a3.46 3.46 0 002.443-1 3.41 3.41 0 001.013-2.422V9.867c0-.735-.328-1.431-.895-1.902l-6.671-5.29a3.097 3.097 0 00-3.949.072L3.467 7.965A2.474 2.474 0 002.5 9.867v8.702C2.5 20.464 4.047 22 5.956 22h1.916c.68 0 1.231-.544 1.236-1.218l.027-.009z"
-                  />
-                </svg>Dashboard</a></li>
-                <input class="profile_picture" type="file" id="profile-image-input" accept="image/*" />
-                <li><a class="log-out" href="#"><svg width = "20px"
-                  viewBox="0 0 24 25"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M8.8999 8.05999C9.2099 4.45999 11.0599 2.98999 15.1099 2.98999H15.2399C19.7099 2.98999 21.4999 4.77999 21.4999 9.24999V15.77C21.4999 20.24 19.7099 22.03 15.2399 22.03H15.1099C11.0899 22.03 9.2399 20.58 8.9099 17.04"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M15.0001 12.5H3.62012"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M5.85 9.14999L2.5 12.5L5.85 15.85"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg> Log Out</a></li>
+                <li>
+                  <a class="first" href="user-dashboard.html">
+                    <svg width="20px" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M9.135 20.773v-3.057c0-.78.637-1.414 1.423-1.414h2.875c.377 0 .74.15 1.006.414.267.265.417.625.417 1v3.057c-.002.325.126.637.356.867.23.23.544.36.87.36h1.962a3.46 3.46 0 002.443-1 3.41 3.41 0 001.013-2.422V9.867c0-.735-.328-1.431-.895-1.902l-6.671-5.29a3.097 3.097 0 00-3.949.072L3.467 7.965A2.474 2.474 0 002.5 9.867v8.702C2.5 20.464 4.047 22 5.956 22h1.916c.68 0 1.231-.544 1.236-1.218l.027-.009z"
+                      />
+                    </svg>
+                    <span>Dashboard</span>
+                  </a>
+                </li>
+                <input
+                  class="profile_picture"
+                  type="file"
+                  id="profile-image-input"
+                  accept="image/*"
+                />
+                <li>
+                  <a class="log-out" href="#"
+                    ><svg
+                      width="20px"
+                      viewBox="0 0 24 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.8999 8.05999C9.2099 4.45999 11.0599 2.98999 15.1099 2.98999H15.2399C19.7099 2.98999 21.4999 4.77999 21.4999 9.24999V15.77C21.4999 20.24 19.7099 22.03 15.2399 22.03H15.1099C11.0899 22.03 9.2399 20.58 8.9099 17.04"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M15.0001 12.5H3.62012"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M5.85 9.14999L2.5 12.5L5.85 15.85"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>Log Out</span></a
+                  >
+                </li>
               </ul>
             </div>
           </a>
@@ -363,7 +392,7 @@
         <div class="footer_navbar_fixed">
           <ul class="footer_nav_list">
             <li>
-              <a onclick="toggleDropdown()" class="red_hover" href="#"
+              <a onclick="toggleDropdown()" class="red_hover" href="category.html"
                 ><img
                   src="../assets/images/Home/menu-dark.svg"
                   alt="menu"
@@ -371,12 +400,13 @@
               >
             </li>
             <li>
-              <a class="red_hover" href="#"
+              <a class="red_hover" href="favourite.html"
                 ><img
                   src="../assets/images/Home/like-min.svg"
                   alt="like"
                 />Избранное</a
               >
+              <span class="fav-counter">0</span>
             </li>
             <li>
               <a class="red_hover" href="#"
@@ -387,13 +417,13 @@
               >
             </li>
             <li>
-              <a class="counts_parent red_hover" href="#"
+              <a class="counts_parent red_hover" href="cart.html"
                 ><img
                   src="../assets/images/Home/shopping-cart.svg"
                   alt="shop cart"
                 />Корзина</a
               >
-              <span class="count">0</span>
+              <span class="count countt">0</span>
             </li>
             <li>
               <a id="mobile-button" class="mobile-only" href="#"
@@ -413,15 +443,15 @@
     <!-- BREADCRUMB END -->
 
     <div class="container">
-      <h2 class="all" >Все продукты</h2>
+      <h2 class="all">Все продукты</h2>
     </div>
 
     <div class="container">
       <div id="allproducts" class="card-content products__row">
-
+        
       </div>
+      <div id="pagination-container"></div>
     </div>
-    <div id="pagination-container"></div>
     <!-- <div class="container"> -->
 
     <!-- footer start -->
@@ -484,19 +514,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.0/build/js/intlTelInput.js"></script>
-    <script src="../JavaScript/modal.js"></script>
+
+
+
+
+
+    <script src="../JavaScript/auth.js"></script>
     <script src="../JavaScript/dropdown.js"></script>
-    <script src="../JavaScript/modal2.js"></script>
     <script src="../JavaScript/chat-user.js"></script>
-
-    <script src="../javascript/const.js"></script>
-    <script src="../javascript/main-shop-cart-counter.js"></script>
-    <script src="../JavaScript/productCart.js"></script>
-    <script src="../JavaScript/all-products.js"></script>
-    <script src="../JavaScript/category_search.js"></script>
-
-
     <script src="../JavaScript/dark-mode.js"></script>
+    
+    <script src="../javascript/const.js"></script>
+    <script src="../JavaScript/products-data.js"></script>
+    <script src="../javascript/utils.js"></script>
+    <script src="../javascript/main.js"></script>
+
+    
+
+    <script src="../JavaScript/products.js"></script>
+    <script src="../JavaScript/product-search.js"></script>
+
     <script>
       document
         .getElementsByClassName("confetti-button")[0]
@@ -535,24 +572,27 @@
         );
       }, 250);
     </script>
-    <script>
-      var items = $("#allproducts .card");
-      var numItems = items.length;
-      var perPage = 8;
 
-      items.slice(perPage).hide();
+<script>
+  const items = $("#allproducts .card");
+  const numItems = items.length;
+  const perPage = 8;
 
-      $("#pagination-container").pagination({
-        items: numItems,
-        itemsOnPage: perPage,
-        prevText: "&laquo;",
-        nextText: "&raquo;",
-        onPageClick: function (pageNumber) {
-          var showFrom = perPage * (pageNumber - 1);
-          var showTo = showFrom + perPage;
-          items.hide().slice(showFrom, showTo).show();
-        },
-      });
-    </script>
+  items.slice(perPage).hide();
+
+  $("#pagination-container").pagination({
+    items: numItems,
+    itemsOnPage: perPage,
+    prevText: "&laquo;",
+    nextText: "&raquo;",
+    onPageClick: function (pageNumber) {
+      var showFrom = perPage * (pageNumber - 1);
+      var showTo = showFrom + perPage;
+      items.hide().slice(showFrom, showTo).show();
+    },
+  });
+</script>
+
+
   </body>
 </html>

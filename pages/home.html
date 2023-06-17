@@ -4,48 +4,43 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.0/build/css/intlTelInput.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/driver.js/dist/driver.min.css"
-    />
-    <script
-      src="https://kit.fontawesome.com/2dd9a30273.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:400,900,700,300,100"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      rel="stylesheet"
-      href="//cdn.materialdesignicons.com/1.4.57/css/materialdesignicons.min.css"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min">
+    
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.0/build/css/intlTelInput.css"
+    />
+    
+    <script
+    src="https://kit.fontawesome.com/2dd9a30273.js"
+    crossorigin="anonymous"
+    ></script>
+    
+    <link
+    href="https://fonts.googleapis.com/css?family=Lato:400,900,700,300,100"
+    rel="stylesheet"
+    type="text/css"
+    />
+    <link
+    rel="stylesheet"
+    href="//cdn.materialdesignicons.com/1.4.57/css/materialdesignicons.min.css"
+    />
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.css"
+  />
     <title>Главная || Северяночка</title>
     <link rel="stylesheet" href="../css/home.min.css" />
   </head>
   <body>
-    <!-- <div id="google_translate_element"></div> -->
 
     <!-- CHAT USER  -->
     <div id="myButton" class="chat">
@@ -219,10 +214,6 @@
                 </div>
               </form>
             </div>
-            <div class="login">
-              <a class="login_reg" href="#">Регистрация</a>
-              <a class="forgot" href="#">Забыли пароль?</a>
-            </div>
           </div>
         </div>
       </div>
@@ -273,10 +264,10 @@
                   alt="like"
                 />Избранное</a
               >
-              <!-- <span id="count-favourite">0</span> -->
+              <span id="count-favourite">0</span>
             </li>
             <li>
-              <a href="../pages/all-product.html"
+              <a href="../pages/products.html"
                 ><img
                   src="../assets/images/Home/product-min.svg"
                   alt="product-min"
@@ -284,7 +275,7 @@
               >
             </li>
             <li>
-              <a  class="counts_parent" href="shop-cart.html"
+              <a  class="counts_parent" href="cart.html"
                 ><img
                   src="../assets/images/Home/shopping-cart.svg"
                   alt="shop cart"
@@ -298,8 +289,7 @@
             <p id="username" class="user_info">SIGN IN</p>
             <div class="user-info-container">
               <div class="user-info" id="user-info">
-                <img src="../assets/images/Home/list.svg" class="dropdown-icon hidden"></img>
-              </div>
+                <img src="../assets/images/Home/list.svg" class="dropdown-icon hidden">
               <ul class="dropdown-menu" id="dropdown-menu">
                 <li><a class="first" href="user-dashboard.html"><svg width = "20px" viewBox="0 0 24 24" fill="currentColor">
                   <path
@@ -384,7 +374,7 @@
         <div class="footer_navbar_fixed">
           <ul class="footer_nav_list">
             <li>
-              <a onclick="toggleDropdown()" class="red_hover" href="#"
+              <a onclick="toggleDropdown()" class="red_hover" href="category.html"
                 ><img
                   src="../assets/images/Home/menu-dark.svg"
                   alt="menu"
@@ -392,15 +382,16 @@
               >
             </li>
             <li>
-              <a class="red_hover" href="#"
+              <a class="red_hover" href="favourite.html"
                 ><img
                   src="../assets/images/Home/like-min.svg"
                   alt="like"
                 />Избранное</a
               >
+              <span class="fav-counter">0</span>
             </li>
             <li>
-              <a class="red_hover" href="#"
+              <a class="red_hover" href="products.html"
                 ><img
                   src="../assets/images/Home/product-min.svg"
                   alt="product-min"
@@ -408,7 +399,7 @@
               >
             </li>
             <li>
-              <a class="counts_parent red_hover" href="shop-cart.html"
+              <a class="counts_parent red_hover" href="cart.html"
                 ><img
                   src="../assets/images/Home/shopping-cart.svg"
                   alt="shop cart"
@@ -426,6 +417,8 @@
       </div>
     </nav>
     <!-- NAVIGATION END -->
+
+   
     <!-- HOME FIRST SECTION START -->
     <section class="deliver">
       <div class="container">
@@ -437,15 +430,13 @@
     </section>
     <!-- HOME FIRST SECTION START -->
 
-    <!-- <span type="text" id="inputField" placeholder = "Speech will be recognized here"></span>
-    <button id="btnGiveCommand">Start Listening</button> -->
     <button id="btnGiveCommand"><img src="../assets/images/Home/mikrafhone.png" alt=""></button>
     <!-- HOME SECOND SECTION START -->
     <section class="discount">
       <div class="container">
         <div class="discount__title">
           <h2>Акции</h2>
-          <a href="all-product.html"
+          <a href="products.html"
             >Все продукты
             <span
               ><img
@@ -455,14 +446,15 @@
         </div>
 
         <div id="root" class="discount__wrapper owl-carousel owl-theme"></div>
+
       </div>
     </section>
-
-    <section class="discount">
+    
+    <section  class="discount">
       <div class="container">
         <div class="discount__title">
           <h2>Новинки</h2>
-          <a href="all-product.html"
+          <a href="products.html"
             >Все продукты
             <span
               ><img
@@ -470,15 +462,17 @@
                 alt="right arrow" /></span
           ></a>
         </div>
-        <div id="roots" class="discount__wrapper owl-carousel owl-theme"></div>
+        <div id="roots" class="discount__wrapper owl-carousel owl-theme ">
+            
+        </div>
       </div>
     </section>
 
-    <section class="discount">
+    <section  class="discount">
       <div class="container">
         <div class="discount__title">
           <h2>Покупали раньше</h2>
-          <a href="all-product.html"
+          <a href="products.html"
             >Все продукты
             <span
               ><img
@@ -489,7 +483,8 @@
         <div
           id="high-rated"
           class="discount__wrapper owl-carousel owl-theme"
-        ></div>
+        >
+          </div>
       </div>
     </section>
     <!-- HOME SECOND SECTION START -->
@@ -582,7 +577,7 @@
       <div class="container">
         <div class="discount__title">
           <h2>Статьи</h2>
-          <a href="all-product.html"
+          <a href="jobs.html"
             >Все статьи
             <span
               ><img
@@ -652,19 +647,10 @@
     </footer>
 
     <!-- carousel js -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
-      integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- carousel js -->
+    <script src="../javascript/carousel.js"></script>
 
     <!-- confetti library -->
     <script>
@@ -705,26 +691,23 @@
         );
       }, 250);
     </script>
+
     <!-- confetti library -->
     <script src="https://cdn.jsdelivr.net/gh/abdulazizcreator/ap-tab/main.js"></script>
-    <script src="https://unpkg.com/driver.js/dist/driver.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.0/build/js/intlTelInput.js"></script>
 
-    <script src="../JavaScript/modal.js"></script>
+    <script src="../JavaScript/auth.js"></script>
     <script src="../JavaScript/dropdown.js"></script>
-    <script src="../JavaScript/modal2.js"></script>
     <script src="../JavaScript/chat-user.js"></script>
+    <script src="../JavaScript/dark-mode.js"></script>
 
     <script src="../javascript/const.js"></script>
-    <script src="../javascript/favourite-main.js"></script>
-    <script src="../javascript/main-shop-cart-counter.js"></script>
-    <script src="../JavaScript/productCart.js"></script>
-    <script src="../javascript/utilis-favourite.js"></script>
-    <script src="../JavaScript/category_search.js"></script>
-    <script src="../JavaScript/product-2.js"></script>
+    <script src="../JavaScript/products-data.js"></script>
+    <script src="../javascript/utils.js"></script>
+    <script src="../javascript/main.js"></script>
 
+    <script src="../JavaScript/product-search.js"></script>
+    <script src="../JavaScript/home.js"></script>
 
-    <script src="../JavaScript/carousel.js"></script>
-    <script src="../JavaScript/dark-mode.js"></script>
   </body>
 </html>

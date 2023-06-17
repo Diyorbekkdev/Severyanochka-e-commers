@@ -1,3 +1,3 @@
-const CART = 'cart';
-const CATEGORY = "category";
+const CART = "cart";
 const FAVORITE = "favorite";
+// const SPECIALCART = "specilacart";

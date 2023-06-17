@@ -1,574 +1,677 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.0/build/css/intlTelInput.css"
-  />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:400,700">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.0/build/css/intlTelInput.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Dosis:400,700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
     <title>Доставка</title>
-    <link rel="stylesheet" href="../css/delivering.min.css">
-</head>
-<body>
-
-  <button id="btnGiveCommand"><img src="../assets/images/Home/mikrafhone.png" alt=""></button>
+    <link rel="stylesheet" href="../css/delivering.min.css" />
+  </head>
+  <body>
+    <button id="btnGiveCommand">
+      <img src="../assets/images/Home/mikrafhone.png" alt="" />
+    </button>
 
     <!-- CHAT USER  -->
     <div id="myButton" class="chat">
-        <a class="telegram" href="../pages/about-us.html"
-          ><img
-            width="60"
-            height="60"
-            src="../assets/images/Home/chat-user/whatssapp.svg"
-            alt=""
-        /></a>
-        <a class="whatsapp" href="#"
-          ><img
-            width="60"
-            height="60"
-            src="../assets/images/Home/chat-user/telegram.svg"
-            alt="Chat user"
-        /></a>
-        <img
-          class="message"
+      <a class="telegram" href="../pages/about-us.html"
+        ><img
           width="60"
           height="60"
-          src="../assets/images/contact/logo.svg"
+          src="../assets/images/Home/chat-user/whatssapp.svg"
           alt=""
-        />
-        <img
-          class="messeage_close"
-          width="55"
-          height="55"
-          src="../assets/images/Home/chat-user/close.png"
-          alt=""
-        />
-        <p class="write">Hапишите нам</p>
-        <p class="join">Подписаться</p>
-      </div>
-      <!-- CHAT USER  -->
-  
-      <header class="header">
-        <div id="modal" class="wrapper-modal">
-          <div class="modal">
-            <img
-              onclick="closeModal()"
-              class="img-close"
-              src="../assets/images/Home/closebutton.svg"
-              alt=""
-            />
-            <div class="modal-content">
-              <header>
-                <img src="../assets/images/Home/logo-tablet.svg" alt="" />
-                Северяночка
-              </header>
-              <div class="progress-bar">
-                <div class="step">
-                  <p>Name</p>
-                  <div class="bullet">
-                    <span>1</span>
-                  </div>
-                  <div class="check fas fa-check"></div>
+      /></a>
+      <a class="whatsapp" href="#"
+        ><img
+          width="60"
+          height="60"
+          src="../assets/images/Home/chat-user/telegram.svg"
+          alt="Chat user"
+      /></a>
+      <img
+        class="message"
+        width="60"
+        height="60"
+        src="../assets/images/contact/logo.svg"
+        alt=""
+      />
+      <img
+        class="messeage_close"
+        width="55"
+        height="55"
+        src="../assets/images/Home/chat-user/close.png"
+        alt=""
+      />
+      <p class="write">Hапишите нам</p>
+      <p class="join">Подписаться</p>
+    </div>
+    <!-- CHAT USER  -->
+
+    <header class="header">
+      <div id="modal" class="wrapper-modal">
+        <div class="modal">
+          <img
+            onclick="closeModal()"
+            class="img-close"
+            src="../assets/images/Home/closebutton.svg"
+            alt=""
+          />
+          <div class="modal-content">
+            <header>
+              <img src="../assets/images/Home/logo-tablet.svg" alt="" />
+              Северяночка
+            </header>
+            <div class="progress-bar">
+              <div class="step">
+                <p>Name</p>
+                <div class="bullet">
+                  <span>1</span>
                 </div>
-                <div class="step">
-                  <p>Contact</p>
-                  <div class="bullet">
-                    <span>2</span>
-                  </div>
-                  <div class="check fas fa-check"></div>
-                </div>
-                <div class="step">
-                  <p>Birth</p>
-                  <div class="bullet">
-                    <span>3</span>
-                  </div>
-                  <div class="check fas fa-check"></div>
-                </div>
-                <div class="step">
-                  <p>Submit</p>
-                  <div class="bullet">
-                    <span>4</span>
-                  </div>
-                  <div class="check fas fa-check"></div>
-                </div>
+                <div class="check fas fa-check"></div>
               </div>
-              <div class="form-outer">
-                <form action="#">
-                  <div class="page slide-page">
-                    <div class="title">Basic Info:</div>
-                    <div class="field">
-                      <div class="label">First Name</div>
-                      <input type="text" placeholder="First Name" required />
-                    </div>
-                    <div class="field">
-                      <div class="label">Last Name</div>
-                      <input type="text" placeholder="Last name" required />
-                    </div>
-                    <div class="field">
-                      <button class="firstNext next">Next</button>
-                    </div>
-                  </div>
-                  <div class="page">
-                    <div class="title">Contact Info:</div>
-                    <div class="field">
-                      <div class="label">Email Address</div>
-                      <input
-                        class="email"
-                        type="email"
-                        placeholder="Email address"
-                        required
-                      />
-                    </div>
-                    <div class="field">
-                      <div class="label">Phone Number</div>
-                      <input class="tel" type="tel" id="phone" required />
-                    </div>
-                    <div class="field btns">
-                      <button class="prev-1 prev">Previous</button>
-                      <button class="next-1 next">Next</button>
-                    </div>
-                  </div>
-                  <div class="page">
-                    <div class="title">Date of Birth:</div>
-                    <div class="field">
-                      <div class="label">Date</div>
-                      <input class="date" type="date" placeholder="03.03.2001" />
-                    </div>
-                    <div class="field">
-                      <div class="label">Gender</div>
-                      <select>
-                        <option>Male</option>
-                        <option>Female</option>
-                        <option>Other</option>
-                      </select>
-                    </div>
-                    <div class="field btns">
-                      <button class="prev-2 prev">Previous</button>
-                      <button class="next-2 next">Next</button>
-                    </div>
-                  </div>
-                  <div class="page">
-                    <div class="title">Login Details:</div>
-                    <div class="field">
-                      <div class="label">Username</div>
-                      <input
-                        class="username_important"
-                        type="text"
-                        placeholder="Username"
-                        required
-                      />
-                    </div>
-                    <div class="field">
-                      <div class="label">Password</div>
-                      <input
-                        class="password"
-                        type="password"
-                        required
-                        placeholder="*******"
-                      />
-                    </div>
-                    <div class="field btns">
-                      <button class="prev-3 prev">Previous</button>
-                      <button class="submit">Submit</button>
-                    </div>
-                  </div>
-                </form>
+              <div class="step">
+                <p>Contact</p>
+                <div class="bullet">
+                  <span>2</span>
+                </div>
+                <div class="check fas fa-check"></div>
               </div>
+              <div class="step">
+                <p>Birth</p>
+                <div class="bullet">
+                  <span>3</span>
+                </div>
+                <div class="check fas fa-check"></div>
+              </div>
+              <div class="step">
+                <p>Submit</p>
+                <div class="bullet">
+                  <span>4</span>
+                </div>
+                <div class="check fas fa-check"></div>
+              </div>
+            </div>
+            <div class="form-outer">
+              <form action="#">
+                <div class="page slide-page">
+                  <div class="title">Basic Info:</div>
+                  <div class="field">
+                    <div class="label">First Name</div>
+                    <input type="text" placeholder="First Name" required />
+                  </div>
+                  <div class="field">
+                    <div class="label">Last Name</div>
+                    <input type="text" placeholder="Last name" required />
+                  </div>
+                  <div class="field">
+                    <button class="firstNext next">Next</button>
+                  </div>
+                </div>
+                <div class="page">
+                  <div class="title">Contact Info:</div>
+                  <div class="field">
+                    <div class="label">Email Address</div>
+                    <input
+                      class="email"
+                      type="email"
+                      placeholder="Email address"
+                      required
+                    />
+                  </div>
+                  <div class="field">
+                    <div class="label">Phone Number</div>
+                    <input class="tel" type="tel" id="phone" required />
+                  </div>
+                  <div class="field btns">
+                    <button class="prev-1 prev">Previous</button>
+                    <button class="next-1 next">Next</button>
+                  </div>
+                </div>
+                <div class="page">
+                  <div class="title">Date of Birth:</div>
+                  <div class="field">
+                    <div class="label">Date</div>
+                    <input class="date" type="date" placeholder="03.03.2001" />
+                  </div>
+                  <div class="field">
+                    <div class="label">Gender</div>
+                    <select>
+                      <option>Male</option>
+                      <option>Female</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div class="field btns">
+                    <button class="prev-2 prev">Previous</button>
+                    <button class="next-2 next">Next</button>
+                  </div>
+                </div>
+                <div class="page">
+                  <div class="title">Login Details:</div>
+                  <div class="field">
+                    <div class="label">Username</div>
+                    <input
+                      class="username_important"
+                      type="text"
+                      placeholder="Username"
+                      required
+                    />
+                  </div>
+                  <div class="field">
+                    <div class="label">Password</div>
+                    <input
+                      class="password"
+                      type="password"
+                      required
+                      placeholder="*******"
+                    />
+                  </div>
+                  <div class="field btns">
+                    <button class="prev-3 prev">Previous</button>
+                    <button class="submit">Submit</button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
-        <div class="container">
-          <nav class="header__nav">
-            <a id="logo" class="logo" href="../pages/home.html"
-              ><img src="../assets/images/Home/logo-min.svg" alt="Logo"
-            /></a>
-            <a class="logo_tablet" href="../pages/home.html"
-              ><img src="../assets/images/Home/logo-tablet.svg" alt="logo"
-            /></a>
-            <div class="header__nav_search">
-              <div class="wrapperr">
-                <button  class="catalog confetti-button">
-                  <img onclick="toggleDropdown()"
-                    id="menuIcon"
-                    src="../assets/images/Home/menu-min.svg"
-                    alt="menu"
-                  /><a href="../pages/category.html" class="text_katalog">Каталог</a>
-                </button>
-              </div>
-              <div class="search">
-                <input id="searchInput" class="search_input" type="text" placeholder="Найти товар" />
+      </div>
+      <div class="container">
+        <nav class="header__nav">
+          <a id="logo" class="logo" href="../pages/home.html"
+            ><img src="../assets/images/Home/logo-min.svg" alt="Logo"
+          /></a>
+          <a class="logo_tablet" href="../pages/home.html"
+            ><img src="../assets/images/Home/logo-tablet.svg" alt="logo"
+          /></a>
+          <div class="header__nav_search">
+            <div class="wrapperr">
+              <button class="catalog confetti-button">
                 <img
-                  class="search_icon"
-                  src="../assets/images/Home/search.svg"
-                  alt="search icon"
-                />
-                <div class="search_result"></div>
-              </div>
+                  onclick="toggleDropdown()"
+                  id="menuIcon"
+                  src="../assets/images/Home/menu-min.svg"
+                  alt="menu"
+                /><a href="../pages/category.html" class="text_katalog"
+                  >Каталог</a
+                >
+              </button>
             </div>
-            <ul>
-              <li>
-                <a href="#"
-                  ><img
-                    src="../assets/images/Home/like-min.svg"
-                    alt="like"
-                  />Избранное</a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><img
-                    src="../assets/images/Home/product-min.svg"
-                    alt="product-min"
-                  />продукты</a
-                >
-              </li>
-              <li>
-                <a  class="counts_parent" href="shop-cart.html"
-                  ><img
-                    src="../assets/images/Home/shopping-cart.svg"
-                    alt="shop cart"
-                  />Корзина</a
-                >
-                <span id="count" class="count">0</span>
-              </li>
-            </ul>
-            <a onclick="" href="#" id="user-button" class="user">
-              <img width="40px" height="40px" id="profile-image" style="border-radius: 50%;" src="../assets/images/Home/aleksiy.png" alt="user" />
-              <p id="username" class="user_info">SIGN IN</p>
-              <div class="user-info-container">
-                <div class="user-info" id="user-info">
-                  <img src="../assets/images/Home/list.svg" class="dropdown-icon hidden"></img>
-                </div>
-                <ul class="dropdown-menu" id="dropdown-menu">
-                  <li><a class="first" href="user-dashboard.html"><svg width = "20px" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                      d="M9.135 20.773v-3.057c0-.78.637-1.414 1.423-1.414h2.875c.377 0 .74.15 1.006.414.267.265.417.625.417 1v3.057c-.002.325.126.637.356.867.23.23.544.36.87.36h1.962a3.46 3.46 0 002.443-1 3.41 3.41 0 001.013-2.422V9.867c0-.735-.328-1.431-.895-1.902l-6.671-5.29a3.097 3.097 0 00-3.949.072L3.467 7.965A2.474 2.474 0 002.5 9.867v8.702C2.5 20.464 4.047 22 5.956 22h1.916c.68 0 1.231-.544 1.236-1.218l.027-.009z"
-                    />
-                  </svg>Dashboard</a></li>
-                  <input class="profile_picture" type="file" id="profile-image-input" accept="image/*" />
-                  <li><a class="log-out" href="#"><svg width = "20px"
-                    viewBox="0 0 24 25"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8.8999 8.05999C9.2099 4.45999 11.0599 2.98999 15.1099 2.98999H15.2399C19.7099 2.98999 21.4999 4.77999 21.4999 9.24999V15.77C21.4999 20.24 19.7099 22.03 15.2399 22.03H15.1099C11.0899 22.03 9.2399 20.58 8.9099 17.04"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M15.0001 12.5H3.62012"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M5.85 9.14999L2.5 12.5L5.85 15.85"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg> Log Out</a></li>
-                </ul>
-              </div>
-            </a>
-          </nav>
-        </div>
-      </header>
-      <div id="dropdown-content">
-        <div class="container">
-          <div id="categoryButtons" class="dropdown_box">
-            <ul class="grid-item">
-              <li>
-                <a data-category="milk" class="grid-itemm" href="#">Молоко, сыр, яйцо</a>
-              </li>
-              <li><a data-category="bread" class="grid-itemm" href="#">Хлеб</a></li>
-              <li><a data-category="bread" class="grid-itemm" href="#">Фрукты и овощи</a></li>
-              <li>
-                <a data-category="bread" class="grid-itemm" href="#">Замороженные продукты</a>
-              </li>
-            </ul>
-            <ul class="second grid-item">
-              <li><a value="Молоко" class="grid-itemm" href="#">Напитки</a></li>
-              <li>
-                <a value="Молоко" class="grid-itemm" href="#">Кондитерские изделия</a>
-              </li>
-              <li><a class="grid-itemm" href="#">Чай, кофе</a></li>
-            </ul>
-            <ul class="second grid-item">
-              <li><a class="grid-itemm" href="#">Бакалея</a></li>
-              <li><a class="grid-itemm" href="#">Здоровое питание</a></li>
-              <li><a class="grid-itemm" href="#">Зоотовары</a></li>
-            </ul>
-            <ul class="second grid-item">
-              <li>
-                <a class="grid-itemm" href="#">Непродовольственные товары</a>
-              </li>
-              <li><a class="grid-itemm" href="#">Детское питание</a></li>
-              <li>
-                <a class="grid-itemm" href="#">Мясо, птица, колбаса</a>
-              </li>
-            </ul>
+            <div class="search">
+              <input
+                id="searchInput"
+                class="search_input"
+                type="text"
+                placeholder="Найти товар"
+              />
+              <img
+                class="search_icon"
+                src="../assets/images/Home/search.svg"
+                alt="search icon"
+              />
+              <div class="search_result"></div>
+            </div>
           </div>
+          <ul>
+            <li>
+              <a href="#"
+                ><img
+                  src="../assets/images/Home/like-min.svg"
+                  alt="like"
+                />Избранное</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="../assets/images/Home/product-min.svg"
+                  alt="product-min"
+                />продукты</a
+              >
+            </li>
+            <li>
+              <a class="counts_parent" href="cart.html"
+                ><img
+                  src="../assets/images/Home/shopping-cart.svg"
+                  alt="shop cart"
+                />Корзина</a
+              >
+              <span id="count" class="count">0</span>
+            </li>
+          </ul>
+          <a onclick="" href="#" id="user-button" class="user">
+            <img
+              width="40px"
+              height="40px"
+              id="profile-image"
+              style="border-radius: 50%"
+              src="../assets/images/Home/aleksiy.png"
+              alt="user"
+            />
+            <p id="username" class="user_info">SIGN IN</p>
+            <div class="user-info-container">
+              <div class="user-info" id="user-info">
+                <img
+                  src="../assets/images/Home/list.svg"
+                  class="dropdown-icon hidden"
+                />
+              </div>
+              <ul class="dropdown-menu" id="dropdown-menu">
+                <li>
+                  <a class="first" href="user-dashboard.html"
+                    ><svg width="20px" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M9.135 20.773v-3.057c0-.78.637-1.414 1.423-1.414h2.875c.377 0 .74.15 1.006.414.267.265.417.625.417 1v3.057c-.002.325.126.637.356.867.23.23.544.36.87.36h1.962a3.46 3.46 0 002.443-1 3.41 3.41 0 001.013-2.422V9.867c0-.735-.328-1.431-.895-1.902l-6.671-5.29a3.097 3.097 0 00-3.949.072L3.467 7.965A2.474 2.474 0 002.5 9.867v8.702C2.5 20.464 4.047 22 5.956 22h1.916c.68 0 1.231-.544 1.236-1.218l.027-.009z"
+                      /></svg
+                    >Dashboard</a
+                  >
+                </li>
+                <input
+                  class="profile_picture"
+                  type="file"
+                  id="profile-image-input"
+                  accept="image/*"
+                />
+                <li>
+                  <a class="log-out" href="#"
+                    ><svg
+                      width="20px"
+                      viewBox="0 0 24 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.8999 8.05999C9.2099 4.45999 11.0599 2.98999 15.1099 2.98999H15.2399C19.7099 2.98999 21.4999 4.77999 21.4999 9.24999V15.77C21.4999 20.24 19.7099 22.03 15.2399 22.03H15.1099C11.0899 22.03 9.2399 20.58 8.9099 17.04"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M15.0001 12.5H3.62012"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M5.85 9.14999L2.5 12.5L5.85 15.85"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    Log Out</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <div id="dropdown-content">
+      <div class="container">
+        <div id="categoryButtons" class="dropdown_box">
+          <ul class="grid-item">
+            <li>
+              <a data-category="milk" class="grid-itemm" href="#"
+                >Молоко, сыр, яйцо</a
+              >
+            </li>
+            <li>
+              <a data-category="bread" class="grid-itemm" href="#">Хлеб</a>
+            </li>
+            <li>
+              <a data-category="bread" class="grid-itemm" href="#"
+                >Фрукты и овощи</a
+              >
+            </li>
+            <li>
+              <a data-category="bread" class="grid-itemm" href="#"
+                >Замороженные продукты</a
+              >
+            </li>
+          </ul>
+          <ul class="second grid-item">
+            <li><a value="Молоко" class="grid-itemm" href="#">Напитки</a></li>
+            <li>
+              <a value="Молоко" class="grid-itemm" href="#"
+                >Кондитерские изделия</a
+              >
+            </li>
+            <li><a class="grid-itemm" href="#">Чай, кофе</a></li>
+          </ul>
+          <ul class="second grid-item">
+            <li><a class="grid-itemm" href="#">Бакалея</a></li>
+            <li><a class="grid-itemm" href="#">Здоровое питание</a></li>
+            <li><a class="grid-itemm" href="#">Зоотовары</a></li>
+          </ul>
+          <ul class="second grid-item">
+            <li>
+              <a class="grid-itemm" href="#">Непродовольственные товары</a>
+            </li>
+            <li><a class="grid-itemm" href="#">Детское питание</a></li>
+            <li>
+              <a class="grid-itemm" href="#">Мясо, птица, колбаса</a>
+            </li>
+          </ul>
         </div>
       </div>
-      <!-- NAVIGATION START -->
+    </div>
+    <!-- NAVIGATION START -->
 
-  
-      <nav class="footer_navbar">
+    <nav class="footer_navbar">
+      <div class="container">
+        <div class="footer_navbar_fixed">
+          <ul class="footer_nav_list">
+            <li>
+              <a onclick="toggleDropdown()" class="red_hover" href="#"
+                ><img
+                  src="../assets/images/Home/menu-dark.svg"
+                  alt="menu"
+                />Каталог</a
+              >
+            </li>
+            <li>
+              <a class="red_hover" href="#"
+                ><img
+                  src="../assets/images/Home/like-min.svg"
+                  alt="like"
+                />Избранное</a
+              >
+            </li>
+            <li>
+              <a class="red_hover" href="#"
+                ><img
+                  src="../assets/images/Home/product-min.svg"
+                  alt="product-min"
+                />продукты</a
+              >
+            </li>
+            <li>
+              <a class="counts_parent red_hover" href="#"
+                ><img
+                  src="../assets/images/Home/shopping-cart.svg"
+                  alt="shop cart"
+                />Корзина</a
+              >
+              <span class="count">0</span>
+            </li>
+            <li>
+              <a id="mobile-button" class="mobile-only" href="#"
+                ><img src="../assets/images/Home/aleksiy.png" alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- NAVIGATION END -->
+    <!-- BREADCRUMB START -->
+    <ul class="container breadcrumb">
+      <li><a href="../pages/home.html">Главная</a></li>
+      <li><a class="active" href="#">Контакты</a></li>
+    </ul>
+    <!-- BREADCRUMB END -->
+
+    <main>
+      <section class="title">
         <div class="container">
-          <div class="footer_navbar_fixed">
-            <ul class="footer_nav_list">
-              <li>
-                <a onclick="toggleDropdown()" class="red_hover" href="#"
-                  ><img
-                    src="../assets/images/Home/menu-dark.svg"
-                    alt="menu"
-                  />Каталог</a
-                >
-              </li>
-              <li>
-                <a class="red_hover" href="#"
-                  ><img
-                    src="../assets/images/Home/like-min.svg"
-                    alt="like"
-                  />Избранное</a
-                >
-              </li>
-              <li>
-                <a class="red_hover" href="#"
-                  ><img
-                    src="../assets/images/Home/product-min.svg"
-                    alt="product-min"
-                  />продукты</a
-                >
-              </li>
-              <li>
-                <a class="counts_parent red_hover" href="#"
-                  ><img
-                    src="../assets/images/Home/shopping-cart.svg"
-                    alt="shop cart"
-                  />Корзина</a
-                >
-                <span class="count">0</span>
-              </li>
-              <li>
-                <a id="mobile-button" class="mobile-only" href="#"
-                  ><img src="../assets/images/Home/aleksiy.png" alt=""
-                /></a>
-              </li>
-            </ul>
+          <div class="wrapper wrapper_cart">
+            <h1>Доставка</h1>
+            <span class="amout">0</span>
           </div>
         </div>
-      </nav>
-      <!-- NAVIGATION END -->
-      <!-- BREADCRUMB START -->
-      <ul class="container breadcrumb">
-        <li><a href="../pages/home.html">Главная</a></li>
-        <li><a class="active" href="#">Контакты</a></li>
-      </ul>
-      <!-- BREADCRUMB END -->
+      </section>
 
-
-      <main>
-        <section class="title">
-            <div class="container">
-                <div class="wrapper wrapper_cart">
-                    <h1>Доставка</h1>
-                    <span class="amout">0</span>
+      <section class="delivering">
+        <div class="container">
+          <h2>Куда</h2>
+          <div class="main_wrapper">
+            <div class="form_wrapper">
+              <div class="user_location">
+                <div>
+                  <label for="city">Населенный пункт:</label>
+                  <input
+                    type="text"
+                    placeholder="  Населенный пункт"
+                    required
+                  />
                 </div>
-            </div>
-        </section>
-        
-
-        <section class="delivering">
-            <div class="container">
-                <h2>Куда</h2>
-                <div class="main_wrapper">
-                    <div class="form_wrapper">
-                          <div class="user_location">
-                              <div>
-                                <label for="city">Населенный пункт:</label>
-                                <input type="text" placeholder="  Населенный пункт" required>
-                              </div>
-                              <div>
-                                <label for="street">Улица:</label>
-                                <input type="text" id="street" name="street" placeholder="  Улица" required>
-                              </div>
-                          </div>
-                          <div class="user_secondary_lcation">
-                              <div>
-                                <label for="house">Дом:</label>
-                                <input class="input_user-1" type="text" id="house" name="house" placeholder="  Дом" required>
-                              </div>
-                              <div>
-                                <label for="apartment">Квартира:</label>
-                                <input class="input_user-2" type="text" id="apartment" name="apartment" placeholder=" Квартира" required>
-                              </div>
-                              <div>
-                                <label for="additional">Дополнительно:</label>
-                               <input class="input_user-3" type="text" placeholder="  Дополнительно">
-                              </div>
-                          </div>
-                          <div class="wrapper_title">
-                              <h1>Date</h1>
-                              <h1>Time</h1>
-                          </div>
-                          <div class="delivering_time">
-                              <div id="calendar">
-                                  
-                            </div>
-                            <div id="timeSlots" class="time_wrapper">
-                                <div class="time">8 - 10</div>
-                                <div class="time">10 - 12</div>
-                                <div class="time">10 - 12</div>
-                                <div class="time">14 - 16</div>
-                                <div class="time">16 - 18</div>
-                                <div class="time">18 - 20</div>
-                            </div>
-                          </div>
-                          <div class="entering">
-                            <div class="entering_title"><h1>Вход</h1></div>
-                            <div class="entering_wrapper">
-                                <input class="tel" type="tel" id="phone" placeholder="   Phone Number">
-                                <button class="receving_code">Получить код</button>
-                                <a href="#">Войти по почте</a>
-                            </div>
-                          </div>
-                    </div>
-                    <div class="card_info_right">
-                        <div class="product_note">
-                          <div class="choose"><span><input onclick="checkboxCart()" id="inpLock" type="checkbox">
-                            <label class="btn-lock" for="inpLock">
-                                <svg width="50px" height="45px" viewBox="0 0 36 40">
-                                    <path class="lockb" d="M27 27C27 34.1797 21.1797 40 14 40C6.8203 40 1 34.1797 1 27C1 19.8203 6.8203 14 14 14C21.1797 14 27 19.8203 27 27ZM15.6298 26.5191C16.4544 25.9845 17 25.056 17 24C17 22.3431 15.6569 21 14 21C12.3431 21 11 22.3431 11 24C11 25.056 11.5456 25.9845 12.3702 26.5191L11 32H17L15.6298 26.5191Z"></path>
-                                    <path class="lock" d="M6 21V10C6 5.58172 9.58172 2 14 2V2C18.4183 2 22 5.58172 22 10V21"></path>
-                                    <path class="bling" d="M29 20L31 22"></path>
-                                    <path class="bling" d="M31.5 15H34.5"></path>
-                                    <path class="bling" d="M29 10L31 8"></path>
-                                </svg>
-                            </label>
-                          </span> Списать  <span id="total-amout-1"></span> ₽ </div>
-                          <p>На карте накоплено <span id="total-amout-2"></span> ₽ </p>
-                        </div>
-  
-                      <div class="cart__order">
-                          <div class="line"></div>
-    
-                          <div class="wrapper_price">
-                            <p><span class="thenumber"><span class="whole-product">3</span> товара</span><span>Скидка</span></p>
-                            <p><span class="price">258,10  ₽ </span><span class="discount">-8,01 ₽ </span></p>
-                          </div>
-    
-                          <div class="line"></div>
-    
-                          <div class="all_price">
-                            <span class="itog" >Итог</span>
-                            <span class="price"><span  id="total-amout"></span> ₽ </span>
-                          </div>
-                          <span class="bonus"><img src="../assets/images/shop-cart/circle-half.svg" alt=""> Вы получяете 100 бонусов</span>
-    
-                          <div class="wrapper_booking">
-                            <button formaction="home.html"  id="booking" class="booking btn" type="button">
-                              Оформить заказ
-                            </button>
-                          </div>
-                       </div>
-                        
-                    </div>
+                <div>
+                  <label for="street">Улица:</label>
+                  <input
+                    type="text"
+                    id="street"
+                    name="street"
+                    placeholder="  Улица"
+                    required
+                  />
                 </div>
+              </div>
+              <div class="user_secondary_lcation">
+                <div>
+                  <label for="house">Дом:</label>
+                  <input
+                    class="input_user-1"
+                    type="text"
+                    id="house"
+                    name="house"
+                    placeholder="  Дом"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="apartment">Квартира:</label>
+                  <input
+                    class="input_user-2"
+                    type="text"
+                    id="apartment"
+                    name="apartment"
+                    placeholder=" Квартира"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="additional">Дополнительно:</label>
+                  <input
+                    class="input_user-3"
+                    type="text"
+                    placeholder="  Дополнительно"
+                  />
+                </div>
+              </div>
+              <div class="wrapper_title">
+                <h1>Date</h1>
+                <h1>Time</h1>
+              </div>
+              <div class="delivering_time">
+                <div id="calendar"></div>
+                <div id="timeSlots" class="time_wrapper">
+                  <div class="time">8 - 10</div>
+                  <div class="time">10 - 12</div>
+                  <div class="time">10 - 12</div>
+                  <div class="time">14 - 16</div>
+                  <div class="time">16 - 18</div>
+                  <div class="time">18 - 20</div>
+                </div>
+              </div>
+              <div class="entering">
+                <div class="entering_title"><h1>Вход</h1></div>
+                <div class="entering_wrapper">
+                  <input
+                    class="tel"
+                    type="tel"
+                    id="phone"
+                    placeholder="   Phone Number"
+                  />
+                  <button class="receving_code">Получить код</button>
+                  <a href="#">Войти по почте</a>
+                </div>
+              </div>
             </div>
-        </section>
+            <div class="card_info_right">
+              <div class="product_note">
+                <div class="choose">
+                  <span
+                    ><input
+                      onclick="checkboxCart()"
+                      id="inpLock"
+                      type="checkbox"
+                    />
+                    <label class="btn-lock" for="inpLock">
+                      <svg width="50px" height="45px" viewBox="0 0 36 40">
+                        <path
+                          class="lockb"
+                          d="M27 27C27 34.1797 21.1797 40 14 40C6.8203 40 1 34.1797 1 27C1 19.8203 6.8203 14 14 14C21.1797 14 27 19.8203 27 27ZM15.6298 26.5191C16.4544 25.9845 17 25.056 17 24C17 22.3431 15.6569 21 14 21C12.3431 21 11 22.3431 11 24C11 25.056 11.5456 25.9845 12.3702 26.5191L11 32H17L15.6298 26.5191Z"
+                        ></path>
+                        <path
+                          class="lock"
+                          d="M6 21V10C6 5.58172 9.58172 2 14 2V2C18.4183 2 22 5.58172 22 10V21"
+                        ></path>
+                        <path class="bling" d="M29 20L31 22"></path>
+                        <path class="bling" d="M31.5 15H34.5"></path>
+                        <path class="bling" d="M29 10L31 8"></path>
+                      </svg>
+                    </label>
+                  </span>
+                  Списать <span id="total-amout-1"></span> ₽
+                </div>
+                <p>На карте накоплено <span id="total-amout-2"></span> ₽</p>
+              </div>
 
+              <div class="cart__order">
+                <div class="line"></div>
 
+                <div class="wrapper_price">
+                  <p>
+                    <span class="thenumber"
+                      ><span class="whole-product">3</span> товара</span
+                    ><span>Скидка</span>
+                  </p>
+                  <p>
+                    <span class="price">258,10 ₽ </span
+                    ><span class="discount">-8,01 ₽ </span>
+                  </p>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="all_price">
+                  <span class="itog">Итог</span>
+                  <span class="price"><span id="total-amout"></span> ₽ </span>
+                </div>
+                <span class="bonus"
+                  ><img
+                    src="../assets/images/shop-cart/circle-half.svg"
+                    alt=""
+                  />
+                  Вы получяете 100 бонусов</span
+                >
+
+                <div class="wrapper_booking">
+                  <button
+                    formaction="home.html"
+                    id="booking"
+                    class="booking btn"
+                    type="button"
+                  >
+                    Оформить заказ
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-
-
-
-
-
-
 
     <!-- footer start -->
     <footer class="footer foo">
-        <div class="container">
-          <div class="footer__left">
-            <a href="home.html"
-              ><img
-                src="../assets/images/Home/home-card-images/logo-footer.svg"
-                alt="logo"
-            /></a>
-            <li><a href="../pages/about-us.html">О компании</a></li>
-            <li><a href="../pages/contact.html">Контакты</a></li>
-            <li><a href="../pages/jobs.html">Вакансии</a></li>
-            <li><a href="#">Статьи</a></li>
-            <li><a href="#">Политика обработки персональных данных</a></li>
+      <div class="container">
+        <div class="footer__left">
+          <a href="home.html"
+            ><img
+              src="../assets/images/Home/home-card-images/logo-footer.svg"
+              alt="logo"
+          /></a>
+          <li><a href="../pages/about-us.html">О компании</a></li>
+          <li><a href="../pages/contact.html">Контакты</a></li>
+          <li><a href="../pages/jobs.html">Вакансии</a></li>
+          <li><a href="#">Статьи</a></li>
+          <li><a href="#">Политика обработки персональных данных</a></li>
+        </div>
+        <div class="footer__right">
+          <div class="socials">
+            <div class="half">
+              <img
+                src="../assets/images/Home/home-card-images/insta.svg"
+                alt="instagram"
+              />
+              <img
+                src="../assets/images/Home/home-card-images/Vector.svg"
+                alt="vektor"
+              />
+            </div>
+            <div class="rest_half">
+              <img
+                src="../assets/images/Home/home-card-images/facebook.svg"
+                alt="facebook"
+              />
+              <img
+                src="../assets/images/Home/home-card-images/odno.svg"
+                alt="odnoklasniky"
+              />
+            </div>
           </div>
-          <div class="footer__right">
-            <div class="socials">
-              <div class="half">
-                <img
-                  src="../assets/images/Home/home-card-images/insta.svg"
-                  alt="instagram"
-                />
-                <img
-                  src="../assets/images/Home/home-card-images/Vector.svg"
-                  alt="vektor"
-                />
-              </div>
-              <div class="rest_half">
-                <img
-                  src="../assets/images/Home/home-card-images/facebook.svg"
-                  alt="facebook"
-                />
-                <img
-                  src="../assets/images/Home/home-card-images/odno.svg"
-                  alt="odnoklasniky"
-                />
-              </div>
-            </div>
-            <div class="phone">
-              <span
-                ><img
-                  src="../assets/images/Home/home-card-images/phone.png"
-                  alt="phone"
-                />
-                8 800 777 33 33</span
-              >
-              <span
-                >Дизайн
-                <img
-                  src="../assets/images/Home/home-card-images/logo-zasovskiy-small-black.svg"
-                  alt="zakaz"
-              /></span>
-            </div>
+          <div class="phone">
+            <span
+              ><img
+                src="../assets/images/Home/home-card-images/phone.png"
+                alt="phone"
+              />
+              8 800 777 33 33</span
+            >
+            <span
+              >Дизайн
+              <img
+                src="../assets/images/Home/home-card-images/logo-zasovskiy-small-black.svg"
+                alt="zakaz"
+            /></span>
           </div>
         </div>
-      </footer>
+      </div>
+    </footer>
     <!-- footer end -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
-    <script src="../JavaScript/productCart.js"></script>
-    <script src="../JavaScript/category_search.js"></script>
-    <script src="../javascript/const.js"></script>
-    <script src="../javascript/main-shop-cart-counter.js"></script>
-    <script src="../JavaScript/shop-cart.js"></script>
-    
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.0/build/js/intlTelInput.js"></script>
-    
-    <script src="../JavaScript/modal.js"></script>
+
+    <script src="../JavaScript/auth.js"></script>
     <script src="../JavaScript/dropdown.js"></script>
-    <script src="../JavaScript/modal2.js"></script>
     <script src="../JavaScript/chat-user.js"></script>
 
+    <script src="../javascript/const.js"></script>
+    <script src="../JavaScript/products-data.js"></script>
+    <script src="../javascript/utils.js"></script>
+    <script src="../javascript/main.js"></script>
 
-  <script src="../javascript/delivering.js"></script>
-</body>
+    <script src="../JavaScript/product-search.js"></script>
+    <script src="../JavaScript/cart.js"></script>
+
+    <script src="../javascript/delivering.js"></script>
+  </body>
 </html>
